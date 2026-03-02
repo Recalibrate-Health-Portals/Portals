@@ -13,6 +13,10 @@ body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-
 a{color:var(--cyan);text-decoration:none;}a:hover{text-decoration:underline;}
 .bmc-float{position:fixed;bottom:24px;right:24px;z-index:999;width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#FFDD00,#ff8c00);display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 4px 20px rgba(255,170,0,0.45);cursor:pointer;text-decoration:none;transition:all .2s;}
 .bmc-float:hover{transform:scale(1.1) translateY(-2px);text-decoration:none;}
+.bmc-wrap{position:fixed;bottom:24px;right:24px;z-index:999;display:flex;flex-direction:column;align-items:flex-end;gap:8px;}
+.bmc-tip{background:rgba(7,7,14,0.92);backdrop-filter:blur(12px);border:1px solid rgba(255,170,0,0.25);border-radius:20px;padding:6px 12px;font-size:10px;color:rgba(255,200,50,0.85);font-weight:500;white-space:nowrap;pointer-events:none;animation:bmc-fade 0.3s ease;}
+@keyframes bmc-fade{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
+.bmc-wrap .bmc-float{position:static;}
 nav{background:rgba(7,7,14,0.97);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200;padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;}
 .brand{display:flex;align-items:center;gap:10px;}.bi{width:30px;height:30px;background:linear-gradient(135deg,var(--cyan),var(--purple));border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:15px;}
 .bn{font-weight:700;font-size:14px;}.bs{font-size:10px;color:var(--muted);}
@@ -177,11 +181,14 @@ h1{font-size:clamp(26px,4vw,46px);font-weight:800;line-height:1.1;margin-bottom:
 footer{background:var(--bg2);border-top:1px solid var(--border);padding:28px 24px;text-align:center;}
 footer p{font-size:11px;color:var(--muted);margin-bottom:4px;}
 @media(max-width:900px){.main{grid-template-columns:1fr;}.right{position:static;}.hg{grid-template-columns:1fr;}.si{grid-template-columns:repeat(3,1fr);}.og,.rcg,.glg,.tg{grid-template-columns:1fr;}.txh,.txr{grid-template-columns:1fr 100px;}.txh span:last-child,.txc{display:none;}.mg{grid-template-columns:1fr 1fr;}}
-@media(max-width:600px){nav .nav-links{display:none;}.si{grid-template-columns:repeat(2,1fr);}.bmc-float{bottom:16px;right:16px;width:46px;height:46px;font-size:18px;}}
+@media(max-width:600px){nav .nav-links{display:none;}.si{grid-template-columns:repeat(2,1fr);}.bmc-wrap{bottom:16px;right:16px;}.bmc-wrap .bmc-float{width:46px;height:46px;font-size:18px;}}
 </style>
 </head>
 <body>
-<a href="https://buymeacoffee.com/TristanSiokos" target="_blank" class="bmc-float" title="Support this free portal">☕</a>
+<div class="bmc-wrap">
+  <div class="bmc-tip">☕ If it saves you research time, a coffee keeps Health Portals free</div>
+  <a href="https://buymeacoffee.com/TristanSiokos" target="_blank" class="bmc-float" title="Support this free portal">☕</a>
+</div>
 <nav>
   <div class="brand"><div class="bi">🧠</div><div><div class="bn">CSS Intelligence Portal</div><div class="bs">CENTRAL SENSITISATION SYNDROME · GLOBAL</div></div></div>
   <div class="nav-links">
