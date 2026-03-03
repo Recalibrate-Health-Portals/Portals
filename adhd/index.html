@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADHD - Complete Patient Intelligence Portal</title>
+<meta name="description" content="The world's most comprehensive free ADHD resource. Validated self-screening, medication guide, evidence-rated treatments, live research, clinical trials, specialists, and community.">
+<meta property="og:title" content="ADHD - Complete Patient Intelligence Portal">
+<meta property="og:description" content="Comprehensive free ADHD intelligence. Self-screening, medication comparisons, evidence-rated treatments, live research, clinical trials and global specialists.">
+<meta property="og:image" content="https://recalibrate-health-portals.github.io/Portals/adhd/og-adhd.jpg">
+<meta property="og:url" content="https://recalibrate-health-portals.github.io/Portals/adhd/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ADHD - Complete Patient Intelligence Portal">
+<meta name="twitter:description" content="Comprehensive free ADHD intelligence. Self-screening, medication guide, evidence-rated treatments, live research, clinical trials and global specialists.">
+<meta name="twitter:image" content="https://recalibrate-health-portals.github.io/Portals/adhd/og-adhd.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07070e;--bg2:#0e0e1a;--bg3:#151524;--border:rgba(255,255,255,0.06);--text:#dde3f0;--muted:rgba(255,255,255,0.38);--cyan:#06b6d4;--purple:#8b5cf6;--green:#10b981;--orange:#f59e0b;--red:#ef4444;--blue:#3b82f6;--pink:#ec4899;--accent:#8b5cf6;}
+*{margin:0;padding:0;box-sizing:border-box;word-break:break-word;overflow-wrap:break-word;}
+html{scroll-behavior:smooth;overflow-x:hidden;max-width:100%;}
+body{overflow-x:hidden;max-width:100%;background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;font-size:14px;}
+a{color:var(--accent);text-decoration:none;}a:hover{text-decoration:underline;}
+.bmc-float{position:fixed;bottom:20px;right:16px;z-index:999;width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#FFDD00,#ff8c00);display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 4px 20px rgba(255,170,0,0.45);cursor:pointer;text-decoration:none;transition:all .2s;}
+.bmc-float:hover{transform:scale(1.1) translateY(-2px);text-decoration:none;}
+nav{background:rgba(7,7,14,0.97);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200;padding:0 14px;height:52px;display:flex;align-items:center;justify-content:space-between;max-width:100%;overflow:hidden;}
+.brand{display:flex;align-items:center;gap:10px;}
+.bn{font-weight:700;font-size:13px;white-space:nowrap;}.bs{font-size:9px;color:var(--muted);white-space:nowrap;}
+.nav-links{display:flex;gap:2px;flex-wrap:wrap;}
+.nl{padding:5px 9px;border-radius:6px;font-size:11px;color:var(--muted);font-weight:500;transition:all .2s;}
+.nl:hover{color:var(--text);background:rgba(255,255,255,0.05);text-decoration:none;}
+.pill{padding:5px 12px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:5px;background:rgba(139,92,246,0.12);border:1px solid rgba(139,92,246,0.25);color:var(--accent);}
+.pill:hover{background:rgba(139,92,246,0.22);text-decoration:none;}
+.hero{padding:56px 24px 0;max-width:1140px;margin:0 auto;overflow-x:hidden;}
+.hg{display:grid;grid-template-columns:1fr 220px;gap:32px;align-items:start;margin-bottom:32px;}
+.hbadge{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:20px;background:rgba(139,92,246,0.08);border:1px solid rgba(139,92,246,0.18);font-size:10px;color:var(--accent);font-weight:600;letter-spacing:1.5px;margin-bottom:14px;}
+h1{font-size:clamp(26px,4vw,46px);font-weight:800;line-height:1.1;margin-bottom:14px;}
+.hl{background:linear-gradient(135deg,var(--accent),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.hd{font-size:14px;color:var(--muted);max-width:520px;line-height:1.75;}
+.hbtns{display:flex;gap:8px;margin-top:20px;flex-wrap:wrap;}
+.btn{padding:10px 20px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:7px;transition:all .2s;}
+.btn-p{background:linear-gradient(135deg,var(--accent),#6d28d9);color:#fff;border:none;box-shadow:0 4px 16px rgba(139,92,246,.3);}
+.btn-g{background:transparent;border:1px solid var(--border);color:var(--text);}
+.btn-p:hover{box-shadow:0 4px 24px rgba(139,92,246,.45);transform:translateY(-1px);text-decoration:none;}
+.btn-g:hover{border-color:rgba(255,255,255,.15);text-decoration:none;}
+.hs{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:8px;}
+.hs-l{font-size:9px;letter-spacing:2px;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-bottom:4px;}
+.hs-v{font-size:22px;font-weight:800;font-family:'JetBrains Mono',monospace;}
+.hs-s{font-size:10px;color:var(--muted);margin-top:1px;}
+.sbar{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-top:32px;overflow-x:hidden;}
+.si{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);padding:0 24px;}
+.st{padding:16px 10px;border-right:1px solid var(--border);text-align:center;}.st:last-child{border-right:none;}
+.sn{font-size:21px;font-weight:800;font-family:'JetBrains Mono',monospace;background:linear-gradient(135deg,var(--accent),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.sl{font-size:9px;color:var(--muted);letter-spacing:1.5px;margin-top:3px;}
+.dw{max-width:1140px;margin:0 auto;padding:16px 24px 0;}
+.disc{background:rgba(139,92,246,.05);border:1px solid rgba(139,92,246,.12);border-radius:8px;padding:10px 14px;font-size:11px;color:rgba(139,92,246,.75);}
+.main{max-width:1140px;margin:0 auto;padding:32px 24px 120px;display:grid;grid-template-columns:1fr 310px;gap:24px;align-items:start;}
+.left{display:flex;flex-direction:column;gap:28px;}
+.right{display:flex;flex-direction:column;gap:16px;position:sticky;top:68px;}
+.sh{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:6px;}
+.stw{display:flex;align-items:center;gap:10px;}
+.sd{width:3px;height:32px;border-radius:2px;}
+.st2{font-size:15px;font-weight:700;}
+.ss{font-size:9px;letter-spacing:2px;color:var(--muted);margin-top:2px;font-family:'JetBrains Mono',monospace;}
+.stag{font-size:8px;padding:3px 8px;border-radius:4px;font-weight:700;letter-spacing:1px;}
+.ts{background:rgba(139,92,246,0.1);border:1px solid rgba(139,92,246,0.2);color:var(--accent);}
+.ti{background:rgba(6,182,212,0.1);border:1px solid rgba(6,182,212,0.2);color:var(--cyan);}
+.tg{background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.2);color:var(--green);}
+.tp{background:rgba(139,92,246,0.1);border:1px solid rgba(139,92,246,0.2);color:var(--purple);}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px;max-width:100%;}
+.card-sm{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 16px;}
+p{font-size:13px;color:rgba(255,255,255,0.6);line-height:1.75;margin-bottom:10px;max-width:100%;}
+p:last-child{margin-bottom:0;}
+.dtitle{font-size:9px;letter-spacing:2px;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-bottom:10px;}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.mechbox{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px;}
+.mechbox h4{font-size:12px;font-weight:700;margin-bottom:5px;}
+.mechbox p{font-size:11px;margin:0;}
+table{width:100%;border-collapse:collapse;font-size:12px;}
+th{text-align:left;padding:8px 10px;font-size:9px;letter-spacing:1.5px;color:var(--muted);border-bottom:1px solid var(--border);font-family:'JetBrains Mono',monospace;}
+td{padding:9px 10px;border-bottom:1px solid rgba(255,255,255,0.03);vertical-align:top;color:rgba(255,255,255,0.65);}
+tr:last-child td{border-bottom:none;}
+.ev{display:inline-block;padding:2px 8px;border-radius:4px;font-size:9px;font-weight:700;letter-spacing:1px;font-family:'JetBrains Mono',monospace;}
+.ev-a{background:rgba(16,185,129,0.15);color:var(--green);border:1px solid rgba(16,185,129,0.3);}
+.ev-b{background:rgba(6,182,212,0.15);color:var(--cyan);border:1px solid rgba(6,182,212,0.3);}
+.ev-c{background:rgba(245,158,11,0.15);color:var(--orange);border:1px solid rgba(245,158,11,0.3);}
+.ev-d{background:rgba(255,255,255,0.05);color:var(--muted);border:1px solid var(--border);}
+.sym-grid{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;max-width:100%;}
+.sym{padding:4px 10px;border-radius:6px;font-size:11px;background:rgba(139,92,246,0.07);border:1px solid rgba(139,92,246,0.15);color:rgba(139,92,246,0.9);word-break:normal;}
+.load{font-size:11px;color:var(--muted);padding:20px;text-align:center;}
+.pub-item{padding:12px 0;border-bottom:1px solid var(--border);}
+.pub-item:last-child{border-bottom:none;}
+.pub-title{font-size:12px;font-weight:600;margin-bottom:4px;line-height:1.4;}
+.pub-meta{font-size:10px;color:var(--muted);}
+.tri{padding:12px 0;border-bottom:1px solid var(--border);}
+.tri:last-child{border-bottom:none;}
+.trih{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:5px;}
+.trit{font-size:12px;font-weight:600;line-height:1.4;flex:1;}
+.trs{font-size:9px;padding:2px 7px;border-radius:4px;white-space:nowrap;font-weight:700;}
+.rec{background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.2);color:var(--green);}
+.trim{display:flex;gap:12px;font-size:10px;color:var(--muted);flex-wrap:wrap;}
+.sbr{display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);}
+.sbl{font-size:9px;letter-spacing:1.5px;color:var(--muted);font-family:'JetBrains Mono',monospace;}
+.org-grid{display:flex;flex-direction:column;gap:8px;}
+.org{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:10px 12px;}
+.org-name{font-size:12px;font-weight:700;margin-bottom:2px;}
+.org-desc{font-size:10px;color:var(--muted);}
+.fqi{border-bottom:1px solid var(--border);}
+.fqi:last-child{border-bottom:none;}
+.fqq{display:flex;align-items:center;justify-content:space-between;padding:12px 0;cursor:pointer;font-size:13px;font-weight:500;}
+.fqa{color:var(--muted);transition:transform .2s;font-size:16px;}
+.fqb{display:none;font-size:12px;color:rgba(255,255,255,0.55);padding-bottom:12px;line-height:1.7;}
+.glc{padding:8px 0;border-bottom:1px solid var(--border);display:flex;gap:12px;}
+.glc:last-child{border-bottom:none;}
+.glt{font-size:11px;font-weight:700;min-width:120px;max-width:140px;color:var(--accent);}
+.gld{font-size:11px;color:var(--muted);line-height:1.5;}
+.screen-q{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:14px;margin-bottom:8px;}
+.screen-q p{font-size:13px;color:var(--text);margin-bottom:10px;}
+.screen-opts{display:flex;gap:6px;flex-wrap:wrap;}
+.screen-opt{padding:5px 12px;border-radius:6px;font-size:11px;border:1px solid var(--border);background:rgba(255,255,255,0.03);cursor:pointer;transition:all .2s;}
+.screen-opt:hover{border-color:var(--accent);color:var(--accent);}
+.screen-opt.sel{background:rgba(139,92,246,0.12);border-color:var(--accent);color:var(--accent);}
+.screen-result{background:var(--bg3);border-radius:8px;padding:16px;margin-top:12px;display:none;}
+.med-card{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:14px;margin-bottom:10px;}
+.med-name{font-size:14px;font-weight:800;margin-bottom:4px;}
+.med-class{font-size:9px;letter-spacing:1.5px;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-bottom:8px;}
+.med-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px;}
+.med-stat{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:6px;padding:8px;}
+.med-stat-label{font-size:9px;letter-spacing:1px;color:var(--muted);margin-bottom:3px;}
+.med-stat-val{font-size:11px;font-weight:600;}
+@media(max-width:900px){
+  .main{grid-template-columns:1fr;}
+  .right{position:static;}
+  .hg{grid-template-columns:1fr;}
+  .grid2{grid-template-columns:1fr;}
+  nav .nav-links{display:none;}
+  .si{grid-template-columns:repeat(2,1fr);}
+  .st{border-bottom:1px solid var(--border);}
+  .hero{padding:36px 16px 0;}
+  .main{padding:20px 16px 80px;}
+  .card{padding:16px;}
+  .dw{padding:12px 16px 0;}
+  .hbtns{flex-direction:column;}
+  .btn{width:100%;justify-content:center;}
+  .med-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:600px){
+  .si{grid-template-columns:1fr 1fr;}
+  .sn{font-size:16px;}
+  nav{padding:0 10px;height:48px;}
+  .bn{font-size:11px;}
+  .hero{padding:28px 12px 0;}
+  .main{padding:16px 12px 80px;}
+  .card{padding:12px;}
+  .hs-v{font-size:18px;}
+  .sbar{overflow-x:hidden;}
+  .stag{display:none;}
+  .screen-opts{flex-direction:column;}
+  .screen-opt{text-align:center;}
+  table thead{display:none;}
+  table tbody tr{display:block;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:10px 12px;margin-bottom:8px;}
+  table tbody tr td{display:block;border:none;padding:3px 0;font-size:12px;}
+  table tbody tr td:first-child{font-weight:700;color:var(--text);font-size:12px;margin-bottom:4px;}
+  table tbody tr td:nth-child(2){margin-bottom:4px;}
+  table tbody tr td:last-child{color:rgba(255,255,255,0.5);font-size:11px;line-height:1.6;}
+  .med-grid{grid-template-columns:1fr 1fr;}
+  .trih{flex-direction:column;gap:4px;}
+}
+@media(max-width:380px){
+  .bn{font-size:10px;}
+  .bs{display:none;}
+}
+</style>
+</head>
+<body>
+<a href="https://buymeacoffee.com/TristanSiokos" class="bmc-float" target="_blank" title="Support this portal">☕</a>
+<nav>
+  <div class="brand">
+    <img src="../logo.jpg" style="width:30px;height:30px;border-radius:7px;object-fit:contain;" alt="Recalibrate">
+    <div><div class="bn">ADHD Portal</div><div class="bs">PATIENT INTELLIGENCE · FREE</div></div>
+  </div>
+  <div class="nav-links">
+    <a href="#overview" class="nl">Overview</a>
+    <a href="#mechanism" class="nl">Mechanism</a>
+    <a href="#screening" class="nl">Screening</a>
+    <a href="#medications" class="nl">Medications</a>
+    <a href="#treatments" class="nl">Treatments</a>
+    <a href="#research" class="nl">Research</a>
+    <a href="#trials" class="nl">Trials</a>
+    <a href="#living" class="nl">Living</a>
+    <a href="#specialists" class="nl">Specialists</a>
+    <a href="#faq" class="nl">FAQ</a>
+  </div>
+  <div style="display:flex;align-items:center;gap:8px;">
+    <a href="../" style="padding:5px 12px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.5);" onmouseover="this.style.color='#fff';this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='rgba(255,255,255,0.5)';this.style.background='rgba(255,255,255,0.04)'">← All Portals</a>
+    <a href="https://t.me/Recalibrate_HealthPortals" class="pill" target="_blank">💬 Community</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hg">
+    <div>
+      <div class="hbadge">⚡ FREE · GLOBAL · EVIDENCE-BASED · LIVE DATA</div>
+      <h1>Everything about<br><span class="hl">ADHD</span><br>in one place</h1>
+      <div class="hd">The world's most comprehensive free ADHD resource. Self-screening, full medication guide, evidence-rated treatments, live research, clinical trials, global specialists, and community.</div>
+      <div class="hbtns">
+        <a href="#screening" class="btn btn-p">ADHD Self-Screen</a>
+        <a href="#medications" class="btn btn-g">Medication Guide</a>
+        <a href="https://t.me/Recalibrate_HealthPortals" class="btn btn-g" target="_blank">Join Community</a>
+      </div>
+    </div>
+    <div>
+      <div class="hs"><div class="hs-l">PEOPLE WITH ADHD</div><div class="hs-v" style="color:var(--accent)">366M+</div><div class="hs-s">Adults worldwide (est.)</div></div>
+      <div class="hs"><div class="hs-l">UNDIAGNOSED ADULTS</div><div class="hs-v" style="color:var(--red)">~75%</div><div class="hs-s">Of adults with ADHD undiagnosed</div></div>
+      <div class="hs"><div class="hs-l">COMORBIDITIES</div><div class="hs-v" style="color:var(--cyan);font-size:14px;">Anxiety · Depression · ASD</div><div class="hs-s">Frequently co-occurring</div></div>
+    </div>
+  </div>
+</div>
+<div class="sbar"><div class="si">
+  <div class="st"><div class="sn">366M+</div><div class="sl">ADULTS GLOBALLY</div></div>
+  <div class="st"><div class="sn">~75%</div><div class="sl">UNDIAGNOSED</div></div>
+  <div class="st"><div class="sn">3x</div><div class="sl">HIGHER BURNOUT RISK</div></div>
+  <div class="st"><div class="sn">Free</div><div class="sl">FOREVER</div></div>
+</div></div>
+<div class="dw"><div class="disc">⚠ Not medical advice. This portal provides educational information only. Always consult a qualified healthcare professional for diagnosis and treatment decisions.</div></div>
+
+<div class="main">
+<div class="left">
+
+<!-- OVERVIEW -->
+<div id="overview" class="card">
+  <div class="sh"><div class="stw"><div class="sd" style="background:var(--accent)"></div><div><div class="st2">Condition Overview</div><div class="ss">WHAT IS ADHD</div></div></div><span class="stag ts">CLINICAL</span></div>
+  <div class="dtitle">DEFINITION</div>
+  <p>Attention Deficit Hyperactivity Disorder (ADHD) is a neurodevelopmental condition characterised by persistent patterns of inattention, hyperactivity, and impulsivity that interfere with functioning and development. It is one of the most common neurodevelopmental conditions, affecting both children and adults across all cultures and demographics.</p>
+  <p>ADHD is not a deficit of attention — it is a deficit of attention regulation. People with ADHD can hyperfocus intensely on things that interest them, yet struggle profoundly with tasks they find unstimulating. This is a neurobiological difference, not a character flaw or lack of effort.</p>
+  <div class="dtitle" style="margin-top:16px;">THREE PRESENTATIONS</div>
+  <div class="grid2">
+    <div class="mechbox"><h4 style="color:var(--accent)">Inattentive (ADHD-I)</h4><p>Difficulty sustaining attention, easily distracted, forgetful, loses things, avoids tasks requiring sustained mental effort. Often missed, particularly in girls and women.</p></div>
+    <div class="mechbox"><h4 style="color:var(--blue)">Hyperactive-Impulsive (ADHD-HI)</h4><p>Restlessness, fidgeting, talking excessively, interrupting, difficulty waiting. More visible — historically over-diagnosed in boys.</p></div>
+    <div class="mechbox" style="grid-column:span 2;"><h4 style="color:var(--cyan)">Combined (ADHD-C)</h4><p>Both inattentive and hyperactive-impulsive symptoms present. Most common presentation in clinical populations.</p></div>
+  </div>
+  <div class="dtitle" style="margin-top:16px;">KEY SYMPTOMS</div>
+  <div class="sym-grid">
+    <span class="sym">Inattention</span><span class="sym">Hyperfocus</span><span class="sym">Impulsivity</span><span class="sym">Executive dysfunction</span><span class="sym">Time blindness</span><span class="sym">Emotional dysregulation</span><span class="sym">Working memory deficits</span><span class="sym">Rejection sensitive dysphoria</span><span class="sym">Procrastination</span><span class="sym">Disorganisation</span><span class="sym">Restlessness</span><span class="sym">Sleep difficulties</span><span class="sym">Sensory sensitivity</span><span class="sym">Low frustration tolerance</span><span class="sym">Task initiation difficulty</span>
+  </div>
+  <div class="dtitle" style="margin-top:16px;">ADHD IN ADULTS</div>
+  <p>ADHD was historically considered a childhood condition, but research confirms that symptoms persist into adulthood in approximately 60-70% of cases. Adult ADHD often presents differently: hyperactivity may internalise as mental restlessness, while executive dysfunction, emotional dysregulation, and time blindness become the dominant challenges. Many adults are diagnosed only after their child receives a diagnosis.</p>
+  <div class="dtitle" style="margin-top:16px;">GENDER DIFFERENCES</div>
+  <p>ADHD is significantly under-diagnosed in women and girls. The inattentive presentation is more common in females, is less disruptive behaviourally, and is frequently misattributed to anxiety or depression. Women with ADHD face higher rates of burnout, internalised shame, and delayed diagnosis — often not identified until their 30s or 40s.</p>
+  <div class="dtitle" style="margin-top:16px;">COMORBIDITIES</div>
+  <p>ADHD rarely travels alone. Common co-occurring conditions include: anxiety disorders (50%), depression (30%), autism spectrum conditions (20-50%), sleep disorders, learning differences (dyslexia, dyscalculia), substance use disorder (elevated risk), oppositional defiant disorder (in children), and Central Sensitisation Syndrome (chronic pain overlap).</p>
+</div>
+
+<!-- MECHANISM -->
+<div id="mechanism" class="card">
+  <div class="sh"><div class="stw"><div class="sd" style="background:var(--blue)"></div><div><div class="st2">Neuroscience and Mechanism</div><div class="ss">WHAT IS HAPPENING IN THE BRAIN</div></div></div><span class="stag ti">SCIENCE</span></div>
+  <p>ADHD involves measurable differences in brain structure, function, and neurochemistry — particularly in the prefrontal cortex and its connections to reward and attentional networks.</p>
+  <div class="grid2">
+    <div class="mechbox"><h4 style="color:var(--accent)">Dopamine Dysregulation</h4><p>Reduced dopamine signalling in the prefrontal cortex and striatum. Dopamine drives motivation, reward anticipation, and sustained attention. Low dopamine = low drive for non-stimulating tasks.</p></div>
+    <div class="mechbox"><h4 style="color:var(--blue)">Norepinephrine Deficiency</h4><p>Norepinephrine modulates prefrontal cortex function — affecting focus, working memory, and impulse control. Deficiency disrupts signal-to-noise ratio in attention networks.</p></div>
+    <div class="mechbox"><h4 style="color:var(--cyan)">Prefrontal Cortex Differences</h4><p>The PFC governs executive function: planning, impulse control, working memory, and emotional regulation. In ADHD, PFC activation is reduced during tasks requiring sustained effort.</p></div>
+    <div class="mechbox"><h4 style="color:var(--purple)">Default Mode Network</h4><p>In neurotypical brains, the DMN (mind-wandering network) deactivates during tasks. In ADHD, the DMN fails to deactivate properly, causing intrusive thoughts and attention lapses.</p></div>
+    <div class="mechbox"><h4 style="color:var(--green)">Delayed Cortical Maturation</h4><p>MRI studies show the ADHD brain matures approximately 3-5 years later than neurotypical brains. The prefrontal cortex is particularly affected.</p></div>
+    <div class="mechbox"><h4 style="color:var(--orange)">Reward System Differences</h4><p>ADHD brains require higher stimulation to activate the reward pathway. This drives novelty-seeking, risk-taking, and hyperfocus on inherently interesting tasks.</p></div>
+  </div>
+  <div class="dtitle" style="margin-top:16px;">EXECUTIVE FUNCTION EXPLAINED</div>
+  <p>Executive functions are the brain's management system. ADHD impairs all six core domains: working memory (holding information in mind), cognitive flexibility (shifting between tasks), inhibition (stopping impulses), planning (sequencing steps), emotional regulation (modulating reactions), and task initiation (starting). These are not motivational failures — they are neurobiological impairments.</p>
+  <div class="dtitle" style="margin-top:16px;">WHY INTEREST CHANGES EVERYTHING</div>
+  <p>The ADHD brain is driven by an interest-based nervous system rather than an importance-based one. Tasks that are novel, urgent, challenging, or interesting activate sufficient dopamine to enable focus. Tasks that are routine, repetitive, or externally imposed — regardless of importance — fail to generate enough dopamine for sustained engagement. This is why people with ADHD can spend hours on a hobby but cannot complete a 10-minute administrative task.</p>
+</div>
+
+<!-- SCREENING -->
+<div id="screening" class="card">
+  <div class="sh"><div class="stw"><div class="sd" style="background:var(--green)"></div><div><div class="st2">ADHD Self-Screen</div><div class="ss">ADULT ADHD SELF-REPORT SCALE (ASRS) ADAPTED</div></div></div><span class="stag tg">INTERACTIVE</span></div>
+  <p style="font-size:12px;color:var(--muted);">Based on the WHO Adult ADHD Self-Report Scale (ASRS-v1.1). Rate how often each applies to you over the past 6 months. This is a screening tool, not a clinical diagnosis.</p>
+  <div id="screen-form">
+    <div class="screen-q"><p>1. How often do you have trouble wrapping up the final details of a project, once the challenging parts have been done?</p><div class="screen-opts"><span class="screen-opt" onclick="selSc(this,1,0)">Never</span><span class="screen-opt" onclick="selSc(this,1,1)">Rarely</span><span class="screen-opt" onclick="selSc(this,1,2)">Sometimes</span><span class="screen-opt" onclick="selSc(this,1,3)">Often</span><span class="screen-opt" onclick="selSc(this,1,4)">Very Often</span></div></div>
+    <div class="screen-q"><p>2. How often do you have difficulty getting things in order when you have to do a task that requires organisation?</p><div class="screen-opts"><span class="screen-opt" onclick="selSc(this,2,0)">Never</span><span class="screen-opt" onclick="selSc(this,2,1)">Rarely</span><span class="screen-opt" onclick="selSc(this,2,2)">Sometimes</span><span class="screen-opt" onclick="selSc(this,2,3)">Often</span><span class="screen-opt" onclick="selSc(this,2,4)">Very Often</span></div></div>
+    <div class="screen-q"><p>3. How often do you have problems remembering appointments or obligations?</p><div class="screen-opts"><span class="screen-opt" onclick="selSc(this,3,0)">Never</span><span class="screen-opt" onclick="selSc(this,3,1)">Rarely</span><span class="screen-opt" onclick="selSc(this,3,2)">Sometimes</span><span class="screen-opt" onclick="selSc(this,3,3)">Often</span><span class="screen-opt" onclick="selSc(this,3,4)">Very Often</span></div></div>
+    <div class="screen-q"><p>4. When you have a task that requires a lot of thought, how often do you avoid or delay getting started?</p><div class="screen-opts"><span class="screen-opt" onclick="selSc(this,4,0)">Never</span><span class="screen-opt" onclick="selSc(this,4,1)">Rarely</span><span class="screen-opt" onclick="selSc(this,4,2)">Sometimes</span><span class="screen-opt" onclick="selSc(this,4,3)">Often</span><span class="screen-opt" onclick="selSc(this,4,4)">Very Often</span></div></div>
+    <div class="screen-q"><p>5. How often do you fidget or squirm with your hands or feet when you have to sit down for a long time?</p><div class="screen-opts"><span class="screen-opt" onclick="selSc(this,5,0)">Never</span><span class="screen-opt" onclick="selSc(this,5,1)">Rarely</span><span class="screen-opt" onclick="selSc(this,5,2)">Sometimes</span><span class="screen-opt" onclick="selSc(this,5,3)">Often</span><span class="screen-opt" onclick="selSc(this,5,4)">Very Often</span></div></div>
+    <div class="screen-q"><p>6. How often do you feel overly active and compelled to do things, as if driven by a motor?</p><div class="screen-opts"><span class="screen-opt" onclick="selSc(this,6,0)">Never</span><span class="screen-opt" onclick="selSc(this,6,1)">Rarely</span><span class="screen-opt" onclick="selSc(this,6,2)">Sometimes</span><span class="screen-opt" onclick="selSc(this,6,3)">Often</span><span class="screen-opt" onclick="selSc(this,6,4)">Very Often</span></div></div>
+    <div class="screen-q"><p>7. How often do you make careless mistakes when you have to work on a boring or difficult project?</p><div class="screen-opts"><span class="screen-opt" onclick="selSc(this,7,0)">Never</span><span class="screen-opt" onclick="selSc(this,7,1)">Rarely</span><span class="screen-opt" onclick="selSc(this,7,2)">Sometimes</span><span class="screen-opt" onclick="selSc(this,7,3)">Often</span><span class="screen-opt" onclick="selSc(this,7,4)">Very Often</span></div></div>
+    <div class="screen-q"><p>8. How often do you have difficulty keeping your attention when doing boring or repetitive work?</p><div class="screen-opts"><span class="screen-opt" onclick="selSc(this,8,0)">Never</span><span class="screen-opt" onclick="selSc(this,8,1)">Rarely</span><span class="screen-opt" onclick="selSc(this,8,2)">Sometimes</span><span class="screen-opt" onclick="selSc(this,8,3)">Often</span><span class="screen-opt" onclick="selSc(this,8,4)">Very Often</span></div></div>
+    <div class="screen-q"><p>9. How often do you have difficulty concentrating on what people say to you, even when they are speaking to you directly?</p><div class="screen-opts"><span class="screen-opt" onclick="selSc(this,9,0)">Never</span><span class="screen-opt" onclick="selSc(this,9,1)">Rarely</span><span class="screen-opt" onclick="selSc(this,9,2)">Sometimes</span><span class="screen-opt" onclick="selSc(this,9,3)">Often</span><span class="screen-opt" onclick="selSc(this,9,4)">Very Often</span></div></div>
+    <div class="screen-q"><p>10. How often do you misplace or have difficulty finding things at home or at work?</p><div class="screen-opts"><span class="screen-opt" onclick="selSc(this,10,0)">Never</span><span class="screen-opt" onclick="selSc(this,10,1)">Rarely</span><span class="screen-opt" onclick="selSc(this,10,2)">Sometimes</span><span class="screen-opt" onclick="selSc(this,10,3)">Often</span><span class="screen-opt" onclick="selSc(this,10,4)">Very Often</span></div></div>
+    <button onclick="calcScreen()" style="margin-top:14px;padding:10px 22px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#6d28d9);border:none;color:#fff;font-size:12px;font-weight:700;cursor:pointer;">Calculate Score</button>
+  </div>
+  <div id="screen-result" class="screen-result"></div>
+</div>
+
+<!-- MEDICATIONS -->
+<div id="medications" class="card">
+  <div class="sh"><div class="stw"><div class="sd" style="background:var(--cyan)"></div><div><div class="st2">Medication Guide</div><div class="ss">COMPREHENSIVE ADHD MEDICATION REFERENCE</div></div></div><span class="stag ti">REFERENCE</span></div>
+  <p style="font-size:12px;color:var(--muted);margin-bottom:16px;">All medications require prescription and medical supervision. This guide is for educational purposes only. Effectiveness varies significantly between individuals.</p>
+
+  <div class="dtitle">STIMULANTS — FIRST LINE</div>
+  <div class="med-card">
+    <div class="med-name">Methylphenidate</div>
+    <div class="med-class">STIMULANT · DOPAMINE / NOREPINEPHRINE REUPTAKE INHIBITOR</div>
+    <p style="font-size:12px;margin-bottom:10px;">Blocks reuptake of dopamine and norepinephrine, increasing their availability in the prefrontal cortex. The most prescribed ADHD medication globally. Available in short-acting (3-5h) and long-acting (8-12h) formulations.</p>
+    <div class="med-grid">
+      <div class="med-stat"><div class="med-stat-label">EVIDENCE</div><div class="med-stat-val" style="color:var(--green);">Grade A</div></div>
+      <div class="med-stat"><div class="med-stat-label">ONSET</div><div class="med-stat-val">20-60 mins</div></div>
+      <div class="med-stat"><div class="med-stat-label">BRANDS</div><div class="med-stat-val">Ritalin, Concerta, Medikinet</div></div>
+      <div class="med-stat"><div class="med-stat-label">COMMON SIDE EFFECTS</div><div class="med-stat-val">Appetite suppression, sleep disruption, increased HR</div></div>
+    </div>
+  </div>
+
+  <div class="med-card">
+    <div class="med-name">Amphetamine Salts</div>
+    <div class="med-class">STIMULANT · DOPAMINE / NOREPINEPHRINE RELEASER</div>
+    <p style="font-size:12px;margin-bottom:10px;">Triggers active release of dopamine and norepinephrine in addition to blocking reuptake. Generally considered more potent than methylphenidate. Widely prescribed in the US. Less available in some countries.</p>
+    <div class="med-grid">
+      <div class="med-stat"><div class="med-stat-label">EVIDENCE</div><div class="med-stat-val" style="color:var(--green);">Grade A</div></div>
+      <div class="med-stat"><div class="med-stat-label">ONSET</div><div class="med-stat-val">30-60 mins</div></div>
+      <div class="med-stat"><div class="med-stat-label">BRANDS</div><div class="med-stat-val">Adderall, Vyvanse (lisdexamfetamine), Dexedrine</div></div>
+      <div class="med-stat"><div class="med-stat-label">COMMON SIDE EFFECTS</div><div class="med-stat-val">Appetite loss, cardiovascular effects, mood changes on comedown</div></div>
+    </div>
+  </div>
+
+  <div class="dtitle" style="margin-top:16px;">NON-STIMULANTS — SECOND LINE</div>
+  <div class="med-card">
+    <div class="med-name">Atomoxetine (Strattera)</div>
+    <div class="med-class">NON-STIMULANT · SELECTIVE NOREPINEPHRINE REUPTAKE INHIBITOR</div>
+    <p style="font-size:12px;margin-bottom:10px;">Selectively blocks norepinephrine reuptake. Takes 4-8 weeks for full effect. Preferred when stimulants are contraindicated, in patients with anxiety, substance use history, or tic disorders. 24-hour coverage with no rebound.</p>
+    <div class="med-grid">
+      <div class="med-stat"><div class="med-stat-label">EVIDENCE</div><div class="med-stat-val" style="color:var(--cyan);">Grade B</div></div>
+      <div class="med-stat"><div class="med-stat-label">ONSET (FULL)</div><div class="med-stat-val">4-8 weeks</div></div>
+      <div class="med-stat"><div class="med-stat-label">DURATION</div><div class="med-stat-val">24 hours</div></div>
+      <div class="med-stat"><div class="med-stat-label">COMMON SIDE EFFECTS</div><div class="med-stat-val">Nausea, dry mouth, decreased appetite, mood changes initially</div></div>
+    </div>
+  </div>
+
+  <div class="med-card">
+    <div class="med-name">Guanfacine (Intuniv)</div>
+    <div class="med-class">NON-STIMULANT · ALPHA-2A ADRENERGIC AGONIST</div>
+    <p style="font-size:12px;margin-bottom:10px;">Activates alpha-2A receptors in the prefrontal cortex, strengthening working memory and attention signals. Particularly effective for emotional dysregulation and hyperactivity. Often used as adjunct to stimulants or alone when stimulants are not tolerated.</p>
+    <div class="med-grid">
+      <div class="med-stat"><div class="med-stat-label">EVIDENCE</div><div class="med-stat-val" style="color:var(--cyan);">Grade B</div></div>
+      <div class="med-stat"><div class="med-stat-label">ONSET (FULL)</div><div class="med-stat-val">2-4 weeks</div></div>
+      <div class="med-stat"><div class="med-stat-label">BEST FOR</div><div class="med-stat-val">Emotional dysregulation, RSD, sleep</div></div>
+      <div class="med-stat"><div class="med-stat-label">COMMON SIDE EFFECTS</div><div class="med-stat-val">Sedation, low blood pressure, dry mouth</div></div>
+    </div>
+  </div>
+
+  <div class="med-card">
+    <div class="med-name">Bupropion (Wellbutrin)</div>
+    <div class="med-class">NON-STIMULANT · DOPAMINE / NOREPINEPHRINE REUPTAKE INHIBITOR</div>
+    <p style="font-size:12px;margin-bottom:10px;">Originally an antidepressant with dopaminergic activity. Off-label for ADHD with comorbid depression or when stimulants are not tolerated. Moderate effectiveness for ADHD symptoms. Does not exacerbate anxiety.</p>
+    <div class="med-grid">
+      <div class="med-stat"><div class="med-stat-label">EVIDENCE</div><div class="med-stat-val" style="color:var(--orange);">Grade C</div></div>
+      <div class="med-stat"><div class="med-stat-label">ONSET (FULL)</div><div class="med-stat-val">2-4 weeks</div></div>
+      <div class="med-stat"><div class="med-stat-label">BEST FOR</div><div class="med-stat-val">ADHD with depression comorbidity</div></div>
+      <div class="med-stat"><div class="med-stat-label">COMMON SIDE EFFECTS</div><div class="med-stat-val">Insomnia, dry mouth, headache, seizure risk at high doses</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- TREATMENTS -->
+<div id="treatments" class="card">
+  <div class="sh"><div class="stw"><div class="sd" style="background:var(--purple)"></div><div><div class="st2">Non-Medication Treatments</div><div class="ss">EVIDENCE-GRADED TREATMENT REFERENCE</div></div></div><span class="stag tp">EVIDENCE</span></div>
+  <p style="font-size:12px;color:var(--muted);margin-bottom:14px;">Evidence grades: <span class="ev ev-a">A</span> Strong · <span class="ev ev-b">B</span> Moderate · <span class="ev ev-c">C</span> Emerging · <span class="ev ev-d">D</span> Limited</p>
+  <table>
+    <tr><th>Treatment</th><th>Evidence</th><th>Notes</th></tr>
+    <tr><td><strong>ADHD Coaching</strong></td><td><span class="ev ev-a">A</span></td><td>Goal-setting, accountability, executive function scaffolding. Most effective non-pharmacological intervention for adults. Addresses real-world functioning rather than symptom reduction alone.</td></tr>
+    <tr><td><strong>Cognitive Behavioural Therapy (CBT)</strong></td><td><span class="ev ev-a">A</span></td><td>ADHD-specific CBT addresses negative self-beliefs, procrastination, organisation, and emotional regulation. Significantly more effective than general CBT in ADHD populations.</td></tr>
+    <tr><td><strong>Aerobic Exercise</strong></td><td><span class="ev ev-a">A</span></td><td>Consistently shown to increase dopamine and norepinephrine acutely. 20-30 minutes of moderate-intensity cardio can improve focus for 2-4 hours. One of the most accessible, evidence-backed interventions.</td></tr>
+    <tr><td><strong>Behavioural Parent Training</strong></td><td><span class="ev ev-a">A</span></td><td>For children with ADHD. Parents learn evidence-based strategies for behaviour management, consistency, and positive reinforcement. First-line non-medication intervention for children under 6.</td></tr>
+    <tr><td><strong>Mindfulness-Based Interventions</strong></td><td><span class="ev ev-b">B</span></td><td>Regular mindfulness practice improves attention regulation, emotional reactivity, and self-awareness in ADHD adults. Less effective as sole treatment but valuable adjunct.</td></tr>
+    <tr><td><strong>Sleep Optimisation</strong></td><td><span class="ev ev-b">B</span></td><td>ADHD and sleep disorders are deeply linked (circadian rhythm differences, delayed sleep phase common). Consistent sleep dramatically improves ADHD symptom severity. Often undertreated.</td></tr>
+    <tr><td><strong>Dietary Interventions</strong></td><td><span class="ev ev-b">B</span></td><td>Omega-3 supplementation (EPA/DHA) shows modest but consistent benefit. Reduced artificial additives/food colouring may help in children. Mediterranean diet associated with lower symptom severity.</td></tr>
+    <tr><td><strong>Neurofeedback (EEG Biofeedback)</strong></td><td><span class="ev ev-c">C</span></td><td>Training brain wave patterns associated with attention. Emerging evidence, mixed results in RCTs. Time-intensive and expensive but some patients report significant benefit.</td></tr>
+    <tr><td><strong>Working Memory Training</strong></td><td><span class="ev ev-c">C</span></td><td>Programs like Cogmed show short-term working memory gains but transfer to real-world ADHD outcomes is inconsistent in literature.</td></tr>
+    <tr><td><strong>Caffeine</strong></td><td><span class="ev ev-d">D</span></td><td>Adenosine antagonist with mild dopaminergic effects. Many adults with undiagnosed ADHD self-medicate with caffeine. Not a substitute for treatment but does have measurable, if modest, attentional effects.</td></tr>
+  </table>
+</div>
+
+<!-- RESEARCH -->
+<div id="research" class="card">
+  <div class="sh"><div class="stw"><div class="sd" style="background:var(--cyan)"></div><div><div class="st2">Live Research Feed</div><div class="ss">PUBMED · UPDATED IN REAL TIME</div></div></div><span class="stag ti">LIVE</span></div>
+  <div id="pubfeed"><div class="load">Loading latest ADHD research from PubMed...</div></div>
+  <p style="font-size:11px;color:var(--muted);margin-top:8px;">Live feed from PubMed. <a href="https://pubmed.ncbi.nlm.nih.gov/?term=ADHD+attention+deficit+hyperactivity+disorder&sort=date" target="_blank">Browse PubMed directly</a></p>
+</div>
+
+<!-- TRIALS -->
+<div id="trials" class="card">
+  <div class="sh"><div class="stw"><div class="sd" style="background:var(--green)"></div><div><div class="st2">Active Clinical Trials</div><div class="ss">RECRUITING NOW · GLOBAL</div></div></div><span class="stag tg">LIVE</span></div>
+  <div id="tfeed"><div class="load">Loading recruiting trials from ClinicalTrials.gov...</div></div>
+  <p style="font-size:11px;color:var(--muted);margin-top:8px;">Verify eligibility at <a href="https://clinicaltrials.gov/search?cond=ADHD+attention+deficit&filter.overallStatus=RECRUITING" target="_blank">ClinicalTrials.gov</a></p>
+</div>
+
+<!-- LIVING -->
+<div id="living" class="card">
+  <div class="sh"><div class="stw"><div class="sd" style="background:var(--orange)"></div><div><div class="st2">Living with ADHD</div><div class="ss">PRACTICAL STRATEGIES</div></div></div><span class="stag ts">GUIDE</span></div>
+  <div class="grid2">
+    <div class="mechbox"><h4 style="color:var(--accent)">Time Management</h4>
+      <p>Use external timers constantly. Time blindness is neurological, not laziness. Body doubling (working near others) dramatically improves task initiation. The Pomodoro technique (25 min work, 5 min break) works well for many ADHD brains.</p></div>
+    <div class="mechbox"><h4 style="color:var(--blue)">Organisation Systems</h4>
+      <p>External systems must replace internal working memory. Everything visible, nothing hidden. Use open shelving, see-through containers, whiteboards. If it is out of sight, it does not exist.</p></div>
+    <div class="mechbox"><h4 style="color:var(--cyan)">Task Initiation</h4>
+      <p>Reduce activation energy: lay everything out the night before, start with the smallest possible step ("just open the document"), use implementation intentions ("when X happens, I will do Y"). Deadlines and accountability are powerful ADHD activators.</p></div>
+    <div class="mechbox"><h4 style="color:var(--green)">Emotional Regulation</h4>
+      <p>Rejection Sensitive Dysphoria (RSD) is common — perceived criticism triggers intense emotional pain. Name it when it happens. The HALT check (Hungry, Angry, Lonely, Tired) predicts dysregulation episodes. Physical exercise before difficult interactions helps.</p></div>
+    <div class="mechbox"><h4 style="color:var(--orange)">Sleep and Routine</h4>
+      <p>ADHD brains have a natural delayed sleep phase. Work with it where possible. Consistent wake time (not just bedtime) anchors the circadian rhythm. Bright light in the morning advances sleep phase. Screens before bed worsen ADHD sleep significantly.</p></div>
+    <div class="mechbox"><h4 style="color:var(--pink)">Work and Study</h4>
+      <p>Request reasonable adjustments: extended time, written instructions, reduced distraction environment. ADHD is a protected disability in most jurisdictions. Know your rights. Playing background music or ambient noise can improve focus — the brain needs stimulation to function.</p></div>
+  </div>
+</div>
+
+<!-- SPECIALISTS -->
+<div id="specialists" class="card">
+  <div class="sh"><div class="stw"><div class="sd" style="background:var(--blue)"></div><div><div class="st2">Specialists and Organisations</div><div class="ss">WHERE TO GET HELP GLOBALLY</div></div></div><span class="stag" style="background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.2);color:var(--blue);">DIRECTORY</span></div>
+  <div class="dtitle">WHO DIAGNOSES AND TREATS ADHD</div>
+  <p>Psychiatrists are most commonly the primary diagnosing and prescribing clinicians for ADHD. Clinical psychologists can diagnose (but not prescribe). Specialist ADHD nurses, GPs with ADHD training, and neuropsychologists also assess. For children: paediatricians and CAMHS (UK) are common referral routes.</p>
+  <div class="dtitle" style="margin-top:14px;">PATIENT ORGANISATIONS</div>
+  <div class="org-grid">
+    <div class="org"><div class="org-name">CHADD (USA)</div><div class="org-desc">Children and Adults with ADHD. Largest ADHD organisation in the US. chadd.org</div></div>
+    <div class="org"><div class="org-name">ADDA (USA)</div><div class="org-desc">Attention Deficit Disorder Association. Focus on adults with ADHD. add.org</div></div>
+    <div class="org"><div class="org-name">ADHD UK</div><div class="org-desc">UK patient-led charity. Resources, peer support and advocacy. adhduk.co.uk</div></div>
+    <div class="org"><div class="org-name">ADDISS (UK)</div><div class="org-desc">National ADHD Information and Support Service. addiss.co.uk</div></div>
+    <div class="org"><div class="org-name">CADDRA (Canada)</div><div class="org-desc">Canadian ADHD Resource Alliance. Clinical guidelines and patient resources. caddra.ca</div></div>
+    <div class="org"><div class="org-name">ADHD Europe</div><div class="org-desc">European federation of ADHD patient groups. adhdeurope.eu</div></div>
+  </div>
+  <div class="dtitle" style="margin-top:16px;">FINDING A SPECIALIST</div>
+  <p>Ask your GP for a referral to a psychiatrist or ADHD specialist. In the UK, you have the right to choose your provider under the NHS Right to Choose scheme — this can significantly reduce wait times. Private assessment is available but typically costs £500-1500. Many patients find psychiatrists via ADHD communities and word of mouth.</p>
+</div>
+
+<!-- FAQ -->
+<div id="faq" class="card">
+  <div class="sh"><div class="stw"><div class="sd" style="background:var(--muted)"></div><div><div class="st2">Frequently Asked Questions</div><div class="ss">COMMON QUESTIONS ANSWERED</div></div></div></div>
+  <div class="fqi"><div class="fqq" onclick="tFaq(this)"><span>Is ADHD real or just an excuse?</span><span class="fqa">›</span></div><div class="fqb">ADHD is a well-established neurodevelopmental condition with decades of research behind it. MRI studies show measurable differences in brain structure and function. It has a heritability of approximately 74-80% (higher than type 2 diabetes). The American Academy of Pediatrics, WHO, NHS, and every major medical body recognise ADHD as a real condition. The "excuse" framing ignores the neurobiological reality.</div></div>
+  <div class="fqi"><div class="fqq" onclick="tFaq(this)"><span>Can adults have ADHD if they weren't diagnosed as children?</span><span class="fqa">›</span></div><div class="fqb">Yes, absolutely. Many adults are diagnosed for the first time in their 30s, 40s, or later. Childhood ADHD is frequently missed — particularly in girls, in children with high IQ (who compensate longer), and in those with inattentive presentation. Life demands in adulthood (career, family, finances) expose executive function limitations that were previously masked.</div></div>
+  <div class="fqi"><div class="fqq" onclick="tFaq(this)"><span>Are ADHD medications safe? Are they addictive?</span><span class="fqa">›</span></div><div class="fqb">ADHD stimulant medications are among the most studied drugs in psychiatry with a 60+ year safety record. When taken as prescribed, they do not cause addiction. Paradoxically, untreated ADHD is associated with higher rates of substance use disorder — effective treatment reduces this risk. Non-stimulant alternatives exist for those with contraindications or concerns.</div></div>
+  <div class="fqi"><div class="fqq" onclick="tFaq(this)"><span>Why can I focus on video games but not work?</span><span class="fqa">›</span></div><div class="fqb">This is not a contradiction — it is a perfect illustration of ADHD. The ADHD brain runs on dopamine. Video games are engineered to deliver constant dopamine: novelty, immediate feedback, challenge scaling, rewards. Work is rarely designed this way. The ADHD nervous system is interest-driven. Hyperfocus on engaging activities coexists with complete inability to sustain attention on unengaging ones.</div></div>
+  <div class="fqi"><div class="fqq" onclick="tFaq(this)"><span>Does ADHD affect women differently?</span><span class="fqa">›</span></div><div class="fqb">Yes, significantly. Women with ADHD are more likely to present with inattentive type, anxiety, emotional dysregulation, and perfectionism as a masking strategy. They are diagnosed on average 5 years later than men. Hormonal fluctuations (puberty, menstrual cycle, pregnancy, perimenopause) substantially affect ADHD symptom severity. Many women are misdiagnosed with anxiety or depression for years before receiving an ADHD diagnosis.</div></div>
+  <div class="fqi"><div class="fqq" onclick="tFaq(this)"><span>What is Rejection Sensitive Dysphoria (RSD)?</span><span class="fqa">›</span></div><div class="fqb">RSD is an intense, immediate emotional response to perceived or actual rejection, criticism, or failure. It is extremely common in ADHD (estimated 99% of adults with ADHD experience it to some degree). The emotional pain is instantaneous and can be overwhelming. It is not "oversensitivity" — it is a neurological feature of the ADHD dopaminergic system. Guanfacine and some antidepressants can reduce RSD severity.</div></div>
+  <div class="fqi"><div class="fqq" onclick="tFaq(this)"><span>Can diet and lifestyle replace medication?</span><span class="fqa">›</span></div><div class="fqb">For mild ADHD, lifestyle interventions (exercise, sleep, diet, coaching) may be sufficient. For moderate-to-severe ADHD, medication is typically necessary to normalise functioning. The evidence strongly supports medication as the most effective single intervention for ADHD. Lifestyle improvements dramatically amplify medication effectiveness and improve overall wellbeing, but are rarely sufficient alone in clinical ADHD.</div></div>
+  <div class="fqi"><div class="fqq" onclick="tFaq(this)"><span>How do I get diagnosed?</span><span class="fqa">›</span></div><div class="fqb">See your GP and request a referral to a psychiatrist for ADHD assessment. In the UK, use NHS Right to Choose to select a provider and reduce waiting times. Bring documentation of symptoms across multiple settings and ideally from childhood (school reports, parent accounts). If waiting lists are prohibitive, private assessment is available through ADHD specialists. Use the ASRS screener above and share results with your doctor.</div></div>
+</div>
+
+<!-- GLOSSARY -->
+<div class="card">
+  <div class="sh"><div class="stw"><div class="sd" style="background:var(--muted)"></div><div><div class="st2">Glossary</div><div class="ss">KEY TERMS EXPLAINED</div></div></div></div>
+  <div class="glc"><div class="glt">Executive Function</div><div class="gld">The brain's management system: working memory, planning, impulse control, cognitive flexibility, task initiation, and emotional regulation.</div></div>
+  <div class="glc"><div class="glt">Dopamine</div><div class="gld">Neurotransmitter central to motivation, reward, and attention. Deficient signalling in the ADHD prefrontal cortex.</div></div>
+  <div class="glc"><div class="glt">RSD</div><div class="gld">Rejection Sensitive Dysphoria. Intense emotional response to perceived rejection or criticism. Extremely common in ADHD.</div></div>
+  <div class="glc"><div class="glt">Time Blindness</div><div class="gld">Difficulty perceiving the passage of time. ADHD brains experience "now" and "not now" rather than a linear timeline.</div></div>
+  <div class="glc"><div class="glt">Hyperfocus</div><div class="gld">The ability to become completely absorbed in a highly interesting task, often for hours. Coexists with attention deficits on other tasks.</div></div>
+  <div class="glc"><div class="glt">Working Memory</div><div class="gld">The ability to hold and manipulate information in mind for short periods. Consistently impaired in ADHD.</div></div>
+  <div class="glc"><div class="glt">ASRS</div><div class="gld">Adult ADHD Self-Report Scale. WHO-developed screening tool for adult ADHD symptoms.</div></div>
+  <div class="glc"><div class="glt">Default Mode Network</div><div class="gld">Brain network active during mind-wandering. Fails to deactivate appropriately during tasks in ADHD.</div></div>
+  <div class="glc"><div class="glt">Masking</div><div class="gld">Consciously or unconsciously suppressing ADHD symptoms to appear neurotypical. Common in women, leads to burnout.</div></div>
+  <div class="glc"><div class="glt">Stimulant Medication</div><div class="gld">Medications (methylphenidate, amphetamine) that increase dopamine and norepinephrine availability. First-line ADHD treatment.</div></div>
+  <div class="glc"><div class="glt">Body Doubling</div><div class="gld">The effect of working in the presence of another person, which improves focus and task completion in ADHD.</div></div>
+  <div class="glc"><div class="glt">ASD</div><div class="gld">Autism Spectrum Disorder. Significant overlap with ADHD, estimated 20-50% comorbidity.</div></div>
+  <div class="glc"><div class="glt">ADHD Tax</div><div class="gld">The cumulative financial, emotional and time cost of ADHD: late fees, lost items, missed appointments, failed projects.</div></div>
+  <div class="glc"><div class="glt">Neurotypical</div><div class="gld">A person whose neurological development follows the typical pattern. Used in contrast to neurodivergent.</div></div>
+  <div class="glc"><div class="glt">Comorbidity</div><div class="gld">A condition occurring alongside another. ADHD has high comorbidity with anxiety, depression, ASD, and learning differences.</div></div>
+</div>
+
+</div><!-- .left -->
+
+<!-- RIGHT SIDEBAR -->
+<div class="right">
+  <div class="card-sm">
+    <div class="sbr"><span class="sbl">PRESENTATION TYPE</span></div>
+    <div style="margin-top:8px;">
+      <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:3px;"><span>Combined (ADHD-C)</span><span style="color:var(--accent);font-weight:700;">~50%</span></div>
+      <div style="height:4px;background:var(--bg3);border-radius:2px;margin-bottom:8px;"><div style="width:50%;height:100%;background:var(--accent);border-radius:2px;"></div></div>
+      <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:3px;"><span>Inattentive (ADHD-I)</span><span style="color:var(--blue);font-weight:700;">~35%</span></div>
+      <div style="height:4px;background:var(--bg3);border-radius:2px;margin-bottom:8px;"><div style="width:35%;height:100%;background:var(--blue);border-radius:2px;"></div></div>
+      <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:3px;"><span>Hyperactive-Impulsive</span><span style="color:var(--cyan);font-weight:700;">~15%</span></div>
+      <div style="height:4px;background:var(--bg3);border-radius:2px;"><div style="width:15%;height:100%;background:var(--cyan);border-radius:2px;"></div></div>
+    </div>
+  </div>
+
+  <div class="card-sm">
+    <div class="sbr"><span class="sbl">QUICK LINKS</span></div>
+    <div style="display:flex;flex-direction:column;gap:6px;margin-top:8px;">
+      <a href="https://www.psychiatry.org/patients-families/adhd" target="_blank" style="font-size:11px;color:var(--accent);">APA ADHD resource</a>
+      <a href="https://www.nice.org.uk/guidance/ng87" target="_blank" style="font-size:11px;color:var(--accent);">NICE ADHD guidelines</a>
+      <a href="https://clinicaltrials.gov/search?cond=ADHD&filter.overallStatus=RECRUITING" target="_blank" style="font-size:11px;color:var(--accent);">Open recruiting trials</a>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/?term=ADHD&sort=date" target="_blank" style="font-size:11px;color:var(--accent);">PubMed: ADHD</a>
+      <a href="https://www.cdc.gov/adhd/" target="_blank" style="font-size:11px;color:var(--accent);">CDC ADHD info</a>
+    </div>
+  </div>
+
+  <div class="card-sm">
+    <div class="sbr"><span class="sbl">KEY FACTS</span></div>
+    <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px;">
+      <div><div style="font-size:11px;font-weight:600;">Heritability: 74-80%</div><div style="font-size:10px;color:var(--muted);">One of the most heritable psychiatric conditions</div></div>
+      <div style="border-top:1px solid var(--border);padding-top:8px;"><div style="font-size:11px;font-weight:600;">Brain matures 3-5 yrs later</div><div style="font-size:10px;color:var(--muted);">Prefrontal cortex development delayed vs neurotypical</div></div>
+      <div style="border-top:1px solid var(--border);padding-top:8px;"><div style="font-size:11px;font-weight:600;">60+ year medication safety record</div><div style="font-size:10px;color:var(--muted);">Stimulants studied longer than most drug classes</div></div>
+    </div>
+  </div>
+
+  <div id="community" class="card-sm" style="text-align:center;background:linear-gradient(135deg,rgba(139,92,246,0.06),rgba(59,130,246,0.06));border-color:rgba(139,92,246,0.15);">
+    <div style="font-size:28px;margin-bottom:8px;">🤝</div>
+    <h3 style="font-size:14px;margin-bottom:6px;">Join the Community</h3>
+    <p style="font-size:11px;margin-bottom:14px;">Connect with others navigating ADHD worldwide.</p>
+    <a href="https://t.me/Recalibrate_HealthPortals" class="btn btn-p" target="_blank" style="width:100%;justify-content:center;">💬 Join Telegram</a>
+    <a href="https://recalibratepain.com" target="_blank" class="btn btn-g" style="width:100%;justify-content:center;margin-top:8px;">🏥 Recalibrate</a>
+    <p style="font-size:11px;color:var(--muted);margin-top:14px;">Free forever. No ads. No data selling.</p>
+  </div>
+</div>
+
+</div><!-- .main -->
+
+<footer style="background:var(--bg2);border-top:1px solid var(--border);padding:32px;text-align:center;">
+  <p style="font-size:11px;color:var(--muted);margin-bottom:4px;">ADHD Portal · The most comprehensive free resource for ADHD patients worldwide</p>
+  <p style="font-size:11px;color:var(--muted);margin-bottom:8px;">Not medical advice · Educational purposes only · Always consult a qualified healthcare professional</p>
+  <p style="font-size:11px;color:var(--muted);">Powered by <a href="https://recalibratepain.com" style="color:var(--accent);">Recalibrate</a> · <a href="https://buymeacoffee.com/TristanSiokos" style="color:var(--accent);">Support this portal</a> · <a href="https://t.me/Recalibrate_HealthPortals" style="color:var(--accent);">Join the community</a></p>
+</footer>
+
+<script>
+const scAnswers = {};
+function selSc(el,q,val){
+  el.closest('.screen-opts').querySelectorAll('.screen-opt').forEach(o=>o.classList.remove('sel'));
+  el.classList.add('sel');
+  scAnswers[q]=val;
+}
+function calcScreen(){
+  const answered=Object.keys(scAnswers).length;
+  if(answered<8){alert('Please answer at least 8 questions.');return;}
+  const total=Object.values(scAnswers).reduce((a,b)=>a+b,0);
+  const max=answered*4;
+  const pct=Math.round((total/max)*100);
+  let level,color,advice;
+  if(pct>=60){
+    level='Significant ADHD indicators present';color='var(--red)';
+    advice='Your responses suggest significant ADHD symptoms consistent with a clinical assessment. This does not confirm a diagnosis, but warrants professional evaluation. Share these results with your GP or psychiatrist and request an ADHD assessment.';
+  } else if(pct>=35){
+    level='Moderate ADHD indicators';color='var(--orange)';
+    advice='Your responses suggest moderate ADHD features. Consider tracking your symptoms over two weeks and discussing with your doctor. ADHD symptoms exist on a spectrum and professional evaluation will clarify whether they meet diagnostic criteria.';
+  } else {
+    level='Low ADHD indicators';color='var(--green)';
+    advice='Your responses suggest ADHD is less likely, though this tool is not definitive. If symptoms are causing difficulty in your daily life, a professional assessment remains worthwhile.';
+  }
+  const res=document.getElementById('screen-result');
+  res.style.display='block';
+  res.innerHTML=`<div style="font-size:9px;letter-spacing:2px;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-bottom:8px;">SCREENING RESULT</div>
+    <div style="font-size:20px;font-weight:800;color:${color};margin-bottom:6px;">${level}</div>
+    <div style="font-size:11px;color:rgba(255,255,255,0.55);">Score: ${total}/${max} (${pct}%)</div>
+    <p style="font-size:12px;margin-top:10px;color:rgba(255,255,255,0.65);">${advice}</p>
+    <p style="font-size:11px;color:var(--muted);margin-top:8px;">Screening tool only, not a clinical diagnosis. Based on ASRS-v1.1. Always consult a qualified healthcare professional.</p>`;
+  res.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+function tFaq(el){
+  const body=el.nextElementSibling;
+  const arrow=el.querySelector('.fqa');
+  const open=body.style.display==='block';
+  body.style.display=open?'none':'block';
+  arrow.style.transform=open?'':'rotate(90deg)';
+}
+
+async function loadPub(){
+  const el=document.getElementById('pubfeed');
+  try{
+    const sr=await fetch('https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=ADHD+attention+deficit+hyperactivity+disorder&sort=date&retmax=8&retmode=json');
+    const sd=await sr.json();
+    const ids=(sd.esearchresult?.idlist||[]).join(',');
+    if(!ids)throw new Error('no ids');
+    const sumR=await fetch('https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id='+ids+'&retmode=json');
+    const sum=await sumR.json();
+    const results=sum.result||{};
+    let html='';
+    (results.uids||[]).forEach(id=>{
+      const p=results[id]||{};
+      const authors=(p.authors||[]).slice(0,2).map(a=>a.name).join(', ')+((p.authors||[]).length>2?' et al.':'');
+      html+='<div class="pub-item"><div class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/'+id+'/" target="_blank">'+(p.title||'Untitled').replace(/<[^>]*>/g,'')+'</a></div><div class="pub-meta">'+(p.fulljournalname||p.source?'<span style="color:var(--accent);font-size:9px;font-weight:600;">'+(p.fulljournalname||p.source)+'</span> · ':'')+( p.pubdate||'')+(authors?' · '+authors:'')+'</div></div>';
+    });
+    el.innerHTML=html||'<div class="load">No results found.</div>';
+  }catch(e){
+    el.innerHTML='<div class="load">Could not load live feed. <a href="https://pubmed.ncbi.nlm.nih.gov/?term=ADHD&sort=date" target="_blank">Browse PubMed directly</a></div>';
+  }
+}
+
+async function loadTrials(){
+  const el=document.getElementById('tfeed');
+  try{
+    const url='https://clinicaltrials.gov/api/v2/studies?query.cond=attention+deficit+hyperactivity+disorder+ADHD&filter.overallStatus=RECRUITING&pageSize=6&fields=NCTId,BriefTitle,OverallStatus,Phase,LocationCountry';
+    const r=await fetch(url);
+    const d=await r.json();
+    const studies=d.studies||[];
+    if(!studies.length)throw new Error('none');
+    let html='';
+    studies.forEach(s=>{
+      const p=s.protocolSection||{};
+      const id2=p.identificationModule||{};
+      const design=p.designModule||{};
+      const contacts=p.contactsLocationsModule||{};
+      const title=id2.briefTitle||'Untitled';
+      const nctId=id2.nctId||'';
+      const phase=(design.phases||['N/A']).join(', ');
+      const locs=contacts.locations||[];
+      const countries=[...new Set(locs.map(l=>l.country).filter(Boolean))].slice(0,3).join(', ')||'Various';
+      html+='<div class="tri"><div class="trih"><div class="trit"><a href="https://clinicaltrials.gov/study/'+nctId+'" target="_blank">'+title+'</a></div><span class="trs rec">RECRUITING</span></div><div class="trim"><span><strong>Phase:</strong> '+phase+'</span><span><strong>Countries:</strong> '+countries+'</span><span><a href="https://clinicaltrials.gov/study/'+nctId+'" target="_blank">'+nctId+' →</a></span></div></div>';
+    });
+    el.innerHTML=html;
+  }catch(e){
+    el.innerHTML='<div class="load">Could not load live trials. <a href="https://clinicaltrials.gov/search?cond=ADHD&filter.overallStatus=RECRUITING" target="_blank">Browse ClinicalTrials.gov</a></div>';
+  }
+}
+
+loadPub();
+loadTrials();
+</script>
+</body>
+</html>
