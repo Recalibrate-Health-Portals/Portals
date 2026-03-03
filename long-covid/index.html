@@ -129,7 +129,35 @@ tr:last-child td{border-bottom:none;}
 .liv h4{font-size:12px;font-weight:700;margin-bottom:6px;color:var(--orange);}
 .liv ul{padding-left:14px;}
 .liv li{font-size:11px;color:var(--muted);margin-bottom:3px;line-height:1.5;}
-@media(max-width:800px){.main{grid-template-columns:1fr;}.right{position:static;}.hg{grid-template-columns:1fr;}.grid2{grid-template-columns:1fr;}.living-grid{grid-template-columns:1fr;}nav .nav-links{display:none;}.si{grid-template-columns:repeat(2,1fr);}.st{border-bottom:1px solid var(--border);}}
+@media(max-width:800px){
+  .main{grid-template-columns:1fr;}
+  .right{position:static;}
+  .hg{grid-template-columns:1fr;}
+  .grid2{grid-template-columns:1fr;}
+  .living-grid{grid-template-columns:1fr;}
+  nav .nav-links{display:none;}
+  .si{grid-template-columns:repeat(2,1fr);}
+  .st{border-bottom:1px solid var(--border);}
+  .hero{padding:36px 16px 0;}
+  .main{padding:20px 16px 80px;}
+  .card{padding:16px;}
+  .card-sm{padding:12px;}
+  .dw{padding:12px 16px 0;}
+  .hbtns{flex-direction:column;}
+  .btn{width:100%;justify-content:center;}
+  nav{padding:0 14px;}
+  .trih{flex-direction:column;gap:4px;}
+  .trim{flex-direction:column;gap:2px;}
+  table{font-size:11px;}
+  th,td{padding:7px 6px;}
+  .pem-opts{flex-direction:column;}
+  .pem-opt{text-align:center;}
+  h1{font-size:clamp(24px,7vw,38px);}
+}
+@media(max-width:400px){
+  .si{grid-template-columns:1fr 1fr;}
+  .sn{font-size:16px;}
+}
 </style>
 </head>
 <body>
@@ -370,7 +398,7 @@ tr:last-child td{border-bottom:none;}
   <div class="sh"><div class="stw"><div class="sd" style="background:var(--muted)"></div><div><div class="st2">Glossary</div><div class="ss">KEY TERMS EXPLAINED</div></div></div></div>
   <div class="glc"><div class="glt">PEM</div><div class="gld">Post-Exertional Malaise. Worsening of symptoms following physical, cognitive, or emotional exertion. The hallmark of ME/CFS. Often delayed 12-48 hours.</div></div>
   <div class="glc"><div class="glt">POTS</div><div class="gld">Postural Orthostatic Tachycardia Syndrome. Heart rate rises abnormally on standing. Causes dizziness, palpitations, brain fog.</div></div>
-  <div class="glc"><div class="glt">MCAS</div><div class="glt">Mast Cell Activation Syndrome. Abnormal mast cell degranulation causing histamine release and widespread symptoms.</div></div>
+  <div class="glc"><div class="glt">MCAS</div><div class="gld">Mast Cell Activation Syndrome. Abnormal mast cell degranulation causing histamine release and widespread symptoms.</div></div>
   <div class="glc"><div class="glt">Brain Fog</div><div class="gld">Cognitive impairment including poor concentration, memory problems, word-finding difficulties, and mental fatigue.</div></div>
   <div class="glc"><div class="glt">Dysautonomia</div><div class="gld">Dysfunction of the autonomic nervous system, which controls heart rate, blood pressure, breathing, and digestion.</div></div>
   <div class="glc"><div class="glt">Viral Persistence</div><div class="gld">The continued presence of SARS-CoV-2 or its proteins in tissues after the acute infection has resolved.</div></div>
@@ -504,25 +532,23 @@ function tFaq(el) {
 async function loadPub() {
   const el = document.getElementById('pubfeed');
   try {
-    const url = 'https://pubmed.ncbi.nlm.nih.gov/rss/search/?term=long+covid+OR+post-acute+sequelae+SARS-CoV-2+ME-CFS&limit=8&format=abstract';
-    const proxy = 'https://api.allorigins.win/get?url=' + encodeURIComponent(url);
-    const r = await fetch(proxy);
-    const d = await r.json();
-    const parser = new DOMParser();
-    const xml = parser.parseFromString(d.contents, 'text/xml');
-    const items = xml.querySelectorAll('item');
-    if (!items.length) throw new Error('none');
+    const sr = await fetch('https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=long+covid+OR+post-acute+sequelae+SARS-CoV-2+OR+ME-CFS+chronic+fatigue&sort=date&retmax=8&retmode=json');
+    const sd = await sr.json();
+    const ids = (sd.esearchresult?.idlist || []).join(',');
+    if (!ids) throw new Error('no ids');
+    const sumR = await fetch('https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=' + ids + '&retmode=json');
+    const sum = await sumR.json();
+    const results = sum.result || {};
     let html = '';
-    items.forEach(item => {
-      const title = item.querySelector('title')?.textContent || '';
-      const link = item.querySelector('link')?.textContent || '#';
-      const date = item.querySelector('pubDate')?.textContent || '';
-      const desc = item.querySelector('description')?.textContent?.replace(/<[^>]+>/g,'').slice(0,160) || '';
-      html += `<div class="pub-item"><div class="pub-title"><a href="${link}" target="_blank">${title}</a></div><div class="pub-meta">${new Date(date).toLocaleDateString('en-GB',{month:'short',year:'numeric'})} · ${desc}...</div></div>`;
+    (results.uids || []).forEach(id => {
+      const p = results[id] || {};
+      const authors = (p.authors || []).slice(0,2).map(a => a.name).join(', ') + ((p.authors||[]).length > 2 ? ' et al.' : '');
+      const types = (p.pubtype || []).filter(t => t !== 'Journal Article');
+      html += '<div class="pub-item"><div class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/' + id + '/" target="_blank">' + (p.title || 'Untitled').replace(/<[^>]*>/g,'') + '</a></div><div class="pub-meta">' + (p.fulljournalname || p.source ? '<span style="color:var(--orange);font-size:9px;font-weight:600;">' + (p.fulljournalname || p.source) + '</span> · ' : '') + (p.pubdate || '') + (authors ? ' · ' + authors : '') + '</div></div>';
     });
-    el.innerHTML = html;
+    el.innerHTML = html || '<div class="load">No results found.</div>';
   } catch(e) {
-    el.innerHTML = '<div class="load">Could not load live feed. <a href="https://pubmed.ncbi.nlm.nih.gov/?term=long+covid+OR+ME-CFS" target="_blank">Browse PubMed directly</a></div>';
+    el.innerHTML = '<div class="load">Could not load live feed. <a href="https://pubmed.ncbi.nlm.nih.gov/?term=long+covid+OR+ME-CFS&sort=date" target="_blank">Browse PubMed directly</a></div>';
   }
 }
 
