@@ -17,7 +17,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#07070e;--bg2:#0e0e1a;--bg3:#151524;--border:rgba(255,255,255,0.06);--text:#dde3f0;--muted:rgba(255,255,255,0.38);--cyan:#06b6d4;--purple:#8b5cf6;--green:#10b981;--orange:#f59e0b;--red:#ef4444;--blue:#3b82f6;--pink:#ec4899;--accent:#8b5cf6;}
-*{margin:0;padding:0;box-sizing:border-box;word-break:break-word;overflow-wrap:break-word;}
+*{margin:0;padding:0;box-sizing:border-box;word-break:normal;overflow-wrap:anywhere;}
 html{scroll-behavior:smooth;overflow-x:hidden;max-width:100%;}
 body{overflow-x:hidden;max-width:100%;background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;font-size:14px;}
 a{color:var(--accent);text-decoration:none;}a:hover{text-decoration:underline;}
@@ -34,7 +34,7 @@ nav{background:rgba(7,7,14,0.97);backdrop-filter:blur(24px);border-bottom:1px so
 .hero{padding:56px 24px 0;max-width:1140px;margin:0 auto;overflow-x:hidden;}
 .hg{display:grid;grid-template-columns:1fr 220px;gap:32px;align-items:start;margin-bottom:32px;}
 .hbadge{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:20px;background:rgba(139,92,246,0.08);border:1px solid rgba(139,92,246,0.18);font-size:10px;color:var(--accent);font-weight:600;letter-spacing:1.5px;margin-bottom:14px;}
-h1{font-size:clamp(26px,4vw,46px);font-weight:800;line-height:1.1;margin-bottom:14px;}
+h1{font-size:clamp(26px,4vw,46px);font-weight:800;line-height:1.1;margin-bottom:14px;word-break:normal;}
 .hl{background:linear-gradient(135deg,var(--accent),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
 .hd{font-size:14px;color:var(--muted);max-width:520px;line-height:1.75;}
 .hbtns{display:flex;gap:8px;margin-top:20px;flex-wrap:wrap;}
@@ -73,8 +73,8 @@ p{font-size:13px;color:rgba(255,255,255,0.6);line-height:1.75;margin-bottom:10px
 p:last-child{margin-bottom:0;}
 .dtitle{font-size:9px;letter-spacing:2px;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-bottom:10px;}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-.mechbox{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px;}
-.mechbox h4{font-size:12px;font-weight:700;margin-bottom:5px;}
+.mechbox{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px;word-break:normal;overflow-wrap:anywhere;}
+.mechbox h4{font-size:12px;font-weight:700;margin-bottom:5px;word-break:normal;overflow-wrap:anywhere;}
 .mechbox p{font-size:11px;margin:0;}
 table{width:100%;border-collapse:collapse;font-size:12px;}
 th{text-align:left;padding:8px 10px;font-size:9px;letter-spacing:1.5px;color:var(--muted);border-bottom:1px solid var(--border);font-family:'JetBrains Mono',monospace;}
@@ -232,11 +232,11 @@ tr:last-child td{border-bottom:none;}
   <div class="sh"><div class="stw"><div class="sd" style="background:var(--accent)"></div><div><div class="st2">Condition Overview</div><div class="ss">WHAT IS ADHD</div></div></div><span class="stag ts">CLINICAL</span></div>
   <div class="dtitle">DEFINITION</div>
   <p>Attention Deficit Hyperactivity Disorder (ADHD) is a neurodevelopmental condition characterised by persistent patterns of inattention, hyperactivity, and impulsivity that interfere with functioning and development. It is one of the most common neurodevelopmental conditions, affecting both children and adults across all cultures and demographics.</p>
-  <p>ADHD is not a deficit of attention — it is a deficit of attention regulation. People with ADHD can hyperfocus intensely on things that interest them, yet struggle profoundly with tasks they find unstimulating. This is a neurobiological difference, not a character flaw or lack of effort.</p>
+  <p>ADHD is not a deficit of attention , it is a deficit of attention regulation. People with ADHD can hyperfocus intensely on things that interest them, yet struggle profoundly with tasks they find unstimulating. This is a neurobiological difference, not a character flaw or lack of effort.</p>
   <div class="dtitle" style="margin-top:16px;">THREE PRESENTATIONS</div>
   <div class="grid2">
     <div class="mechbox"><h4 style="color:var(--accent)">Inattentive (ADHD-I)</h4><p>Difficulty sustaining attention, easily distracted, forgetful, loses things, avoids tasks requiring sustained mental effort. Often missed, particularly in girls and women.</p></div>
-    <div class="mechbox"><h4 style="color:var(--blue)">Hyperactive-Impulsive (ADHD-HI)</h4><p>Restlessness, fidgeting, talking excessively, interrupting, difficulty waiting. More visible — historically over-diagnosed in boys.</p></div>
+    <div class="mechbox"><h4 style="color:var(--blue)">Hyperactive-Impulsive (ADHD-HI)</h4><p>Restlessness, fidgeting, talking excessively, interrupting, difficulty waiting. More visible, historically over-diagnosed in boys.</p></div>
     <div class="mechbox" style="grid-column:span 2;"><h4 style="color:var(--cyan)">Combined (ADHD-C)</h4><p>Both inattentive and hyperactive-impulsive symptoms present. Most common presentation in clinical populations.</p></div>
   </div>
   <div class="dtitle" style="margin-top:16px;">KEY SYMPTOMS</div>
@@ -246,7 +246,7 @@ tr:last-child td{border-bottom:none;}
   <div class="dtitle" style="margin-top:16px;">ADHD IN ADULTS</div>
   <p>ADHD was historically considered a childhood condition, but research confirms that symptoms persist into adulthood in approximately 60-70% of cases. Adult ADHD often presents differently: hyperactivity may internalise as mental restlessness, while executive dysfunction, emotional dysregulation, and time blindness become the dominant challenges. Many adults are diagnosed only after their child receives a diagnosis.</p>
   <div class="dtitle" style="margin-top:16px;">GENDER DIFFERENCES</div>
-  <p>ADHD is significantly under-diagnosed in women and girls. The inattentive presentation is more common in females, is less disruptive behaviourally, and is frequently misattributed to anxiety or depression. Women with ADHD face higher rates of burnout, internalised shame, and delayed diagnosis — often not identified until their 30s or 40s.</p>
+  <p>ADHD is significantly under-diagnosed in women and girls. The inattentive presentation is more common in females, is less disruptive behaviourally, and is frequently misattributed to anxiety or depression. Women with ADHD face higher rates of burnout, internalised shame, and delayed diagnosis , often not identified until their 30s or 40s.</p>
   <div class="dtitle" style="margin-top:16px;">COMORBIDITIES</div>
   <p>ADHD rarely travels alone. Common co-occurring conditions include: anxiety disorders (50%), depression (30%), autism spectrum conditions (20-50%), sleep disorders, learning differences (dyslexia, dyscalculia), substance use disorder (elevated risk), oppositional defiant disorder (in children), and Central Sensitisation Syndrome (chronic pain overlap).</p>
 </div>
@@ -254,19 +254,19 @@ tr:last-child td{border-bottom:none;}
 <!-- MECHANISM -->
 <div id="mechanism" class="card">
   <div class="sh"><div class="stw"><div class="sd" style="background:var(--blue)"></div><div><div class="st2">Neuroscience and Mechanism</div><div class="ss">WHAT IS HAPPENING IN THE BRAIN</div></div></div><span class="stag ti">SCIENCE</span></div>
-  <p>ADHD involves measurable differences in brain structure, function, and neurochemistry — particularly in the prefrontal cortex and its connections to reward and attentional networks.</p>
+  <p>ADHD involves measurable differences in brain structure, function, and neurochemistry , particularly in the prefrontal cortex and its connections to reward and attentional networks.</p>
   <div class="grid2">
     <div class="mechbox"><h4 style="color:var(--accent)">Dopamine Dysregulation</h4><p>Reduced dopamine signalling in the prefrontal cortex and striatum. Dopamine drives motivation, reward anticipation, and sustained attention. Low dopamine = low drive for non-stimulating tasks.</p></div>
-    <div class="mechbox"><h4 style="color:var(--blue)">Norepinephrine Deficiency</h4><p>Norepinephrine modulates prefrontal cortex function — affecting focus, working memory, and impulse control. Deficiency disrupts signal-to-noise ratio in attention networks.</p></div>
+    <div class="mechbox"><h4 style="color:var(--blue)">Norepinephrine Deficiency</h4><p>Norepinephrine modulates prefrontal cortex function , affecting focus, working memory, and impulse control. Deficiency disrupts signal-to-noise ratio in attention networks.</p></div>
     <div class="mechbox"><h4 style="color:var(--cyan)">Prefrontal Cortex Differences</h4><p>The PFC governs executive function: planning, impulse control, working memory, and emotional regulation. In ADHD, PFC activation is reduced during tasks requiring sustained effort.</p></div>
     <div class="mechbox"><h4 style="color:var(--purple)">Default Mode Network</h4><p>In neurotypical brains, the DMN (mind-wandering network) deactivates during tasks. In ADHD, the DMN fails to deactivate properly, causing intrusive thoughts and attention lapses.</p></div>
     <div class="mechbox"><h4 style="color:var(--green)">Delayed Cortical Maturation</h4><p>MRI studies show the ADHD brain matures approximately 3-5 years later than neurotypical brains. The prefrontal cortex is particularly affected.</p></div>
     <div class="mechbox"><h4 style="color:var(--orange)">Reward System Differences</h4><p>ADHD brains require higher stimulation to activate the reward pathway. This drives novelty-seeking, risk-taking, and hyperfocus on inherently interesting tasks.</p></div>
   </div>
   <div class="dtitle" style="margin-top:16px;">EXECUTIVE FUNCTION EXPLAINED</div>
-  <p>Executive functions are the brain's management system. ADHD impairs all six core domains: working memory (holding information in mind), cognitive flexibility (shifting between tasks), inhibition (stopping impulses), planning (sequencing steps), emotional regulation (modulating reactions), and task initiation (starting). These are not motivational failures — they are neurobiological impairments.</p>
+  <p>Executive functions are the brain's management system. ADHD impairs all six core domains: working memory (holding information in mind), cognitive flexibility (shifting between tasks), inhibition (stopping impulses), planning (sequencing steps), emotional regulation (modulating reactions), and task initiation (starting). These are not motivational failures , they are neurobiological impairments.</p>
   <div class="dtitle" style="margin-top:16px;">WHY INTEREST CHANGES EVERYTHING</div>
-  <p>The ADHD brain is driven by an interest-based nervous system rather than an importance-based one. Tasks that are novel, urgent, challenging, or interesting activate sufficient dopamine to enable focus. Tasks that are routine, repetitive, or externally imposed — regardless of importance — fail to generate enough dopamine for sustained engagement. This is why people with ADHD can spend hours on a hobby but cannot complete a 10-minute administrative task.</p>
+  <p>The ADHD brain is driven by an interest-based nervous system rather than an importance-based one. Tasks that are novel, urgent, challenging, or interesting activate sufficient dopamine to enable focus. Tasks that are routine, repetitive, or externally imposed , regardless of importance , fail to generate enough dopamine for sustained engagement. This is why people with ADHD can spend hours on a hobby but cannot complete a 10-minute administrative task.</p>
 </div>
 
 <!-- SCREENING -->
@@ -294,7 +294,7 @@ tr:last-child td{border-bottom:none;}
   <div class="sh"><div class="stw"><div class="sd" style="background:var(--cyan)"></div><div><div class="st2">Medication Guide</div><div class="ss">COMPREHENSIVE ADHD MEDICATION REFERENCE</div></div></div><span class="stag ti">REFERENCE</span></div>
   <p style="font-size:12px;color:var(--muted);margin-bottom:16px;">All medications require prescription and medical supervision. This guide is for educational purposes only. Effectiveness varies significantly between individuals.</p>
 
-  <div class="dtitle">STIMULANTS — FIRST LINE</div>
+  <div class="dtitle">STIMULANTS , FIRST LINE</div>
   <div class="med-card">
     <div class="med-name">Methylphenidate</div>
     <div class="med-class">STIMULANT · DOPAMINE / NOREPINEPHRINE REUPTAKE INHIBITOR</div>
@@ -319,7 +319,7 @@ tr:last-child td{border-bottom:none;}
     </div>
   </div>
 
-  <div class="dtitle" style="margin-top:16px;">NON-STIMULANTS — SECOND LINE</div>
+  <div class="dtitle" style="margin-top:16px;">NON-STIMULANTS , SECOND LINE</div>
   <div class="med-card">
     <div class="med-name">Atomoxetine (Strattera)</div>
     <div class="med-class">NON-STIMULANT · SELECTIVE NOREPINEPHRINE REUPTAKE INHIBITOR</div>
@@ -401,11 +401,11 @@ tr:last-child td{border-bottom:none;}
     <div class="mechbox"><h4 style="color:var(--cyan)">Task Initiation</h4>
       <p>Reduce activation energy: lay everything out the night before, start with the smallest possible step ("just open the document"), use implementation intentions ("when X happens, I will do Y"). Deadlines and accountability are powerful ADHD activators.</p></div>
     <div class="mechbox"><h4 style="color:var(--green)">Emotional Regulation</h4>
-      <p>Rejection Sensitive Dysphoria (RSD) is common — perceived criticism triggers intense emotional pain. Name it when it happens. The HALT check (Hungry, Angry, Lonely, Tired) predicts dysregulation episodes. Physical exercise before difficult interactions helps.</p></div>
+      <p>Rejection Sensitive Dysphoria (RSD) is common , perceived criticism triggers intense emotional pain. Name it when it happens. The HALT check (Hungry, Angry, Lonely, Tired) predicts dysregulation episodes. Physical exercise before difficult interactions helps.</p></div>
     <div class="mechbox"><h4 style="color:var(--orange)">Sleep and Routine</h4>
       <p>ADHD brains have a natural delayed sleep phase. Work with it where possible. Consistent wake time (not just bedtime) anchors the circadian rhythm. Bright light in the morning advances sleep phase. Screens before bed worsen ADHD sleep significantly.</p></div>
     <div class="mechbox"><h4 style="color:var(--pink)">Work and Study</h4>
-      <p>Request reasonable adjustments: extended time, written instructions, reduced distraction environment. ADHD is a protected disability in most jurisdictions. Know your rights. Playing background music or ambient noise can improve focus — the brain needs stimulation to function.</p></div>
+      <p>Request reasonable adjustments: extended time, written instructions, reduced distraction environment. ADHD is a protected disability in most jurisdictions. Know your rights. Playing background music or ambient noise can improve focus , the brain needs stimulation to function.</p></div>
   </div>
 </div>
 
@@ -424,18 +424,18 @@ tr:last-child td{border-bottom:none;}
     <div class="org"><div class="org-name">ADHD Europe</div><div class="org-desc">European federation of ADHD patient groups. adhdeurope.eu</div></div>
   </div>
   <div class="dtitle" style="margin-top:16px;">FINDING A SPECIALIST</div>
-  <p>Ask your GP for a referral to a psychiatrist or ADHD specialist. In the UK, you have the right to choose your provider under the NHS Right to Choose scheme — this can significantly reduce wait times. Private assessment is available but typically costs £500-1500. Many patients find psychiatrists via ADHD communities and word of mouth.</p>
+  <p>Ask your GP for a referral to a psychiatrist or ADHD specialist. In the UK, you have the right to choose your provider under the NHS Right to Choose scheme , this can significantly reduce wait times. Private assessment is available but typically costs £500-1500. Many patients find psychiatrists via ADHD communities and word of mouth.</p>
 </div>
 
 <!-- FAQ -->
 <div id="faq" class="card">
   <div class="sh"><div class="stw"><div class="sd" style="background:var(--muted)"></div><div><div class="st2">Frequently Asked Questions</div><div class="ss">COMMON QUESTIONS ANSWERED</div></div></div></div>
   <div class="fqi"><div class="fqq" onclick="tFaq(this)"><span>Is ADHD real or just an excuse?</span><span class="fqa">›</span></div><div class="fqb">ADHD is a well-established neurodevelopmental condition with decades of research behind it. MRI studies show measurable differences in brain structure and function. It has a heritability of approximately 74-80% (higher than type 2 diabetes). The American Academy of Pediatrics, WHO, NHS, and every major medical body recognise ADHD as a real condition. The "excuse" framing ignores the neurobiological reality.</div></div>
-  <div class="fqi"><div class="fqq" onclick="tFaq(this)"><span>Can adults have ADHD if they weren't diagnosed as children?</span><span class="fqa">›</span></div><div class="fqb">Yes, absolutely. Many adults are diagnosed for the first time in their 30s, 40s, or later. Childhood ADHD is frequently missed — particularly in girls, in children with high IQ (who compensate longer), and in those with inattentive presentation. Life demands in adulthood (career, family, finances) expose executive function limitations that were previously masked.</div></div>
-  <div class="fqi"><div class="fqq" onclick="tFaq(this)"><span>Are ADHD medications safe? Are they addictive?</span><span class="fqa">›</span></div><div class="fqb">ADHD stimulant medications are among the most studied drugs in psychiatry with a 60+ year safety record. When taken as prescribed, they do not cause addiction. Paradoxically, untreated ADHD is associated with higher rates of substance use disorder — effective treatment reduces this risk. Non-stimulant alternatives exist for those with contraindications or concerns.</div></div>
-  <div class="fqi"><div class="fqq" onclick="tFaq(this)"><span>Why can I focus on video games but not work?</span><span class="fqa">›</span></div><div class="fqb">This is not a contradiction — it is a perfect illustration of ADHD. The ADHD brain runs on dopamine. Video games are engineered to deliver constant dopamine: novelty, immediate feedback, challenge scaling, rewards. Work is rarely designed this way. The ADHD nervous system is interest-driven. Hyperfocus on engaging activities coexists with complete inability to sustain attention on unengaging ones.</div></div>
+  <div class="fqi"><div class="fqq" onclick="tFaq(this)"><span>Can adults have ADHD if they weren't diagnosed as children?</span><span class="fqa">›</span></div><div class="fqb">Yes, absolutely. Many adults are diagnosed for the first time in their 30s, 40s, or later. Childhood ADHD is frequently missed , particularly in girls, in children with high IQ (who compensate longer), and in those with inattentive presentation. Life demands in adulthood (career, family, finances) expose executive function limitations that were previously masked.</div></div>
+  <div class="fqi"><div class="fqq" onclick="tFaq(this)"><span>Are ADHD medications safe? Are they addictive?</span><span class="fqa">›</span></div><div class="fqb">ADHD stimulant medications are among the most studied drugs in psychiatry with a 60+ year safety record. When taken as prescribed, they do not cause addiction. Paradoxically, untreated ADHD is associated with higher rates of substance use disorder , effective treatment reduces this risk. Non-stimulant alternatives exist for those with contraindications or concerns.</div></div>
+  <div class="fqi"><div class="fqq" onclick="tFaq(this)"><span>Why can I focus on video games but not work?</span><span class="fqa">›</span></div><div class="fqb">This is not a contradiction , it is a perfect illustration of ADHD. The ADHD brain runs on dopamine. Video games are engineered to deliver constant dopamine: novelty, immediate feedback, challenge scaling, rewards. Work is rarely designed this way. The ADHD nervous system is interest-driven. Hyperfocus on engaging activities coexists with complete inability to sustain attention on unengaging ones.</div></div>
   <div class="fqi"><div class="fqq" onclick="tFaq(this)"><span>Does ADHD affect women differently?</span><span class="fqa">›</span></div><div class="fqb">Yes, significantly. Women with ADHD are more likely to present with inattentive type, anxiety, emotional dysregulation, and perfectionism as a masking strategy. They are diagnosed on average 5 years later than men. Hormonal fluctuations (puberty, menstrual cycle, pregnancy, perimenopause) substantially affect ADHD symptom severity. Many women are misdiagnosed with anxiety or depression for years before receiving an ADHD diagnosis.</div></div>
-  <div class="fqi"><div class="fqq" onclick="tFaq(this)"><span>What is Rejection Sensitive Dysphoria (RSD)?</span><span class="fqa">›</span></div><div class="fqb">RSD is an intense, immediate emotional response to perceived or actual rejection, criticism, or failure. It is extremely common in ADHD (estimated 99% of adults with ADHD experience it to some degree). The emotional pain is instantaneous and can be overwhelming. It is not "oversensitivity" — it is a neurological feature of the ADHD dopaminergic system. Guanfacine and some antidepressants can reduce RSD severity.</div></div>
+  <div class="fqi"><div class="fqq" onclick="tFaq(this)"><span>What is Rejection Sensitive Dysphoria (RSD)?</span><span class="fqa">›</span></div><div class="fqb">RSD is an intense, immediate emotional response to perceived or actual rejection, criticism, or failure. It is extremely common in ADHD (estimated 99% of adults with ADHD experience it to some degree). The emotional pain is instantaneous and can be overwhelming. It is not "oversensitivity" , it is a neurological feature of the ADHD dopaminergic system. Guanfacine and some antidepressants can reduce RSD severity.</div></div>
   <div class="fqi"><div class="fqq" onclick="tFaq(this)"><span>Can diet and lifestyle replace medication?</span><span class="fqa">›</span></div><div class="fqb">For mild ADHD, lifestyle interventions (exercise, sleep, diet, coaching) may be sufficient. For moderate-to-severe ADHD, medication is typically necessary to normalise functioning. The evidence strongly supports medication as the most effective single intervention for ADHD. Lifestyle improvements dramatically amplify medication effectiveness and improve overall wellbeing, but are rarely sufficient alone in clinical ADHD.</div></div>
   <div class="fqi"><div class="fqq" onclick="tFaq(this)"><span>How do I get diagnosed?</span><span class="fqa">›</span></div><div class="fqb">See your GP and request a referral to a psychiatrist for ADHD assessment. In the UK, use NHS Right to Choose to select a provider and reduce waiting times. Bring documentation of symptoms across multiple settings and ideally from childhood (school reports, parent accounts). If waiting lists are prohibitive, private assessment is available through ADHD specialists. Use the ASRS screener above and share results with your doctor.</div></div>
 </div>
