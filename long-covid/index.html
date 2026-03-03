@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Long COVID / ME-CFS - Complete Patient Intelligence Portal</title>
+<meta name="description" content="The world's most comprehensive free resource for Long COVID and ME-CFS patients. Live research, PEM screener, evidence-rated treatments, clinical trials, specialists, and community.">
+<meta property="og:title" content="Long COVID / ME-CFS - Complete Patient Intelligence Portal">
+<meta property="og:description" content="The world's most comprehensive free Long COVID and ME-CFS resource. PEM screener, evidence-rated treatments, live research, active clinical trials and global specialists.">
+<meta property="og:image" content="https://recalibrate-health-portals.github.io/Portals/long-covid/og-longcovid.jpg">
+<meta property="og:url" content="https://recalibrate-health-portals.github.io/Portals/long-covid/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Long COVID / ME-CFS - Complete Patient Intelligence Portal">
+<meta name="twitter:description" content="The world's most comprehensive free Long COVID resource. PEM screener, evidence-rated treatments, live research, clinical trials and global specialists.">
+<meta name="twitter:image" content="https://recalibrate-health-portals.github.io/Portals/long-covid/og-longcovid.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07070e;--bg2:#0e0e1a;--bg3:#151524;--border:rgba(255,255,255,0.06);--text:#dde3f0;--muted:rgba(255,255,255,0.38);--cyan:#06b6d4;--purple:#8b5cf6;--green:#10b981;--orange:#f59e0b;--red:#ef4444;--blue:#3b82f6;--pink:#ec4899;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;font-size:14px;}
+a{color:var(--orange);text-decoration:none;}a:hover{text-decoration:underline;}
+.bmc-float{position:fixed;bottom:24px;right:24px;z-index:999;width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#FFDD00,#ff8c00);display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 4px 20px rgba(255,170,0,0.45);cursor:pointer;text-decoration:none;transition:all .2s;}
+.bmc-float:hover{transform:scale(1.1) translateY(-2px);text-decoration:none;}
+nav{background:rgba(7,7,14,0.97);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200;padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;}
+.brand{display:flex;align-items:center;gap:10px;}
+.bn{font-weight:700;font-size:13px;white-space:nowrap;}.bs{font-size:9px;color:var(--muted);white-space:nowrap;}
+.nav-links{display:flex;gap:2px;flex-wrap:wrap;}
+.nl{padding:5px 9px;border-radius:6px;font-size:11px;color:var(--muted);font-weight:500;transition:all .2s;}
+.nl:hover{color:var(--text);background:rgba(255,255,255,0.05);text-decoration:none;}
+.pill{padding:5px 12px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:5px;background:rgba(245,158,11,0.12);border:1px solid rgba(245,158,11,0.25);color:var(--orange);}
+.pill:hover{background:rgba(245,158,11,0.22);text-decoration:none;}
+.hero{padding:56px 24px 0;max-width:1140px;margin:0 auto;}
+.hg{display:grid;grid-template-columns:1fr 220px;gap:32px;align-items:start;margin-bottom:32px;}
+.hbadge{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:20px;background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.18);font-size:10px;color:var(--orange);font-weight:600;letter-spacing:1.5px;margin-bottom:14px;}
+h1{font-size:clamp(26px,4vw,46px);font-weight:800;line-height:1.1;margin-bottom:14px;}
+.hl{background:linear-gradient(135deg,var(--orange),var(--red));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.hd{font-size:14px;color:var(--muted);max-width:520px;line-height:1.75;}
+.hbtns{display:flex;gap:8px;margin-top:20px;flex-wrap:wrap;}
+.btn{padding:10px 20px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:7px;transition:all .2s;}
+.btn-p{background:linear-gradient(135deg,var(--orange),#d97706);color:#fff;border:none;box-shadow:0 4px 16px rgba(245,158,11,.3);}
+.btn-g{background:transparent;border:1px solid var(--border);color:var(--text);}
+.btn-p:hover{box-shadow:0 4px 24px rgba(245,158,11,.45);transform:translateY(-1px);text-decoration:none;}
+.btn-g:hover{border-color:rgba(255,255,255,.15);text-decoration:none;}
+.hs{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:8px;}
+.hs-l{font-size:9px;letter-spacing:2px;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-bottom:4px;}
+.hs-v{font-size:22px;font-weight:800;font-family:'JetBrains Mono',monospace;}
+.hs-s{font-size:10px;color:var(--muted);margin-top:1px;}
+.sbar{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-top:32px;}
+.si{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);padding:0 24px;}
+.st{padding:16px 10px;border-right:1px solid var(--border);text-align:center;}.st:last-child{border-right:none;}
+.sn{font-size:21px;font-weight:800;font-family:'JetBrains Mono',monospace;background:linear-gradient(135deg,var(--orange),var(--red));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.sl{font-size:9px;color:var(--muted);letter-spacing:1.5px;margin-top:3px;}
+.dw{max-width:1140px;margin:0 auto;padding:16px 24px 0;}
+.disc{background:rgba(245,158,11,.05);border:1px solid rgba(245,158,11,.12);border-radius:8px;padding:10px 14px;font-size:11px;color:rgba(245,158,11,.75);}
+.pem-warn{background:rgba(239,68,68,.07);border:1px solid rgba(239,68,68,.25);border-radius:8px;padding:12px 16px;font-size:12px;color:#fca5a5;margin:12px 0;display:flex;gap:10px;align-items:flex-start;}
+.pem-warn strong{color:var(--red);}
+.main{max-width:1140px;margin:0 auto;padding:32px 24px 120px;display:grid;grid-template-columns:1fr 310px;gap:24px;align-items:start;}
+.left{display:flex;flex-direction:column;gap:28px;}
+.right{display:flex;flex-direction:column;gap:16px;position:sticky;top:68px;}
+.sh{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
+.stw{display:flex;align-items:center;gap:10px;}
+.sd{width:3px;height:32px;border-radius:2px;}
+.st2{font-size:15px;font-weight:700;}
+.ss{font-size:9px;letter-spacing:2px;color:var(--muted);margin-top:2px;font-family:'JetBrains Mono',monospace;}
+.stag{font-size:8px;padding:3px 8px;border-radius:4px;font-weight:700;letter-spacing:1px;}
+.ts{background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.2);color:var(--orange);}
+.ti{background:rgba(6,182,212,0.1);border:1px solid rgba(6,182,212,0.2);color:var(--cyan);}
+.tg{background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.2);color:var(--green);}
+.tp{background:rgba(139,92,246,0.1);border:1px solid rgba(139,92,246,0.2);color:var(--purple);}
+.tr{background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.2);color:var(--red);}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px;}
+.card-sm{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 16px;}
+p{font-size:13px;color:rgba(255,255,255,0.6);line-height:1.75;margin-bottom:10px;}
+p:last-child{margin-bottom:0;}
+.dtitle{font-size:9px;letter-spacing:2px;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-bottom:10px;}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.mechbox{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px;}
+.mechbox h4{font-size:12px;font-weight:700;margin-bottom:5px;}
+.mechbox p{font-size:11px;margin:0;}
+table{width:100%;border-collapse:collapse;font-size:12px;}
+th{text-align:left;padding:8px 10px;font-size:9px;letter-spacing:1.5px;color:var(--muted);border-bottom:1px solid var(--border);font-family:'JetBrains Mono',monospace;}
+td{padding:9px 10px;border-bottom:1px solid rgba(255,255,255,0.03);vertical-align:top;color:rgba(255,255,255,0.65);}
+tr:last-child td{border-bottom:none;}
+.ev{display:inline-block;padding:2px 8px;border-radius:4px;font-size:9px;font-weight:700;letter-spacing:1px;font-family:'JetBrains Mono',monospace;}
+.ev-a{background:rgba(16,185,129,0.15);color:var(--green);border:1px solid rgba(16,185,129,0.3);}
+.ev-b{background:rgba(6,182,212,0.15);color:var(--cyan);border:1px solid rgba(6,182,212,0.3);}
+.ev-c{background:rgba(245,158,11,0.15);color:var(--orange);border:1px solid rgba(245,158,11,0.3);}
+.ev-d{background:rgba(255,255,255,0.05);color:var(--muted);border:1px solid var(--border);}
+.ev-x{background:rgba(239,68,68,0.15);color:var(--red);border:1px solid rgba(239,68,68,0.3);}
+.sym-grid{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
+.sym{padding:4px 10px;border-radius:6px;font-size:11px;background:rgba(245,158,11,0.07);border:1px solid rgba(245,158,11,0.15);color:rgba(245,158,11,0.8);}
+.load{font-size:11px;color:var(--muted);padding:20px;text-align:center;}
+.pub-item{padding:12px 0;border-bottom:1px solid var(--border);}
+.pub-item:last-child{border-bottom:none;}
+.pub-title{font-size:12px;font-weight:600;margin-bottom:4px;line-height:1.4;}
+.pub-meta{font-size:10px;color:var(--muted);}
+.tri{padding:12px 0;border-bottom:1px solid var(--border);}
+.tri:last-child{border-bottom:none;}
+.trih{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:5px;}
+.trit{font-size:12px;font-weight:600;line-height:1.4;flex:1;}
+.trs{font-size:9px;padding:2px 7px;border-radius:4px;white-space:nowrap;font-weight:700;}
+.rec{background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.2);color:var(--green);}
+.trim{display:flex;gap:12px;font-size:10px;color:var(--muted);flex-wrap:wrap;}
+.sbr{display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);}
+.sbl{font-size:9px;letter-spacing:1.5px;color:var(--muted);font-family:'JetBrains Mono',monospace;}
+.org-grid{display:flex;flex-direction:column;gap:8px;}
+.org{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:10px 12px;}
+.org-name{font-size:12px;font-weight:700;margin-bottom:2px;}
+.org-desc{font-size:10px;color:var(--muted);}
+.fqi{border-bottom:1px solid var(--border);}
+.fqi:last-child{border-bottom:none;}
+.fqq{display:flex;align-items:center;justify-content:space-between;padding:12px 0;cursor:pointer;font-size:13px;font-weight:500;}
+.fqa{color:var(--muted);transition:transform .2s;font-size:16px;}
+.fqb{display:none;font-size:12px;color:rgba(255,255,255,0.55);padding-bottom:12px;line-height:1.7;}
+.glc{padding:8px 0;border-bottom:1px solid var(--border);display:flex;gap:12px;}
+.glc:last-child{border-bottom:none;}
+.glt{font-size:11px;font-weight:700;min-width:160px;color:var(--orange);}
+.gld{font-size:11px;color:var(--muted);line-height:1.5;}
+.pem-q{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:14px;margin-bottom:8px;}
+.pem-q p{font-size:13px;color:var(--text);margin-bottom:10px;}
+.pem-opts{display:flex;gap:6px;flex-wrap:wrap;}
+.pem-opt{padding:5px 12px;border-radius:6px;font-size:11px;border:1px solid var(--border);background:rgba(255,255,255,0.03);cursor:pointer;transition:all .2s;}
+.pem-opt:hover{border-color:var(--orange);color:var(--orange);}
+.pem-opt.sel{background:rgba(245,158,11,0.12);border-color:var(--orange);color:var(--orange);}
+.pem-result{background:var(--bg3);border-radius:8px;padding:16px;margin-top:12px;display:none;}
+.living-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.liv{background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px;}
+.liv h4{font-size:12px;font-weight:700;margin-bottom:6px;color:var(--orange);}
+.liv ul{padding-left:14px;}
+.liv li{font-size:11px;color:var(--muted);margin-bottom:3px;line-height:1.5;}
+@media(max-width:800px){.main{grid-template-columns:1fr;}.right{position:static;}.hg{grid-template-columns:1fr;}.grid2{grid-template-columns:1fr;}.living-grid{grid-template-columns:1fr;}nav .nav-links{display:none;}.si{grid-template-columns:repeat(2,1fr);}.st{border-bottom:1px solid var(--border);}}
+</style>
+</head>
+<body>
+<a href="https://buymeacoffee.com/TristanSiokos" class="bmc-float" target="_blank" title="Support this portal">☕</a>
+<nav>
+  <div class="brand">
+    <img src="../logo.jpg" style="width:30px;height:30px;border-radius:7px;object-fit:contain;" alt="Recalibrate">
+    <div><div class="bn">Long COVID Portal</div><div class="bs">PATIENT INTELLIGENCE · FREE</div></div>
+  </div>
+  <div class="nav-links">
+    <a href="#overview" class="nl">Overview</a>
+    <a href="#mechanism" class="nl">Mechanism</a>
+    <a href="#assessment" class="nl">PEM Screener</a>
+    <a href="#treatments" class="nl">Treatments</a>
+    <a href="#research" class="nl">Research</a>
+    <a href="#trials" class="nl">Trials</a>
+    <a href="#living" class="nl">Living</a>
+    <a href="#specialists" class="nl">Specialists</a>
+    <a href="#faq" class="nl">FAQ</a>
+  </div>
+  <div style="display:flex;align-items:center;gap:8px;">
+    <a href="../" style="padding:5px 12px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.5);" onmouseover="this.style.color='#fff';this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='rgba(255,255,255,0.5)';this.style.background='rgba(255,255,255,0.04)'">← All Portals</a>
+    <a href="https://t.me/Recalibrate_HealthPortals" class="pill" target="_blank">💬 Community</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hg">
+    <div>
+      <div class="hbadge">🦠 FREE · GLOBAL · EVIDENCE-BASED · LIVE DATA</div>
+      <h1>Everything about<br><span class="hl">Long COVID / ME-CFS</span><br>in one place</h1>
+      <div class="hd">The world's most comprehensive free resource for Long COVID and ME/CFS patients. PEM screener, evidence-rated treatments, live research, clinical trials, global specialists, and community.</div>
+      <div class="hbtns">
+        <a href="#assessment" class="btn btn-p">PEM Screener</a>
+        <a href="#treatments" class="btn btn-g">Treatments</a>
+        <a href="https://t.me/Recalibrate_HealthPortals" class="btn btn-g" target="_blank">Join Community</a>
+      </div>
+    </div>
+    <div>
+      <div class="hs"><div class="hs-l">PATIENTS GLOBALLY</div><div class="hs-v" style="color:var(--orange)">65M+</div><div class="hs-s">Long COVID estimate (WHO 2023)</div></div>
+      <div class="hs"><div class="hs-l">AVG DIAGNOSIS DELAY</div><div class="hs-v" style="color:var(--red)">2+ yrs</div><div class="hs-s">Many still undiagnosed</div></div>
+      <div class="hs"><div class="hs-l">OVERLAP CONDITIONS</div><div class="hs-v" style="color:var(--cyan);font-size:14px;">ME/CFS · POTS · MCAS</div><div class="hs-s">Frequently co-occurring</div></div>
+    </div>
+  </div>
+</div>
+<div class="sbar"><div class="si">
+  <div class="st"><div class="sn">65M+</div><div class="sl">PATIENTS WORLDWIDE</div></div>
+  <div class="st"><div class="sn">200+</div><div class="sl">REPORTED SYMPTOMS</div></div>
+  <div class="st"><div class="sn">~50%</div><div class="sl">STILL SYMPTOMATIC AT 2 YRS</div></div>
+  <div class="st"><div class="sn">Free</div><div class="sl">FOREVER</div></div>
+</div></div>
+<div class="dw"><div class="disc">⚠ Not medical advice. This portal provides educational information only. Always consult a qualified healthcare professional for diagnosis and treatment.</div></div>
+
+<div class="main">
+<div class="left">
+
+<!-- OVERVIEW -->
+<div id="overview" class="card">
+  <div class="sh"><div class="stw"><div class="sd" style="background:var(--orange)"></div><div><div class="st2">Condition Overview</div><div class="ss">WHAT IS LONG COVID AND ME/CFS</div></div></div><span class="stag ts">CLINICAL</span></div>
+  <div class="dtitle">DEFINITION</div>
+  <p>Long COVID (also called Post-Acute Sequelae of SARS-CoV-2 / PASC) refers to new, returning, or ongoing health problems that persist 3 or more months after a SARS-CoV-2 infection, as defined by the WHO. Symptoms may be continuous or relapsing and remitting.</p>
+  <p>ME/CFS (Myalgic Encephalomyelitis / Chronic Fatigue Syndrome) is a serious, long-term illness that affects many body systems. Long COVID and ME/CFS share striking biological and symptomatic overlap — many Long COVID patients meet the clinical criteria for ME/CFS.</p>
+  <div class="dtitle" style="margin-top:16px;">KEY SYMPTOMS</div>
+  <div class="sym-grid">
+    <span class="sym">Post-Exertional Malaise (PEM)</span><span class="sym">Brain fog</span><span class="sym">Fatigue</span><span class="sym">Breathlessness</span><span class="sym">POTS / dizziness</span><span class="sym">Chest pain</span><span class="sym">Unrefreshing sleep</span><span class="sym">Cognitive impairment</span><span class="sym">Headaches</span><span class="sym">Joint / muscle pain</span><span class="sym">Heart palpitations</span><span class="sym">Sensory sensitivity</span><span class="sym">Smell / taste issues</span><span class="sym">Anxiety / low mood</span><span class="sym">Immune dysfunction</span>
+  </div>
+  <div class="pem-warn" style="margin-top:16px;">
+    <span style="font-size:18px;">🚨</span>
+    <div><strong>Critical: Post-Exertional Malaise (PEM)</strong> — PEM is the hallmark of ME/CFS and many Long COVID cases. It is the worsening of symptoms after physical or mental exertion that would not have caused a problem before illness. PEM can be delayed by 12-48 hours. <strong>Graded Exercise Therapy (GET) is contraindicated</strong> in patients with PEM and can cause serious, lasting harm.</div>
+  </div>
+  <div class="dtitle" style="margin-top:16px;">WHO GETS IT</div>
+  <p>Long COVID can follow any COVID-19 infection, regardless of severity. Studies show approximately 10-30% of non-hospitalised COVID cases develop Long COVID. It affects all ages, including children, and was more common before widespread vaccination, though vaccinated individuals are not immune. Female sex, older age, pre-existing conditions, and more severe initial illness increase risk.</p>
+  <div class="dtitle" style="margin-top:16px;">ME/CFS CONNECTION</div>
+  <p>ME/CFS is not new — it has been documented since the 1950s. Long COVID has brought renewed scientific attention to ME/CFS, as many Long COVID patients develop a condition clinically indistinguishable from ME/CFS. Shared features include PEM, cognitive dysfunction, orthostatic intolerance, immune abnormalities, and sleep disruption.</p>
+</div>
+
+<!-- MECHANISM -->
+<div id="mechanism" class="card">
+  <div class="sh"><div class="stw"><div class="sd" style="background:var(--cyan)"></div><div><div class="st2">Biological Mechanism</div><div class="ss">WHAT IS HAPPENING IN THE BODY</div></div></div><span class="stag ti">SCIENCE</span></div>
+  <p>Long COVID and ME/CFS are complex, multi-system conditions. Current research points to several overlapping biological mechanisms, often occurring simultaneously.</p>
+  <div class="grid2">
+    <div class="mechbox"><h4 style="color:var(--orange)">Viral Persistence</h4><p>SARS-CoV-2 reservoirs may persist in tissue (gut, lymph nodes, brain) long after acute infection, driving ongoing immune activation and inflammation.</p></div>
+    <div class="mechbox"><h4 style="color:var(--red)">Immune Dysregulation</h4><p>Abnormal T-cell and B-cell responses, elevated inflammatory cytokines, and activated immune signatures persist months to years post-infection.</p></div>
+    <div class="mechbox"><h4 style="color:var(--cyan)">Microbiome Disruption</h4><p>COVID-19 and Long COVID are associated with significant gut dysbiosis, which correlates with symptom severity and may perpetuate systemic inflammation.</p></div>
+    <div class="mechbox"><h4 style="color:var(--purple)">Autoimmunity</h4><p>Novel autoantibodies targeting the nervous system, blood vessels, and other tissues have been identified in Long COVID patients, suggesting autoimmune components.</p></div>
+    <div class="mechbox"><h4 style="color:var(--green)">Endothelial Damage</h4><p>Microclots (microthrombi) and endothelial dysfunction impair oxygen delivery to tissues, contributing to fatigue, breathlessness, and cognitive symptoms.</p></div>
+    <div class="mechbox"><h4 style="color:var(--orange)">Mitochondrial Dysfunction</h4><p>Impaired energy production at the cellular level — mitochondria fail to produce ATP efficiently, explaining profound fatigue and PEM.</p></div>
+    <div class="mechbox"><h4 style="color:var(--pink)">Latent Virus Reactivation</h4><p>EBV (Epstein-Barr Virus), HHV-6, and other herpesviruses may reactivate post-COVID, compounding immune burden and symptoms.</p></div>
+    <div class="mechbox"><h4 style="color:var(--blue)">Neurological Involvement</h4><p>Neuroinflammation, blood-brain barrier disruption, and reduced cerebral blood flow contribute to brain fog, cognitive impairment, and autonomic dysfunction.</p></div>
+  </div>
+  <div class="dtitle" style="margin-top:16px;">WHY STANDARD TESTS APPEAR NORMAL</div>
+  <p>Routine blood panels, MRI, and ECG frequently appear normal in Long COVID and ME/CFS patients. This does not mean nothing is wrong. The abnormalities are often at the cellular, mitochondrial, or microbiome level, or involve subtle immune signatures not captured by standard clinical tests. Specialised research assays detect consistent abnormalities — the absence of a positive test result does not invalidate symptoms.</p>
+</div>
+
+<!-- ASSESSMENT -->
+<div id="assessment" class="card">
+  <div class="sh"><div class="stw"><div class="sd" style="background:var(--green)"></div><div><div class="st2">PEM Screener</div><div class="ss">POST-EXERTIONAL MALAISE ASSESSMENT TOOL</div></div></div><span class="stag tg">INTERACTIVE</span></div>
+  <p style="font-size:12px;color:var(--muted);">This tool helps identify Post-Exertional Malaise — the hallmark feature of ME/CFS and Long COVID. It is not a diagnostic tool. Share results with your doctor.</p>
+  <div class="pem-warn"><span style="font-size:16px;">⚠</span><div><strong>Important:</strong> PEM is often delayed 12-48 hours after exertion. When answering, think about how you feel the day after activity, not just during it.</div></div>
+  <div id="pem-form">
+    <div class="pem-q"><p>1. After physical activity (e.g. walking, housework, exercise), do you feel worse than before?</p><div class="pem-opts"><span class="pem-opt" onclick="selOpt(this,1,0)">Never</span><span class="pem-opt" onclick="selOpt(this,1,1)">Occasionally</span><span class="pem-opt" onclick="selOpt(this,1,2)">Often</span><span class="pem-opt" onclick="selOpt(this,1,3)">Always</span></div></div>
+    <div class="pem-q"><p>2. Does this worsening occur 12-48 hours after activity rather than immediately?</p><div class="pem-opts"><span class="pem-opt" onclick="selOpt(this,2,0)">No</span><span class="pem-opt" onclick="selOpt(this,2,1)">Sometimes</span><span class="pem-opt" onclick="selOpt(this,2,2)">Usually</span><span class="pem-opt" onclick="selOpt(this,2,3)">Yes, consistently</span></div></div>
+    <div class="pem-q"><p>3. After mental effort (reading, conversation, screen time), do you experience increased symptoms?</p><div class="pem-opts"><span class="pem-opt" onclick="selOpt(this,3,0)">Never</span><span class="pem-opt" onclick="selOpt(this,3,1)">Occasionally</span><span class="pem-opt" onclick="selOpt(this,3,2)">Often</span><span class="pem-opt" onclick="selOpt(this,3,3)">Always</span></div></div>
+    <div class="pem-q"><p>4. How long does it take to recover after a "crash" or worsening episode?</p><div class="pem-opts"><span class="pem-opt" onclick="selOpt(this,4,0)">Hours</span><span class="pem-opt" onclick="selOpt(this,4,1)">1 day</span><span class="pem-opt" onclick="selOpt(this,4,2)">2-7 days</span><span class="pem-opt" onclick="selOpt(this,4,3)">Over a week</span></div></div>
+    <div class="pem-q"><p>5. Do you need to significantly limit activities to avoid worsening your symptoms?</p><div class="pem-opts"><span class="pem-opt" onclick="selOpt(this,5,0)">No</span><span class="pem-opt" onclick="selOpt(this,5,1)">Slightly</span><span class="pem-opt" onclick="selOpt(this,5,2)">Moderately</span><span class="pem-opt" onclick="selOpt(this,5,3)">Severely</span></div></div>
+    <div class="pem-q"><p>6. Does exertion cause symptoms beyond fatigue (e.g. pain, brain fog, flu-like feeling, dizziness)?</p><div class="pem-opts"><span class="pem-opt" onclick="selOpt(this,6,0)">No</span><span class="pem-opt" onclick="selOpt(this,6,1)">Occasionally</span><span class="pem-opt" onclick="selOpt(this,6,2)">Often</span><span class="pem-opt" onclick="selOpt(this,6,3)">Always</span></div></div>
+    <div class="pem-q"><p>7. Has "pushing through" fatigue ever made you significantly worse for days or longer?</p><div class="pem-opts"><span class="pem-opt" onclick="selOpt(this,7,0)">Never tried</span><span class="pem-opt" onclick="selOpt(this,7,1)">No</span><span class="pem-opt" onclick="selOpt(this,7,2)">Yes, once or twice</span><span class="pem-opt" onclick="selOpt(this,7,3)">Yes, consistently</span></div></div>
+    <div class="pem-q"><p>8. Do emotional or sensory stimuli (stress, noise, light) also trigger symptom worsening?</p><div class="pem-opts"><span class="pem-opt" onclick="selOpt(this,8,0)">No</span><span class="pem-opt" onclick="selOpt(this,8,1)">Occasionally</span><span class="pem-opt" onclick="selOpt(this,8,2)">Often</span><span class="pem-opt" onclick="selOpt(this,8,3)">Yes</span></div></div>
+    <button onclick="calcPEM()" style="margin-top:14px;padding:10px 22px;border-radius:8px;background:linear-gradient(135deg,var(--orange),#d97706);border:none;color:#fff;font-size:12px;font-weight:700;cursor:pointer;">Calculate Score</button>
+  </div>
+  <div id="pem-result" class="pem-result"></div>
+</div>
+
+<!-- TREATMENTS -->
+<div id="treatments" class="card">
+  <div class="sh"><div class="stw"><div class="sd" style="background:var(--purple)"></div><div><div class="st2">Treatment Evidence</div><div class="ss">EVIDENCE-GRADED TREATMENT REFERENCE</div></div></div><span class="stag tp">EVIDENCE</span></div>
+  <p style="font-size:12px;color:var(--muted);margin-bottom:14px;">Evidence grades: <span class="ev ev-a">A</span> Strong · <span class="ev ev-b">B</span> Moderate · <span class="ev ev-c">C</span> Emerging · <span class="ev ev-d">D</span> Limited · <span class="ev ev-x">CONTRAINDICATED</span></p>
+  <div class="pem-warn"><span>🚨</span><div><strong>Graded Exercise Therapy (GET) is contraindicated</strong> in patients with Post-Exertional Malaise. Multiple studies and patient reports document harm. Do not push through fatigue. Exercise must be carefully managed within your energy envelope.</div></div>
+  <table style="margin-top:14px;">
+    <tr><th>Treatment</th><th>Evidence</th><th>Notes</th></tr>
+    <tr><td><strong>Pacing / Energy Management</strong></td><td><span class="ev ev-a">A</span></td><td>Staying within energy envelope to avoid PEM. Most important management strategy. Includes cognitive and emotional pacing, not just physical.</td></tr>
+    <tr><td><strong>Heart Rate Monitoring</strong></td><td><span class="ev ev-a">A</span></td><td>Keeping HR below anaerobic threshold (typically 55-60% max HR) to prevent PEM. Proven to reduce crashes.</td></tr>
+    <tr><td><strong>POTS Management</strong></td><td><span class="ev ev-b">B</span></td><td>Increased fluid/salt intake, compression garments, beta-blockers, ivabradine, or fludrocortisone depending on subtype. Consult cardiologist/dysautonomia specialist.</td></tr>
+    <tr><td><strong>Antihistamines (H1+H2)</strong></td><td><span class="ev ev-b">B</span></td><td>Loratadine, cetirizine (H1) with famotidine (H2). Particularly helpful in patients with MCAS overlap. Many report significant symptom improvement.</td></tr>
+    <tr><td><strong>Low-Histamine Diet</strong></td><td><span class="ev ev-b">B</span></td><td>Reduction in high-histamine and histamine-liberating foods. Beneficial in MCAS subgroup. Reduces immune activation.</td></tr>
+    <tr><td><strong>Low Dose Naltrexone (LDN)</strong></td><td><span class="ev ev-b">B</span></td><td>1.5-4.5mg nightly. Anti-neuroinflammatory. Growing evidence base, significant patient-reported benefit. Well-tolerated. Off-label use.</td></tr>
+    <tr><td><strong>SSRIs / SNRIs</strong></td><td><span class="ev ev-b">B</span></td><td>Particularly for dysautonomia, POTS, and neuropathic symptoms. Fluoxetine, duloxetine. Not purely antidepressant — target autonomic dysfunction.</td></tr>
+    <tr><td><strong>Melatonin</strong></td><td><span class="ev ev-b">B</span></td><td>0.5-5mg for sleep disruption and circadian dysregulation. Anti-inflammatory properties may have additional benefit.</td></tr>
+    <tr><td><strong>Antivirals (Paxlovid / Nirmatrelvir)</strong></td><td><span class="ev ev-c">C</span></td><td>Case series and trials suggest benefit in patients with viral persistence. Research ongoing. Not yet standard of care but promising.</td></tr>
+    <tr><td><strong>BC007</strong></td><td><span class="ev ev-c">C</span></td><td>Aptamer targeting autoantibodies. Phase II trials underway. Early results promising for autoantibody-mediated subgroup.</td></tr>
+    <tr><td><strong>Hyperbaric Oxygen Therapy</strong></td><td><span class="ev ev-c">C</span></td><td>Israeli RCT showed improvements in cognitive function and quality of life. Mechanism may involve neuroplasticity and oxygen delivery.</td></tr>
+    <tr><td><strong>Graded Exercise Therapy (GET)</strong></td><td><span class="ev ev-x">CONTRAINDICATED</span></td><td>Shown to cause harm in ME/CFS and Long COVID with PEM. NICE guidelines updated 2021 to remove recommendation. Do not use in PEM patients.</td></tr>
+    <tr><td><strong>Cognitive Behavioural Therapy (CBT for deconditioning)</strong></td><td><span class="ev ev-x">CONTRAINDICATED</span></td><td>CBT based on the discredited deconditioning model is harmful. Psychological support is beneficial but must not promote pushing through PEM.</td></tr>
+  </table>
+</div>
+
+<!-- RESEARCH -->
+<div id="research" class="card">
+  <div class="sh"><div class="stw"><div class="sd" style="background:var(--cyan)"></div><div><div class="st2">Live Research Feed</div><div class="ss">PUBMED · UPDATED IN REAL TIME</div></div></div><span class="stag ti">LIVE</span></div>
+  <div id="pubfeed"><div class="load">Loading latest Long COVID research from PubMed...</div></div>
+  <p style="font-size:11px;color:var(--muted);margin-top:8px;">Live feed from PubMed. Updates automatically. <a href="https://pubmed.ncbi.nlm.nih.gov/?term=long+covid+OR+post-acute+sequelae+SARS-CoV-2+OR+ME-CFS" target="_blank">Browse PubMed directly</a></p>
+</div>
+
+<!-- TRIALS -->
+<div id="trials" class="card">
+  <div class="sh"><div class="stw"><div class="sd" style="background:var(--green)"></div><div><div class="st2">Active Clinical Trials</div><div class="ss">RECRUITING NOW · GLOBAL</div></div></div><span class="stag tg">LIVE</span></div>
+  <div id="tfeed"><div class="load">Loading recruiting trials from ClinicalTrials.gov...</div></div>
+  <p style="font-size:11px;color:var(--muted);margin-top:8px;">Verify eligibility at <a href="https://clinicaltrials.gov/search?cond=long+covid+OR+post-acute+sequelae&filter.overallStatus=RECRUITING" target="_blank">ClinicalTrials.gov</a></p>
+</div>
+
+<!-- LIVING WITH IT -->
+<div id="living" class="card">
+  <div class="sh"><div class="stw"><div class="sd" style="background:var(--orange)"></div><div><div class="st2">Living with Long COVID / ME-CFS</div><div class="ss">PRACTICAL GUIDANCE</div></div></div><span class="stag ts">GUIDE</span></div>
+  <div class="living-grid">
+    <div class="liv"><h4>Pacing and Energy Envelope</h4><ul>
+      <li>Identify your energy limit and stay inside it</li>
+      <li>Stop activity before you feel tired, not after</li>
+      <li>Include cognitive and emotional exertion in your budget</li>
+      <li>Use a 1-10 symptom diary to track patterns</li>
+      <li>Rest does not mean sleep — quiet lying down counts</li>
+    </ul></div>
+    <div class="liv"><h4>Heart Rate Management</h4><ul>
+      <li>Use a HR monitor (smartwatch or chest strap)</li>
+      <li>Stay below anaerobic threshold (approx. 110 bpm or 55% max HR)</li>
+      <li>Stop activity immediately if HR rises above threshold</li>
+      <li>Lie flat if feeling post-exertional worsening</li>
+      <li>Tilt table / recline more to manage POTS symptoms</li>
+    </ul></div>
+    <div class="liv"><h4>Cognitive Pacing (Brain Fog)</h4><ul>
+      <li>Screen time is exertion — limit in acute periods</li>
+      <li>Use voice notes instead of writing when fatigued</li>
+      <li>Break tasks into very small steps with rest in between</li>
+      <li>Prioritise ruthlessly — not everything needs doing today</li>
+      <li>Cold packs on the neck can temporarily reduce brain fog</li>
+    </ul></div>
+    <div class="liv"><h4>Sleep and Rest</h4><ul>
+      <li>Unrefreshing sleep is a core symptom — not laziness</li>
+      <li>Consistent sleep/wake times help stabilise circadian rhythm</li>
+      <li>Avoid screens 1 hour before bed</li>
+      <li>Dark, cool room reduces sensory load during sleep</li>
+      <li>Melatonin (0.5-5mg) may help circadian dysregulation</li>
+    </ul></div>
+    <div class="liv"><h4>Nutrition and Supplements</h4><ul>
+      <li>Anti-inflammatory diet: reduce processed foods, sugar</li>
+      <li>Low-histamine diet if MCAS symptoms present</li>
+      <li>Electrolytes (increased salt/fluid for POTS)</li>
+      <li>Coenzyme Q10, magnesium, B vitamins (supportive evidence)</li>
+      <li>Avoid alcohol — worsens nearly all Long COVID symptoms</li>
+    </ul></div>
+    <div class="liv"><h4>Work and Social Adjustments</h4><ul>
+      <li>Request reasonable adjustments from employer</li>
+      <li>Working from home reduces commute exertion significantly</li>
+      <li>Part-time or reduced hours during recovery phase</li>
+      <li>Communicate energy limits clearly to family and friends</li>
+      <li>Disability benefits may be available — seek welfare advice</li>
+    </ul></div>
+  </div>
+</div>
+
+<!-- SPECIALISTS -->
+<div id="specialists" class="card">
+  <div class="sh"><div class="stw"><div class="sd" style="background:var(--blue)"></div><div><div class="st2">Specialists and Organisations</div><div class="ss">WHERE TO GET HELP GLOBALLY</div></div></div><span class="stag" style="background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.2);color:var(--blue);">DIRECTORY</span></div>
+  <div class="dtitle">LONG COVID CLINICS</div>
+  <div class="org-grid">
+    <div class="org"><div class="org-name">NHS Long COVID Service (UK)</div><div class="org-desc">Referral via GP. Multidisciplinary teams across England. Find your local service: england.nhs.uk/long-covid</div></div>
+    <div class="org"><div class="org-name">Bateman Horne Center (USA)</div><div class="org-desc">Leading ME/CFS and Long COVID clinic. Utah-based, telehealth available. batemanhornecenter.org</div></div>
+    <div class="org"><div class="org-name">Mount Sinai Center for Post-COVID Care (USA)</div><div class="org-desc">One of the first and largest Long COVID clinics. New York. mountsinai.org/long-covid</div></div>
+    <div class="org"><div class="org-name">Stanford Long COVID Clinic (USA)</div><div class="org-desc">Academic centre with research integration. Division of Post-Acute COVID Syndrome. stanford.edu</div></div>
+    <div class="org"><div class="org-name">Charité Fatigue Center (Germany)</div><div class="org-desc">Leading European ME/CFS and Long COVID research centre. charite.de</div></div>
+    <div class="org"><div class="org-name">PHOSP-COVID Consortium (UK)</div><div class="org-desc">National research initiative. Clinics embedded in participating hospitals. phosp.org</div></div>
+  </div>
+  <div class="dtitle" style="margin-top:16px;">PATIENT ORGANISATIONS</div>
+  <div class="org-grid">
+    <div class="org"><div class="org-name">Long COVID Alliance</div><div class="org-desc">Research advocacy and policy. longcovidalliance.org</div></div>
+    <div class="org"><div class="org-name">Body Politic</div><div class="org-desc">Patient-led research and support community. wearebodypolitic.com</div></div>
+    <div class="org"><div class="org-name">ME Association (UK)</div><div class="org-desc">Decades of ME/CFS advocacy and support. meassociation.org.uk</div></div>
+    <div class="org"><div class="org-name">#MEAction</div><div class="org-desc">International advocacy for ME/CFS patients. meaction.net</div></div>
+    <div class="org"><div class="org-name">Long COVID SOS (UK)</div><div class="org-desc">Patient-led advocacy. Influential in driving NHS response. longcovidsos.org</div></div>
+    <div class="org"><div class="org-name">Solve ME/CFS Initiative</div><div class="org-desc">Research funding and patient registry. solvecfs.org</div></div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div id="faq" class="card">
+  <div class="sh"><div class="stw"><div class="sd" style="background:var(--muted)"></div><div><div class="st2">Frequently Asked Questions</div><div class="ss">COMMON QUESTIONS ANSWERED</div></div></div></div>
+  <div class="fqi"><div class="fqq" onclick="tFaq(this)"><span>Is Long COVID a real medical condition?</span><span class="fqa">›</span></div><div class="fqb">Yes. Long COVID is recognised by the WHO, CDC, NIH, and all major health authorities. It has been documented in thousands of peer-reviewed studies. Consistent biological abnormalities have been found in Long COVID patients including immune dysregulation, microclots, viral persistence, and metabolic dysfunction. The absence of a positive routine test does not mean the condition does not exist.</div></div>
+  <div class="fqi"><div class="fqq" onclick="tFaq(this)"><span>Can I recover from Long COVID?</span><span class="fqa">›</span></div><div class="fqb">Yes, many people improve significantly. Recovery timelines vary widely. Some recover within months; others take years. Key factors associated with better outcomes include early identification, pacing (avoiding PEM), appropriate medical support, and avoiding GET. The trajectory is often non-linear — gradual improvement with occasional setbacks is common.</div></div>
+  <div class="fqi"><div class="fqq" onclick="tFaq(this)"><span>What is the difference between Long COVID and ME/CFS?</span><span class="fqa">›</span></div><div class="fqb">ME/CFS is a well-defined clinical condition that predates COVID-19. Long COVID is a newer umbrella term for persistent post-COVID illness. Many Long COVID patients meet the diagnostic criteria for ME/CFS. They share PEM, cognitive dysfunction, orthostatic intolerance, and immune abnormalities. Some consider post-COVID ME/CFS to be a subtype of Long COVID; research is ongoing.</div></div>
+  <div class="fqi"><div class="fqq" onclick="tFaq(this)"><span>Why does exercise make me worse?</span><span class="fqa">›</span></div><div class="fqb">This is Post-Exertional Malaise (PEM). In Long COVID and ME/CFS, cellular energy production is impaired and the immune system responds abnormally to exertion. Exercise triggers a cascade of inflammatory and metabolic dysfunction that takes days to recover from. This is a physiological response, not a psychological one. PEM is measured and documented in research labs.</div></div>
+  <div class="fqi"><div class="fqq" onclick="tFaq(this)"><span>What is POTS and how does it relate to Long COVID?</span><span class="fqa">›</span></div><div class="fqb">POTS (Postural Orthostatic Tachycardia Syndrome) is a form of dysautonomia where standing causes an abnormal increase in heart rate (typically 30+ bpm). It causes dizziness, palpitations, brain fog, and near-fainting. Approximately 30% of Long COVID patients show signs of POTS or orthostatic intolerance. It is manageable with increased salt/fluid, compression garments, and in some cases medication.</div></div>
+  <div class="fqi"><div class="fqq" onclick="tFaq(this)"><span>Is there a cure?</span><span class="fqa">›</span></div><div class="fqb">Not yet. There is no single approved cure for Long COVID or ME/CFS. Multiple clinical trials are underway targeting viral persistence, immune dysfunction, and microclots. Several treatments show significant promise. The science is moving faster than at any point in ME/CFS history, driven by the scale of Long COVID. Many patients achieve substantial improvement with proper management.</div></div>
+  <div class="fqi"><div class="fqq" onclick="tFaq(this)"><span>How do I find a doctor who takes me seriously?</span><span class="fqa">›</span></div><div class="fqb">Seek out Long COVID clinics (see Specialists section above). Bring printed summaries of your symptoms and the PEM screener results. ME/CFS specialists typically understand Long COVID. Patient organisations like Body Politic and ME Association maintain doctor directories. If a doctor suggests GET or "pushing through", seek a second opinion.</div></div>
+  <div class="fqi"><div class="fqq" onclick="tFaq(this)"><span>What is MCAS and does it connect to Long COVID?</span><span class="fqa">›</span></div><div class="fqb">MCAS (Mast Cell Activation Syndrome) involves mast cells inappropriately releasing histamine and other mediators, causing widespread symptoms including skin reactions, gut issues, headaches, and fatigue. It is increasingly recognised as a common comorbidity in Long COVID, possibly triggered by viral immune activation. Antihistamines (H1 and H2 blockers) often provide significant symptom relief.</div></div>
+</div>
+
+<!-- GLOSSARY -->
+<div class="card">
+  <div class="sh"><div class="stw"><div class="sd" style="background:var(--muted)"></div><div><div class="st2">Glossary</div><div class="ss">KEY TERMS EXPLAINED</div></div></div></div>
+  <div class="glc"><div class="glt">PEM</div><div class="gld">Post-Exertional Malaise. Worsening of symptoms following physical, cognitive, or emotional exertion. The hallmark of ME/CFS. Often delayed 12-48 hours.</div></div>
+  <div class="glc"><div class="glt">POTS</div><div class="gld">Postural Orthostatic Tachycardia Syndrome. Heart rate rises abnormally on standing. Causes dizziness, palpitations, brain fog.</div></div>
+  <div class="glc"><div class="glt">MCAS</div><div class="glt">Mast Cell Activation Syndrome. Abnormal mast cell degranulation causing histamine release and widespread symptoms.</div></div>
+  <div class="glc"><div class="glt">Brain Fog</div><div class="gld">Cognitive impairment including poor concentration, memory problems, word-finding difficulties, and mental fatigue.</div></div>
+  <div class="glc"><div class="glt">Dysautonomia</div><div class="gld">Dysfunction of the autonomic nervous system, which controls heart rate, blood pressure, breathing, and digestion.</div></div>
+  <div class="glc"><div class="glt">Viral Persistence</div><div class="gld">The continued presence of SARS-CoV-2 or its proteins in tissues after the acute infection has resolved.</div></div>
+  <div class="glc"><div class="glt">Microthrombi / Microclots</div><div class="gld">Tiny blood clots that resist breakdown and impair microvascular circulation, identified in Long COVID patients by Pretorius et al.</div></div>
+  <div class="glc"><div class="glt">Neuroinflammation</div><div class="gld">Inflammation within the central nervous system contributing to brain fog, fatigue, and pain sensitisation.</div></div>
+  <div class="glc"><div class="glt">Mitochondrial Dysfunction</div><div class="gld">Impaired cellular energy production in mitochondria, leading to severe fatigue and post-exertional worsening.</div></div>
+  <div class="glc"><div class="glt">Energy Envelope</div><div class="gld">The amount of physical and cognitive activity a patient can perform without triggering PEM. Staying within it is central to recovery.</div></div>
+  <div class="glc"><div class="glt">Orthostatic Intolerance</div><div class="gld">Inability to maintain normal function when upright due to blood pooling in the lower body. Includes POTS, NMH, and OH.</div></div>
+  <div class="glc"><div class="glt">Anaerobic Threshold</div><div class="gld">The heart rate above which the body shifts to anaerobic metabolism. Exceeded threshold often triggers PEM in Long COVID/ME-CFS.</div></div>
+  <div class="glc"><div class="glt">HRV</div><div class="gld">Heart Rate Variability. Measure of autonomic nervous system function. Often reduced in Long COVID, useful for guiding pacing.</div></div>
+  <div class="glc"><div class="glt">Cytokine Storm</div><div class="gld">Excessive immune activation releasing large quantities of cytokines, causing systemic inflammation and tissue damage.</div></div>
+  <div class="glc"><div class="glt">Autoantibodies</div><div class="gld">Antibodies that mistakenly target the body's own tissues. Novel autoantibodies targeting the nervous system and vasculature found in Long COVID.</div></div>
+  <div class="glc"><div class="glt">GET</div><div class="gld">Graded Exercise Therapy. A discredited approach that caused harm in ME/CFS and Long COVID patients with PEM. No longer recommended by NICE.</div></div>
+</div>
+
+</div><!-- .left -->
+
+<!-- RIGHT SIDEBAR -->
+<div class="right">
+  <div class="card-sm">
+    <div class="sbr"><span class="sbl">CONDITION OVERLAP</span></div>
+    <div style="margin-top:8px;">
+      <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:3px;"><span>ME/CFS criteria met</span><span style="color:var(--orange);font-weight:700;">~50%</span></div>
+      <div style="height:4px;background:var(--bg3);border-radius:2px;margin-bottom:8px;"><div style="width:50%;height:100%;background:var(--orange);border-radius:2px;"></div></div>
+      <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:3px;"><span>POTS / Dysautonomia</span><span style="color:var(--cyan);font-weight:700;">~30%</span></div>
+      <div style="height:4px;background:var(--bg3);border-radius:2px;margin-bottom:8px;"><div style="width:30%;height:100%;background:var(--cyan);border-radius:2px;"></div></div>
+      <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:3px;"><span>MCAS symptoms</span><span style="color:var(--pink);font-weight:700;">~17%</span></div>
+      <div style="height:4px;background:var(--bg3);border-radius:2px;margin-bottom:8px;"><div style="width:17%;height:100%;background:var(--pink);border-radius:2px;"></div></div>
+      <div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:3px;"><span>CSS / Central Sensitisation</span><span style="color:var(--purple);font-weight:700;">~25%</span></div>
+      <div style="height:4px;background:var(--bg3);border-radius:2px;"><div style="width:25%;height:100%;background:var(--purple);border-radius:2px;"></div></div>
+    </div>
+  </div>
+
+  <div class="card-sm">
+    <div class="sbr"><span class="sbl">PACING GUIDE</span></div>
+    <div style="font-size:11px;color:var(--muted);margin-top:8px;line-height:1.7;">
+      <div style="margin-bottom:6px;">🟢 <strong style="color:var(--green);">Green zone:</strong> below anaerobic threshold. Safe activity level.</div>
+      <div style="margin-bottom:6px;">🟡 <strong style="color:var(--orange);">Yellow zone:</strong> approaching limit. Rest now.</div>
+      <div style="margin-bottom:6px;">🔴 <strong style="color:var(--red);">Red zone:</strong> over threshold. Stop immediately, rest lying flat.</div>
+      <div style="margin-top:8px;padding:8px;background:var(--bg3);border-radius:6px;font-size:10px;">Approx anaerobic threshold: <strong style="color:var(--orange);">220 - age × 0.55</strong><br>e.g. age 35: ~102 bpm limit</div>
+    </div>
+  </div>
+
+  <div class="card-sm">
+    <div class="sbr"><span class="sbl">QUICK LINKS</span></div>
+    <div style="display:flex;flex-direction:column;gap:6px;margin-top:8px;">
+      <a href="https://www.who.int/europe/news-room/fact-sheets/item/post-covid-19-condition" target="_blank" style="font-size:11px;color:var(--orange);">WHO Long COVID fact sheet</a>
+      <a href="https://www.nice.org.uk/guidance/ng188" target="_blank" style="font-size:11px;color:var(--orange);">NICE ME/CFS guidelines (2021)</a>
+      <a href="https://clinicaltrials.gov/search?cond=long+covid&filter.overallStatus=RECRUITING" target="_blank" style="font-size:11px;color:var(--orange);">Open recruiting trials</a>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/?term=long+covid" target="_blank" style="font-size:11px;color:var(--orange);">PubMed: Long COVID</a>
+      <a href="https://www.cdc.gov/covid/long-term-effects/" target="_blank" style="font-size:11px;color:var(--orange);">CDC Long COVID info</a>
+    </div>
+  </div>
+
+  <div class="card-sm">
+    <div class="sbr"><span class="sbl">LANDMARK PAPERS</span></div>
+    <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px;">
+      <div><div style="font-size:11px;font-weight:600;">Pretorius et al. 2021</div><div style="font-size:10px;color:var(--muted);">Persistent clotting protein pathology in Long COVID</div></div>
+      <div><div style="font-size:11px;font-weight:600;">Bhaskaran et al. 2021</div><div style="font-size:10px;color:var(--muted);">Population-based cohort study of Long COVID incidence</div></div>
+      <div><div style="font-size:11px;font-weight:600;">Davis et al. 2023</div><div style="font-size:10px;color:var(--muted);">Long COVID: major findings, mechanisms and recommendations</div></div>
+      <div><div style="font-size:11px;font-weight:600;">Kedor et al. 2022</div><div style="font-size:10px;color:var(--muted);">Prospective cohort of ME/CFS after COVID-19 (Charite)</div></div>
+    </div>
+  </div>
+
+  <div id="community" class="card-sm" style="text-align:center;background:linear-gradient(135deg,rgba(245,158,11,0.06),rgba(239,68,68,0.06));border-color:rgba(245,158,11,0.15);">
+    <div style="font-size:28px;margin-bottom:8px;">🤝</div>
+    <h3 style="font-size:14px;margin-bottom:6px;">Join the Community</h3>
+    <p style="font-size:11px;margin-bottom:14px;">Connect with others navigating Long COVID and ME/CFS worldwide.</p>
+    <a href="https://t.me/Recalibrate_HealthPortals" class="btn btn-p" target="_blank" style="width:100%;justify-content:center;">💬 Join Telegram Community</a>
+    <a href="https://recalibratepain.com" target="_blank" class="btn btn-g" style="width:100%;justify-content:center;margin-top:8px;">🏥 Recalibrate</a>
+    <p style="font-size:11px;color:var(--muted);margin-top:14px;">Free forever. No ads. No data selling.</p>
+  </div>
+</div>
+
+</div><!-- .main -->
+
+<footer style="background:var(--bg2);border-top:1px solid var(--border);padding:32px;text-align:center;">
+  <p style="font-size:11px;color:var(--muted);margin-bottom:4px;">Long COVID Portal · The most comprehensive free resource for Long COVID and ME/CFS patients worldwide</p>
+  <p style="font-size:11px;color:var(--muted);margin-bottom:8px;">Not medical advice · Educational purposes only · Always consult a qualified healthcare professional</p>
+  <p style="font-size:11px;color:var(--muted);">Powered by <a href="https://recalibratepain.com" style="color:var(--orange);">Recalibrate</a> · <a href="https://buymeacoffee.com/TristanSiokos" style="color:var(--orange);">Support this portal</a> · <a href="https://t.me/Recalibrate_HealthPortals" style="color:var(--orange);">Join the community</a></p>
+</footer>
+
+<script>
+// PEM Screener
+const pemAnswers = {};
+function selOpt(el, q, val) {
+  el.closest('.pem-opts').querySelectorAll('.pem-opt').forEach(o => o.classList.remove('sel'));
+  el.classList.add('sel');
+  pemAnswers[q] = val;
+}
+function calcPEM() {
+  const answered = Object.keys(pemAnswers).length;
+  if (answered < 6) { alert('Please answer at least 6 questions.'); return; }
+  const total = Object.values(pemAnswers).reduce((a,b) => a+b, 0);
+  const max = answered * 3;
+  const pct = Math.round((total / max) * 100);
+  let level, color, advice;
+  if (pct >= 70) {
+    level = 'Strong PEM indicators present';
+    color = 'var(--red)';
+    advice = 'Your responses strongly suggest Post-Exertional Malaise. This is the hallmark symptom of ME/CFS and Long COVID. Share these results with your doctor. Avoid graded exercise therapy. Focus on pacing and staying within your energy envelope.';
+  } else if (pct >= 40) {
+    level = 'Moderate PEM indicators';
+    color = 'var(--orange)';
+    advice = 'Your responses suggest moderate PEM features. Discuss with your doctor. Track symptoms carefully for 2 weeks, noting how you feel 24-48 hours after different types of exertion. Pacing strategies are recommended.';
+  } else {
+    level = 'Low PEM indicators';
+    color = 'var(--green)';
+    advice = 'Your responses suggest PEM may not be a significant feature. However, Long COVID presents differently in different people. If symptoms persist, continue monitoring and discuss with your doctor.';
+  }
+  const res = document.getElementById('pem-result');
+  res.style.display = 'block';
+  res.innerHTML = `<div style="font-size:9px;letter-spacing:2px;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-bottom:8px;">RESULT</div>
+    <div style="font-size:20px;font-weight:800;color:${color};margin-bottom:6px;">${level}</div>
+    <div style="font-size:11px;color:rgba(255,255,255,0.55);">Score: ${total}/${max} (${pct}%)</div>
+    <p style="font-size:12px;margin-top:10px;color:rgba(255,255,255,0.65);">${advice}</p>
+    <p style="font-size:11px;color:var(--muted);margin-top:8px;">This is a screening tool only, not a clinical diagnosis. Always consult a healthcare professional.</p>`;
+  res.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+// FAQ
+function tFaq(el) {
+  const body = el.nextElementSibling;
+  const arrow = el.querySelector('.fqa');
+  const open = body.style.display === 'block';
+  body.style.display = open ? 'none' : 'block';
+  arrow.style.transform = open ? '' : 'rotate(90deg)';
+}
+
+// PubMed RSS
+async function loadPub() {
+  const el = document.getElementById('pubfeed');
+  try {
+    const url = 'https://pubmed.ncbi.nlm.nih.gov/rss/search/?term=long+covid+OR+post-acute+sequelae+SARS-CoV-2+ME-CFS&limit=8&format=abstract';
+    const proxy = 'https://api.allorigins.win/get?url=' + encodeURIComponent(url);
+    const r = await fetch(proxy);
+    const d = await r.json();
+    const parser = new DOMParser();
+    const xml = parser.parseFromString(d.contents, 'text/xml');
+    const items = xml.querySelectorAll('item');
+    if (!items.length) throw new Error('none');
+    let html = '';
+    items.forEach(item => {
+      const title = item.querySelector('title')?.textContent || '';
+      const link = item.querySelector('link')?.textContent || '#';
+      const date = item.querySelector('pubDate')?.textContent || '';
+      const desc = item.querySelector('description')?.textContent?.replace(/<[^>]+>/g,'').slice(0,160) || '';
+      html += `<div class="pub-item"><div class="pub-title"><a href="${link}" target="_blank">${title}</a></div><div class="pub-meta">${new Date(date).toLocaleDateString('en-GB',{month:'short',year:'numeric'})} · ${desc}...</div></div>`;
+    });
+    el.innerHTML = html;
+  } catch(e) {
+    el.innerHTML = '<div class="load">Could not load live feed. <a href="https://pubmed.ncbi.nlm.nih.gov/?term=long+covid+OR+ME-CFS" target="_blank">Browse PubMed directly</a></div>';
+  }
+}
+
+// ClinicalTrials
+async function loadTrials() {
+  const el = document.getElementById('tfeed');
+  try {
+    const url = 'https://clinicaltrials.gov/api/v2/studies?query.cond=long+covid+OR+post-acute+sequelae+SARS-CoV-2+OR+ME-CFS&filter.overallStatus=RECRUITING&pageSize=6&fields=NCTId,BriefTitle,OverallStatus,Phase,LocationCountry';
+    const r = await fetch(url);
+    const d = await r.json();
+    const studies = d.studies || [];
+    if (!studies.length) throw new Error('none');
+    let html = '';
+    studies.forEach(s => {
+      const p = s.protocolSection || {};
+      const id2 = p.identificationModule || {};
+      const stat = p.statusModule || {};
+      const design = p.designModule || {};
+      const contacts = p.contactsLocationsModule || {};
+      const title = id2.briefTitle || 'Untitled';
+      const nctId = id2.nctId || '';
+      const phase = (design.phases || ['N/A']).join(', ');
+      const locs = contacts.locations || [];
+      const countries = [...new Set(locs.map(l => l.country).filter(Boolean))].slice(0,3).join(', ') || 'Various';
+      html += `<div class="tri"><div class="trih"><div class="trit"><a href="https://clinicaltrials.gov/study/${nctId}" target="_blank">${title}</a></div><span class="trs rec">RECRUITING</span></div><div class="trim"><span><strong>Phase:</strong> ${phase}</span><span><strong>Countries:</strong> ${countries}</span><span><a href="https://clinicaltrials.gov/study/${nctId}" target="_blank">${nctId} →</a></span></div></div>`;
+    });
+    el.innerHTML = html;
+  } catch(e) {
+    el.innerHTML = '<div class="load">Could not load live trials. <a href="https://clinicaltrials.gov/search?cond=long+covid&filter.overallStatus=RECRUITING" target="_blank">Browse ClinicalTrials.gov</a></div>';
+  }
+}
+
+loadPub();
+loadTrials();
+</script>
+</body>
+</html>
