@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Recalibrate, Free Health Intelligence Portals</title>
+<title>Recalibrate — Free Health Intelligence Portals</title>
 <meta name="description" content="Free, comprehensive patient intelligence portals for chronic illness. CSS, Fibromyalgia, Long COVID, ADHD and more. Built by patients, for patients.">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -12,16 +12,11 @@
 body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;min-height:100vh;}
 a{color:var(--cyan);text-decoration:none;}
 nav{background:rgba(7,7,14,0.97);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);padding:0 32px;height:56px;display:flex;align-items:center;justify-content:space-between;}
-.brand{display:flex;align-items:center;gap:12px;min-width:0;overflow:hidden;}
+.brand{display:flex;align-items:center;gap:12px;}
 .logo{width:34px;height:34px;background:linear-gradient(135deg,var(--cyan),var(--purple));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;}
-.bn{font-weight:800;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}.bs{font-size:10px;color:var(--muted);letter-spacing:1px;}
+.bn{font-weight:800;font-size:15px;}.bs{font-size:10px;color:var(--muted);letter-spacing:1px;}
 .pill{padding:6px 14px;border-radius:20px;font-size:11px;font-weight:600;background:rgba(139,92,246,0.12);border:1px solid rgba(139,92,246,0.25);color:var(--purple);}
 .pill:hover{background:rgba(139,92,246,0.22);}
-.bmc-wrap{position:fixed;bottom:24px;right:24px;z-index:999;display:flex;flex-direction:column;align-items:flex-end;gap:8px;}
-.bmc-tip{background:rgba(7,7,14,0.92);backdrop-filter:blur(12px);border:1px solid rgba(255,170,0,0.25);border-radius:20px;padding:6px 12px;font-size:10px;color:rgba(255,200,50,0.85);font-weight:500;white-space:nowrap;pointer-events:none;text-align:center;max-width:160px;white-space:normal;line-height:1.4;}
-.bmc-float{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#FFDD00,#ff8c00);display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 4px 20px rgba(255,170,0,0.45);cursor:pointer;text-decoration:none;transition:all .2s;}
-.bmc-float:hover{transform:scale(1.1) translateY(-2px);text-decoration:none;}
-@media(max-width:600px){.bmc-wrap{bottom:80px;right:16px;}.bmc-float{width:46px;height:46px;font-size:18px;}.bmc-tip{font-size:9px;}}
 .hero{max-width:900px;margin:0 auto;padding:80px 32px 48px;text-align:center;}
 .badge{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:20px;background:rgba(6,182,212,0.08);border:1px solid rgba(6,182,212,0.18);font-size:10px;color:var(--cyan);font-weight:600;letter-spacing:1.5px;margin-bottom:20px;}
 h1{font-size:clamp(32px,5vw,58px);font-weight:800;line-height:1.1;margin-bottom:16px;}
@@ -63,6 +58,11 @@ h1{font-size:clamp(32px,5vw,58px);font-weight:800;line-height:1.1;margin-bottom:
 .btn-g:hover{border-color:rgba(255,255,255,.15);}
 footer{background:var(--bg2);border-top:1px solid var(--border);padding:32px;text-align:center;}
 footer p{font-size:11px;color:var(--muted);margin-bottom:4px;}
+.social-links{display:flex;justify-content:center;gap:10px;margin:16px 0 8px;flex-wrap:wrap;}
+.social-link{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:20px;font-size:11px;font-weight:600;border:1px solid var(--border);color:var(--muted);transition:all 0.2s;text-decoration:none;}
+.social-link:hover{border-color:rgba(255,255,255,0.15);color:var(--text);background:rgba(255,255,255,0.04);text-decoration:none;}
+.social-link.x:hover{border-color:rgba(255,255,255,0.3);color:#fff;}
+.social-link.li:hover{border-color:rgba(10,102,194,0.5);color:#0a66c2;}
 @media(max-width:600px){.hero{padding:48px 20px 32px;}.portals,.community{padding-left:20px;padding-right:20px;}.stats{flex-wrap:wrap;}.stat{min-width:50%;border-bottom:1px solid var(--border);}}
 </style>
 </head>
@@ -70,15 +70,15 @@ footer p{font-size:11px;color:var(--muted);margin-bottom:4px;}
 <nav>
   <div class="brand">
     <div class="logo">🏥</div>
-    <div><div class="bn"><span class="bn-short">Recalibrate</span><span class="bn-long"> Health Portals</span></div><div class="bs">FREE PATIENT INTELLIGENCE · GLOBAL</div></div>
+    <div><div class="bn">Recalibrate Health Portals</div><div class="bs">FREE PATIENT INTELLIGENCE · GLOBAL</div></div>
   </div>
   <a href="https://t.me/Recalibrate_HealthPortals" class="pill" target="_blank">💬 Community</a>
 </nav>
 
 <div class="hero">
   <div class="badge">🧬 FREE · GLOBAL · EVIDENCE-BASED · LIVE DATA</div>
-  <h1>The world's most<br>comprehensive <span class="hl">chronic illness<br>intelligence</span></h1>
-  <p class="hd">Deep patient intelligence portals for the most misunderstood conditions on earth. Live research, evidence-rated treatments, clinical trials, and community, built by patients, for patients.</p>
+  <h1>The world's most<br>comprehensive <span class="hl">chronic illness<br>intelligence</span> — free</h1>
+  <p class="hd">Deep patient intelligence portals for the most misunderstood conditions on earth. Live research, evidence-rated treatments, clinical trials, and community — built by patients, for patients.</p>
   <div class="stats">
     <div class="stat"><div class="sv">100M+</div><div class="sl">PATIENTS GLOBALLY</div></div>
     <div class="stat"><div class="sv">83%</div><div class="sl">MISDIAGNOSED</div></div>
@@ -112,65 +112,29 @@ footer p{font-size:11px;color:var(--muted);margin-bottom:4px;}
       <div><div class="pc-title">ADHD &amp; Neurodivergence</div><div class="pc-sub">ATTENTION · EXECUTIVE FUNCTION · COMORBIDITIES</div></div>
       <p class="pc-desc">Evidence-based portal for ADHD, autism spectrum, and neurodivergent conditions. Treatment comparisons, medication guides, live research.</p>
       <div class="pc-features"><span class="feat">Medication Guide</span><span class="feat">Live Research</span><span class="feat">Comorbidities</span></div>
-      <div class="pc-link-dis">Coming soon, join community for updates 🔔</div>
+      <div class="pc-link-dis">Coming soon — join community for updates 🔔</div>
     </div>
     <div class="portal-card">
       <div class="pc-glow" style="background:var(--pink)"></div>
       <div class="pc-icon">🧬</div>
       <span class="pc-badge soon">COMING SOON</span>
       <div><div class="pc-title">Fibromyalgia</div><div class="pc-sub">WIDESPREAD PAIN · FATIGUE · SLEEP</div></div>
-      <p class="pc-desc">Comprehensive fibromyalgia intelligence, mechanism, diagnosis, treatment evidence, active trials, global specialist centres.</p>
+      <p class="pc-desc">Comprehensive fibromyalgia intelligence — mechanism, diagnosis, treatment evidence, active trials, global specialist centres.</p>
       <div class="pc-features"><span class="feat">FIQ-R Assessment</span><span class="feat">Live Trials</span><span class="feat">Treatment Evidence</span></div>
-      <div class="pc-link-dis">Coming soon, join community for updates 🔔</div>
+      <div class="pc-link-dis">Coming soon — join community for updates 🔔</div>
     </div>
     <div class="portal-card">
       <div class="pc-glow" style="background:var(--orange)"></div>
       <div class="pc-icon">🦠</div>
       <span class="pc-badge soon">COMING SOON</span>
       <div><div class="pc-title">Long COVID / ME-CFS</div><div class="pc-sub">POST-VIRAL · FATIGUE · BRAIN FOG</div></div>
-      <p class="pc-desc">Deep intelligence portal for Long COVID and ME/CFS, the post-viral conditions reshaping medicine. Live trial data and cutting-edge research.</p>
+      <p class="pc-desc">Deep intelligence portal for Long COVID and ME/CFS — the post-viral conditions reshaping medicine. Live trial data and cutting-edge research.</p>
       <div class="pc-features"><span class="feat">PEM Tracker</span><span class="feat">Live Research</span><span class="feat">Recovery Protocols</span></div>
-      <div class="pc-link-dis">Coming soon, join community for updates 🔔</div>
+      <div class="pc-link-dis">Coming soon — join community for updates 🔔</div>
     </div>
   </div>
 </div>
 
-
-<div style="max-width:900px;margin:0 auto;padding:0 32px 80px;">
-  <div style="font-size:9px;letter-spacing:3px;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-bottom:20px;display:flex;align-items:center;gap:12px;">🏥 THE RECALIBRATE ECOSYSTEM<span style="flex:1;height:1px;background:var(--border);display:block;"></span></div>
-  <div style="background:var(--bg2);border:1px solid rgba(6,182,212,0.15);border-radius:14px;overflow:hidden;">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);">
-      <div style="background:var(--bg2);padding:24px;">
-        <div style="font-size:24px;margin-bottom:10px;">🏥</div>
-        <div style="font-size:14px;font-weight:800;margin-bottom:6px;">Recalibrate App</div>
-        <div style="font-size:11px;color:var(--muted);line-height:1.7;margin-bottom:14px;">A health technology platform built for people with chronic pain and central sensitisation. Tools, tracking, and programmes designed by a CSS patient, for CSS patients.</div>
-        <a href="https://recalibratepain.com" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:rgba(6,182,212,0.08);border:1px solid rgba(6,182,212,0.2);border-radius:7px;font-size:11px;font-weight:700;color:var(--cyan);">Visit Recalibrate →</a>
-      </div>
-      <div style="background:var(--bg2);padding:24px;">
-        <div style="font-size:24px;margin-bottom:10px;">🧠</div>
-        <div style="font-size:14px;font-weight:800;margin-bottom:6px;">Free Health Portals</div>
-        <div style="font-size:11px;color:var(--muted);line-height:1.7;margin-bottom:14px;">Standalone free intelligence resources for chronic illness conditions worldwide. No ads, no paywalls, no sign-ups. Built to help patients navigate complex conditions faster.</div>
-        <a href="css/" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:rgba(139,92,246,0.08);border:1px solid rgba(139,92,246,0.2);border-radius:7px;font-size:11px;font-weight:700;color:var(--purple);">CSS Portal →</a>
-      </div>
-      <div style="background:var(--bg2);padding:24px;">
-        <div style="font-size:24px;margin-bottom:10px;">💬</div>
-        <div style="font-size:14px;font-weight:800;margin-bottom:6px;">Community</div>
-        <div style="font-size:11px;color:var(--muted);line-height:1.7;margin-bottom:14px;">A growing global community of people navigating chronic illness. Share what works, ask questions, and connect with people who genuinely understand.</div>
-        <a href="https://t.me/Recalibrate_HealthPortals" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:rgba(139,92,246,0.08);border:1px solid rgba(139,92,246,0.2);border-radius:7px;font-size:11px;font-weight:700;color:var(--purple);">Join Telegram →</a>
-      </div>
-      <div style="background:var(--bg2);padding:24px;">
-        <div style="font-size:24px;margin-bottom:10px;">☕</div>
-        <div style="font-size:14px;font-weight:800;margin-bottom:6px;">Support the Mission</div>
-        <div style="font-size:11px;color:var(--muted);line-height:1.7;margin-bottom:14px;">Everything here is free and always will be. If these resources save you time, help you understand your condition, or help someone you love, consider supporting the work.</div>
-        <a href="https://buymeacoffee.com/TristanSiokos" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:rgba(255,170,0,0.08);border:1px solid rgba(255,170,0,0.2);border-radius:7px;font-size:11px;font-weight:700;color:#ffaa00;">Buy a Coffee →</a>
-      </div>
-    </div>
-    <div style="padding:20px 24px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:gap;gap:12px;">
-      <div style="font-size:12px;color:var(--muted);">Built by a chronic pain patient. Powered by research, not revenue.</div>
-      <a href="https://recalibratepain.com" target="_blank" style="font-size:11px;font-weight:700;color:var(--cyan);">recalibratepain.com →</a>
-    </div>
-  </div>
-</div>
 <div class="community">
   <div class="comm-card">
     <div style="font-size:42px;margin-bottom:14px;">🤝</div>
@@ -186,13 +150,15 @@ footer p{font-size:11px;color:var(--muted);margin-bottom:4px;}
 
 <footer>
   <p>Recalibrate Health Portals · Free patient intelligence for chronic illness worldwide</p>
+  <div class="social-links">
+    <a href="https://www.linkedin.com/company/recalibrate-inc" class="social-link li" target="_blank">💼 LinkedIn</a>
+    <a href="https://x.com/Recalibrateapp" class="social-link x" target="_blank">𝕏 @Recalibrateapp</a>
+    <a href="https://instagram.com/Recalibrateapp" class="social-link" target="_blank">📸 Instagram</a>
+    <a href="https://tiktok.com/@Recalibrateapp" class="social-link" target="_blank">🎵 TikTok</a>
+    <a href="https://t.me/Recalibrate_HealthPortals" class="social-link" target="_blank">💬 Telegram</a>
+  </div>
   <p>Not medical advice · Educational purposes only · Always consult a qualified healthcare professional</p>
-  <p style="margin-top:8px;"><a href="https://recalibratepain.com">Recalibrate</a> · <a href="https://t.me/Recalibrate_HealthPortals">Community</a> · <a href="https://buymeacoffee.com/TristanSiokos">Support</a></p>
+  <p style="margin-top:8px;"><a href="https://recalibratepain.com">Recalibrate</a> · <a href="https://buymeacoffee.com/TristanSiokos">Support</a></p>
 </footer>
-<div class="bmc-wrap">
-  <div class="bmc-tip">Keep Health Portals free ☕</div>
-  <a href="https://buymeacoffee.com/TristanSiokos" target="_blank" class="bmc-float" title="Support this free portal">☕</a>
-</div>
 </body>
 </html>
-
