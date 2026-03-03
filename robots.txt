@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://recalibrate-health-portals.github.io/Portals/sitemap.xml
