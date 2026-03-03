@@ -22,7 +22,7 @@ body{overflow-x:hidden;background:var(--bg);color:var(--text);font-family:'Inter
 a{color:var(--orange);text-decoration:none;}a:hover{text-decoration:underline;}
 .bmc-float{position:fixed;bottom:20px;right:16px;z-index:999;width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#FFDD00,#ff8c00);display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 4px 20px rgba(255,170,0,0.45);cursor:pointer;text-decoration:none;transition:all .2s;}
 .bmc-float:hover{transform:scale(1.1) translateY(-2px);text-decoration:none;}
-nav{background:rgba(7,7,14,0.97);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200;padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;}
+nav{background:rgba(7,7,14,0.97);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200;padding:0 14px;height:52px;display:flex;align-items:center;justify-content:space-between;max-width:100%;overflow:hidden;}
 .brand{display:flex;align-items:center;gap:10px;}
 .bn{font-weight:700;font-size:13px;white-space:nowrap;}.bs{font-size:9px;color:var(--muted);white-space:nowrap;}
 .nav-links{display:flex;gap:2px;flex-wrap:wrap;}
@@ -30,7 +30,7 @@ nav{background:rgba(7,7,14,0.97);backdrop-filter:blur(24px);border-bottom:1px so
 .nl:hover{color:var(--text);background:rgba(255,255,255,0.05);text-decoration:none;}
 .pill{padding:5px 12px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:5px;background:rgba(245,158,11,0.12);border:1px solid rgba(245,158,11,0.25);color:var(--orange);}
 .pill:hover{background:rgba(245,158,11,0.22);text-decoration:none;}
-.hero{padding:56px 24px 0;max-width:1140px;margin:0 auto;}
+.hero{padding:56px 24px 0;max-width:1140px;margin:0 auto;overflow-x:hidden;}
 .hg{display:grid;grid-template-columns:1fr 220px;gap:32px;align-items:start;margin-bottom:32px;}
 .hbadge{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:20px;background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.18);font-size:10px;color:var(--orange);font-weight:600;letter-spacing:1.5px;margin-bottom:14px;}
 h1{font-size:clamp(26px,4vw,46px);font-weight:800;line-height:1.1;margin-bottom:14px;}
@@ -58,7 +58,7 @@ h1{font-size:clamp(26px,4vw,46px);font-weight:800;line-height:1.1;margin-bottom:
 .main{max-width:1140px;margin:0 auto;padding:32px 24px 120px;display:grid;grid-template-columns:1fr 310px;gap:24px;align-items:start;}
 .left{display:flex;flex-direction:column;gap:28px;}
 .right{display:flex;flex-direction:column;gap:16px;position:sticky;top:68px;}
-.sh{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
+.sh{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:6px;}
 .stw{display:flex;align-items:center;gap:10px;}
 .sd{width:3px;height:32px;border-radius:2px;}
 .st2{font-size:15px;font-weight:700;}
@@ -71,7 +71,7 @@ h1{font-size:clamp(26px,4vw,46px);font-weight:800;line-height:1.1;margin-bottom:
 .tr{background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.2);color:var(--red);}
 .card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:20px;}
 .card-sm{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 16px;}
-p{font-size:13px;color:rgba(255,255,255,0.6);line-height:1.75;margin-bottom:10px;}
+p{font-size:13px;color:rgba(255,255,255,0.6);line-height:1.75;margin-bottom:10px;max-width:100%;}
 p:last-child{margin-bottom:0;}
 .dtitle{font-size:9px;letter-spacing:2px;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-bottom:10px;}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
@@ -88,8 +88,8 @@ tr:last-child td{border-bottom:none;}
 .ev-c{background:rgba(245,158,11,0.15);color:var(--orange);border:1px solid rgba(245,158,11,0.3);}
 .ev-d{background:rgba(255,255,255,0.05);color:var(--muted);border:1px solid var(--border);}
 .ev-x{background:rgba(239,68,68,0.15);color:var(--red);border:1px solid rgba(239,68,68,0.3);}
-.sym-grid{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
-.sym{padding:4px 10px;border-radius:6px;font-size:11px;background:rgba(245,158,11,0.07);border:1px solid rgba(245,158,11,0.15);color:rgba(245,158,11,0.8);}
+.sym-grid{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;max-width:100%;}
+.sym{padding:4px 10px;border-radius:6px;font-size:11px;background:rgba(245,158,11,0.07);border:1px solid rgba(245,158,11,0.15);color:rgba(245,158,11,0.8);word-break:normal;}
 .load{font-size:11px;color:var(--muted);padding:20px;text-align:center;}
 .pub-item{padding:12px 0;border-bottom:1px solid var(--border);}
 .pub-item:last-child{border-bottom:none;}
@@ -232,19 +232,19 @@ tr:last-child td{border-bottom:none;}
   <div class="sh"><div class="stw"><div class="sd" style="background:var(--orange)"></div><div><div class="st2">Condition Overview</div><div class="ss">WHAT IS LONG COVID AND ME/CFS</div></div></div><span class="stag ts">CLINICAL</span></div>
   <div class="dtitle">DEFINITION</div>
   <p>Long COVID (also called Post-Acute Sequelae of SARS-CoV-2 / PASC) refers to new, returning, or ongoing health problems that persist 3 or more months after a SARS-CoV-2 infection, as defined by the WHO. Symptoms may be continuous or relapsing and remitting.</p>
-  <p>ME/CFS (Myalgic Encephalomyelitis / Chronic Fatigue Syndrome) is a serious, long-term illness that affects many body systems. Long COVID and ME/CFS share striking biological and symptomatic overlap — many Long COVID patients meet the clinical criteria for ME/CFS.</p>
+  <p>ME/CFS (Myalgic Encephalomyelitis / Chronic Fatigue Syndrome) is a serious, long-term illness that affects many body systems. Long COVID and ME/CFS share striking biological and symptomatic overlap. Many Long COVID patients meet the clinical criteria for ME/CFS.</p>
   <div class="dtitle" style="margin-top:16px;">KEY SYMPTOMS</div>
   <div class="sym-grid">
     <span class="sym">Post-Exertional Malaise (PEM)</span><span class="sym">Brain fog</span><span class="sym">Fatigue</span><span class="sym">Breathlessness</span><span class="sym">POTS / dizziness</span><span class="sym">Chest pain</span><span class="sym">Unrefreshing sleep</span><span class="sym">Cognitive impairment</span><span class="sym">Headaches</span><span class="sym">Joint / muscle pain</span><span class="sym">Heart palpitations</span><span class="sym">Sensory sensitivity</span><span class="sym">Smell / taste issues</span><span class="sym">Anxiety / low mood</span><span class="sym">Immune dysfunction</span>
   </div>
   <div class="pem-warn" style="margin-top:16px;">
     <span style="font-size:18px;">🚨</span>
-    <div><strong>Critical: Post-Exertional Malaise (PEM)</strong> — PEM is the hallmark of ME/CFS and many Long COVID cases. It is the worsening of symptoms after physical or mental exertion that would not have caused a problem before illness. PEM can be delayed by 12-48 hours. <strong>Graded Exercise Therapy (GET) is contraindicated</strong> in patients with PEM and can cause serious, lasting harm.</div>
+    <div><strong>Critical: Post-Exertional Malaise (PEM)</strong> , PEM is the hallmark of ME/CFS and many Long COVID cases. It is the worsening of symptoms after physical or mental exertion that would not have caused a problem before illness. PEM can be delayed by 12-48 hours. <strong>Graded Exercise Therapy (GET) is contraindicated</strong> in patients with PEM and can cause serious, lasting harm.</div>
   </div>
   <div class="dtitle" style="margin-top:16px;">WHO GETS IT</div>
   <p>Long COVID can follow any COVID-19 infection, regardless of severity. Studies show approximately 10-30% of non-hospitalised COVID cases develop Long COVID. It affects all ages, including children, and was more common before widespread vaccination, though vaccinated individuals are not immune. Female sex, older age, pre-existing conditions, and more severe initial illness increase risk.</p>
   <div class="dtitle" style="margin-top:16px;">ME/CFS CONNECTION</div>
-  <p>ME/CFS is not new — it has been documented since the 1950s. Long COVID has brought renewed scientific attention to ME/CFS, as many Long COVID patients develop a condition clinically indistinguishable from ME/CFS. Shared features include PEM, cognitive dysfunction, orthostatic intolerance, immune abnormalities, and sleep disruption.</p>
+  <p>ME/CFS is not new , it has been documented since the 1950s. Long COVID has brought renewed scientific attention to ME/CFS, as many Long COVID patients develop a condition clinically indistinguishable from ME/CFS. Shared features include PEM, cognitive dysfunction, orthostatic intolerance, immune abnormalities, and sleep disruption.</p>
 </div>
 
 <!-- MECHANISM -->
@@ -257,18 +257,18 @@ tr:last-child td{border-bottom:none;}
     <div class="mechbox"><h4 style="color:var(--cyan)">Microbiome Disruption</h4><p>COVID-19 and Long COVID are associated with significant gut dysbiosis, which correlates with symptom severity and may perpetuate systemic inflammation.</p></div>
     <div class="mechbox"><h4 style="color:var(--purple)">Autoimmunity</h4><p>Novel autoantibodies targeting the nervous system, blood vessels, and other tissues have been identified in Long COVID patients, suggesting autoimmune components.</p></div>
     <div class="mechbox"><h4 style="color:var(--green)">Endothelial Damage</h4><p>Microclots (microthrombi) and endothelial dysfunction impair oxygen delivery to tissues, contributing to fatigue, breathlessness, and cognitive symptoms.</p></div>
-    <div class="mechbox"><h4 style="color:var(--orange)">Mitochondrial Dysfunction</h4><p>Impaired energy production at the cellular level — mitochondria fail to produce ATP efficiently, explaining profound fatigue and PEM.</p></div>
+    <div class="mechbox"><h4 style="color:var(--orange)">Mitochondrial Dysfunction</h4><p>Impaired energy production at the cellular level , mitochondria fail to produce ATP efficiently, explaining profound fatigue and PEM.</p></div>
     <div class="mechbox"><h4 style="color:var(--pink)">Latent Virus Reactivation</h4><p>EBV (Epstein-Barr Virus), HHV-6, and other herpesviruses may reactivate post-COVID, compounding immune burden and symptoms.</p></div>
     <div class="mechbox"><h4 style="color:var(--blue)">Neurological Involvement</h4><p>Neuroinflammation, blood-brain barrier disruption, and reduced cerebral blood flow contribute to brain fog, cognitive impairment, and autonomic dysfunction.</p></div>
   </div>
   <div class="dtitle" style="margin-top:16px;">WHY STANDARD TESTS APPEAR NORMAL</div>
-  <p>Routine blood panels, MRI, and ECG frequently appear normal in Long COVID and ME/CFS patients. This does not mean nothing is wrong. The abnormalities are often at the cellular, mitochondrial, or microbiome level, or involve subtle immune signatures not captured by standard clinical tests. Specialised research assays detect consistent abnormalities — the absence of a positive test result does not invalidate symptoms.</p>
+  <p>Routine blood panels, MRI, and ECG frequently appear normal in Long COVID and ME/CFS patients. This does not mean nothing is wrong. The abnormalities are often at the cellular, mitochondrial, or microbiome level, or involve subtle immune signatures not captured by standard clinical tests. Specialised research assays detect consistent abnormalities , the absence of a positive test result does not invalidate symptoms.</p>
 </div>
 
 <!-- ASSESSMENT -->
 <div id="assessment" class="card">
   <div class="sh"><div class="stw"><div class="sd" style="background:var(--green)"></div><div><div class="st2">PEM Screener</div><div class="ss">POST-EXERTIONAL MALAISE ASSESSMENT TOOL</div></div></div><span class="stag tg">INTERACTIVE</span></div>
-  <p style="font-size:12px;color:var(--muted);">This tool helps identify Post-Exertional Malaise — the hallmark feature of ME/CFS and Long COVID. It is not a diagnostic tool. Share results with your doctor.</p>
+  <p style="font-size:12px;color:var(--muted);">This tool helps identify Post-Exertional Malaise , the hallmark feature of ME/CFS and Long COVID. It is not a diagnostic tool. Share results with your doctor.</p>
   <div class="pem-warn"><span style="font-size:16px;">⚠</span><div><strong>Important:</strong> PEM is often delayed 12-48 hours after exertion. When answering, think about how you feel the day after activity, not just during it.</div></div>
   <div id="pem-form">
     <div class="pem-q"><p>1. After physical activity (e.g. walking, housework, exercise), do you feel worse than before?</p><div class="pem-opts"><span class="pem-opt" onclick="selOpt(this,1,0)">Never</span><span class="pem-opt" onclick="selOpt(this,1,1)">Occasionally</span><span class="pem-opt" onclick="selOpt(this,1,2)">Often</span><span class="pem-opt" onclick="selOpt(this,1,3)">Always</span></div></div>
@@ -297,7 +297,7 @@ tr:last-child td{border-bottom:none;}
     <tr><td><strong>Antihistamines (H1+H2)</strong></td><td><span class="ev ev-b">B</span></td><td>Loratadine, cetirizine (H1) with famotidine (H2). Particularly helpful in patients with MCAS overlap. Many report significant symptom improvement.</td></tr>
     <tr><td><strong>Low-Histamine Diet</strong></td><td><span class="ev ev-b">B</span></td><td>Reduction in high-histamine and histamine-liberating foods. Beneficial in MCAS subgroup. Reduces immune activation.</td></tr>
     <tr><td><strong>Low Dose Naltrexone (LDN)</strong></td><td><span class="ev ev-b">B</span></td><td>1.5-4.5mg nightly. Anti-neuroinflammatory. Growing evidence base, significant patient-reported benefit. Well-tolerated. Off-label use.</td></tr>
-    <tr><td><strong>SSRIs / SNRIs</strong></td><td><span class="ev ev-b">B</span></td><td>Particularly for dysautonomia, POTS, and neuropathic symptoms. Fluoxetine, duloxetine. Not purely antidepressant — target autonomic dysfunction.</td></tr>
+    <tr><td><strong>SSRIs / SNRIs</strong></td><td><span class="ev ev-b">B</span></td><td>Particularly for dysautonomia, POTS, and neuropathic symptoms. Fluoxetine, duloxetine. Not purely antidepressant , target autonomic dysfunction.</td></tr>
     <tr><td><strong>Melatonin</strong></td><td><span class="ev ev-b">B</span></td><td>0.5-5mg for sleep disruption and circadian dysregulation. Anti-inflammatory properties may have additional benefit.</td></tr>
     <tr><td><strong>Antivirals (Paxlovid / Nirmatrelvir)</strong></td><td><span class="ev ev-c">C</span></td><td>Case series and trials suggest benefit in patients with viral persistence. Research ongoing. Not yet standard of care but promising.</td></tr>
     <tr><td><strong>BC007</strong></td><td><span class="ev ev-c">C</span></td><td>Aptamer targeting autoantibodies. Phase II trials underway. Early results promising for autoantibody-mediated subgroup.</td></tr>
@@ -330,7 +330,7 @@ tr:last-child td{border-bottom:none;}
       <li>Stop activity before you feel tired, not after</li>
       <li>Include cognitive and emotional exertion in your budget</li>
       <li>Use a 1-10 symptom diary to track patterns</li>
-      <li>Rest does not mean sleep — quiet lying down counts</li>
+      <li>Rest does not mean sleep , quiet lying down counts</li>
     </ul></div>
     <div class="liv"><h4>Heart Rate Management</h4><ul>
       <li>Use a HR monitor (smartwatch or chest strap)</li>
@@ -340,14 +340,14 @@ tr:last-child td{border-bottom:none;}
       <li>Tilt table / recline more to manage POTS symptoms</li>
     </ul></div>
     <div class="liv"><h4>Cognitive Pacing (Brain Fog)</h4><ul>
-      <li>Screen time is exertion — limit in acute periods</li>
+      <li>Screen time is exertion , limit in acute periods</li>
       <li>Use voice notes instead of writing when fatigued</li>
       <li>Break tasks into very small steps with rest in between</li>
-      <li>Prioritise ruthlessly — not everything needs doing today</li>
+      <li>Prioritise ruthlessly , not everything needs doing today</li>
       <li>Cold packs on the neck can temporarily reduce brain fog</li>
     </ul></div>
     <div class="liv"><h4>Sleep and Rest</h4><ul>
-      <li>Unrefreshing sleep is a core symptom — not laziness</li>
+      <li>Unrefreshing sleep is a core symptom , not laziness</li>
       <li>Consistent sleep/wake times help stabilise circadian rhythm</li>
       <li>Avoid screens 1 hour before bed</li>
       <li>Dark, cool room reduces sensory load during sleep</li>
@@ -358,14 +358,14 @@ tr:last-child td{border-bottom:none;}
       <li>Low-histamine diet if MCAS symptoms present</li>
       <li>Electrolytes (increased salt/fluid for POTS)</li>
       <li>Coenzyme Q10, magnesium, B vitamins (supportive evidence)</li>
-      <li>Avoid alcohol — worsens nearly all Long COVID symptoms</li>
+      <li>Avoid alcohol , worsens nearly all Long COVID symptoms</li>
     </ul></div>
     <div class="liv"><h4>Work and Social Adjustments</h4><ul>
       <li>Request reasonable adjustments from employer</li>
       <li>Working from home reduces commute exertion significantly</li>
       <li>Part-time or reduced hours during recovery phase</li>
       <li>Communicate energy limits clearly to family and friends</li>
-      <li>Disability benefits may be available — seek welfare advice</li>
+      <li>Disability benefits may be available , seek welfare advice</li>
     </ul></div>
   </div>
 </div>
@@ -397,7 +397,7 @@ tr:last-child td{border-bottom:none;}
 <div id="faq" class="card">
   <div class="sh"><div class="stw"><div class="sd" style="background:var(--muted)"></div><div><div class="st2">Frequently Asked Questions</div><div class="ss">COMMON QUESTIONS ANSWERED</div></div></div></div>
   <div class="fqi"><div class="fqq" onclick="tFaq(this)"><span>Is Long COVID a real medical condition?</span><span class="fqa">›</span></div><div class="fqb">Yes. Long COVID is recognised by the WHO, CDC, NIH, and all major health authorities. It has been documented in thousands of peer-reviewed studies. Consistent biological abnormalities have been found in Long COVID patients including immune dysregulation, microclots, viral persistence, and metabolic dysfunction. The absence of a positive routine test does not mean the condition does not exist.</div></div>
-  <div class="fqi"><div class="fqq" onclick="tFaq(this)"><span>Can I recover from Long COVID?</span><span class="fqa">›</span></div><div class="fqb">Yes, many people improve significantly. Recovery timelines vary widely. Some recover within months; others take years. Key factors associated with better outcomes include early identification, pacing (avoiding PEM), appropriate medical support, and avoiding GET. The trajectory is often non-linear — gradual improvement with occasional setbacks is common.</div></div>
+  <div class="fqi"><div class="fqq" onclick="tFaq(this)"><span>Can I recover from Long COVID?</span><span class="fqa">›</span></div><div class="fqb">Yes, many people improve significantly. Recovery timelines vary widely. Some recover within months; others take years. Key factors associated with better outcomes include early identification, pacing (avoiding PEM), appropriate medical support, and avoiding GET. The trajectory is often non-linear , gradual improvement with occasional setbacks is common.</div></div>
   <div class="fqi"><div class="fqq" onclick="tFaq(this)"><span>What is the difference between Long COVID and ME/CFS?</span><span class="fqa">›</span></div><div class="fqb">ME/CFS is a well-defined clinical condition that predates COVID-19. Long COVID is a newer umbrella term for persistent post-COVID illness. Many Long COVID patients meet the diagnostic criteria for ME/CFS. They share PEM, cognitive dysfunction, orthostatic intolerance, and immune abnormalities. Some consider post-COVID ME/CFS to be a subtype of Long COVID; research is ongoing.</div></div>
   <div class="fqi"><div class="fqq" onclick="tFaq(this)"><span>Why does exercise make me worse?</span><span class="fqa">›</span></div><div class="fqb">This is Post-Exertional Malaise (PEM). In Long COVID and ME/CFS, cellular energy production is impaired and the immune system responds abnormally to exertion. Exercise triggers a cascade of inflammatory and metabolic dysfunction that takes days to recover from. This is a physiological response, not a psychological one. PEM is measured and documented in research labs.</div></div>
   <div class="fqi"><div class="fqq" onclick="tFaq(this)"><span>What is POTS and how does it relate to Long COVID?</span><span class="fqa">›</span></div><div class="fqb">POTS (Postural Orthostatic Tachycardia Syndrome) is a form of dysautonomia where standing causes an abnormal increase in heart rate (typically 30+ bpm). It causes dizziness, palpitations, brain fog, and near-fainting. Approximately 30% of Long COVID patients show signs of POTS or orthostatic intolerance. It is manageable with increased salt/fluid, compression garments, and in some cases medication.</div></div>
