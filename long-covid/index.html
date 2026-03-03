@@ -164,8 +164,15 @@ tr:last-child td{border-bottom:none;}
   .card{padding:12px;}
   .hs-v{font-size:18px;}
   .sbar{overflow-x:hidden;}
-  table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;}
   .pem-warn{flex-direction:column;gap:6px;}
+  .stag{display:none;}
+  /* table -> card layout on mobile */
+  table thead{display:none;}
+  table tbody tr{display:block;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:10px 12px;margin-bottom:8px;}
+  table tbody tr td{display:block;border:none;padding:3px 0;font-size:12px;}
+  table tbody tr td:first-child{font-weight:700;color:var(--text);font-size:12px;margin-bottom:4px;}
+  table tbody tr td:nth-child(2){margin-bottom:4px;}
+  table tbody tr td:last-child{color:rgba(255,255,255,0.5);font-size:11px;line-height:1.6;}
 }
 @media(max-width:380px){
   .bn{font-size:10px;}
