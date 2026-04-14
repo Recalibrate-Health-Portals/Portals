@@ -217,8 +217,8 @@ tr:last-child td{border-bottom:none;}
 </head>
 <body>
 <div class="bmc-wrap">
-  <div class="bmc-tip">Keep Health Portals free ☕</div>
-  <a href="https://buymeacoffee.com/TristanSiokos" target="_blank" class="bmc-float" title="Support this free portal">☕</a>
+  <div class="bmc-tip">Keep Health Portals Free ☕</div>
+  <a href="https://ko-fi.com/recalibrate" target="_blank" class="bmc-float" title="Support this free portal">☕</a>
 </div>
 <nav>
   <div class="brand">
@@ -238,6 +238,7 @@ tr:last-child td{border-bottom:none;}
   </div>
   <div style="display:flex;align-items:center;gap:8px;">
     <a href="../" style="padding:5px 12px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.5);" onmouseover="this.style.color='#fff';this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='rgba(255,255,255,0.5)';this.style.background='rgba(255,255,255,0.04)'">← All Portals</a>
+    <a href="https://recalibratepain.com" style="padding:5px 12px;border-radius:20px;font-size:11px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.5);" onmouseover="this.style.color='#fff';this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.color='rgba(255,255,255,0.5)';this.style.background='rgba(255,255,255,0.04)'" target="_blank">← Website</a>
     <a href="https://t.me/+WQAEro0iwB5kY2Fk" class="pill" target="_blank">💬 Community</a>
   </div>
 </nav>
@@ -292,14 +293,22 @@ tr:last-child td{border-bottom:none;}
   <p>ME/CFS is not new , it has been documented since the 1950s. Long COVID has brought renewed scientific attention to ME/CFS, as many Long COVID patients develop a condition clinically indistinguishable from ME/CFS. Shared features include PEM, cognitive dysfunction, orthostatic intolerance, immune abnormalities, and sleep disruption.</p>
 </div>
 
-<div class="card" style="border-color:rgba(6,182,212,0.18);background:linear-gradient(135deg,rgba(6,182,212,0.05),rgba(245,158,11,0.04));">
-  <div class="sh"><div class="stw"><div class="sd" style="background:var(--cyan)"></div><div><div class="st2">Research and Clinical Updates</div><div class="ss">GO STRAIGHT TO LIVE DATA</div></div></div><span class="stag ti">PRIORITY</span></div>
-  <div class="grid2">
-    <div class="mechbox"><h4 style="color:var(--cyan)">Live Research Feed</h4><p>Newest Long COVID and ME/CFS PubMed papers surfaced near the top for rapid access.</p><p style="margin-top:8px;"><a href="#research">Open live research ↓</a></p></div>
-    <div class="mechbox"><h4 style="color:var(--green)">Active Clinical Trials</h4><p>Recruiting studies appear one jump away so people can get to options quickly.</p><p style="margin-top:8px;"><a href="#trials">Open active trials ↓</a></p></div>
-  </div>
-</div>
 <!-- MECHANISM -->
+
+<div id="research" class="card">
+  <div class="sh"><div class="stw"><div class="sd" style="background:var(--cyan)"></div><div><div class="st2">Live Research Feed</div><div class="ss">PUBMED · UPDATED IN REAL TIME</div></div></div><span class="stag ti">LIVE</span></div>
+  <div id="pubfeed"><div class="load">Loading latest Long COVID research from PubMed...</div></div>
+  <p style="font-size:11px;color:var(--muted);margin-top:8px;">Live feed from PubMed. Updates automatically. <a href="https://pubmed.ncbi.nlm.nih.gov/?term=long+covid+OR+post-acute+sequelae+SARS-CoV-2+OR+ME-CFS" target="_blank">Browse PubMed directly</a></p>
+</div>
+
+
+<div id="trials" class="card">
+  <div class="sh"><div class="stw"><div class="sd" style="background:var(--green)"></div><div><div class="st2">Active Clinical Trials</div><div class="ss">RECRUITING NOW · GLOBAL</div></div></div><span class="stag tg">LIVE</span></div>
+  <div id="tfeed"><div class="load">Loading recruiting trials from ClinicalTrials.gov...</div></div>
+  <p style="font-size:11px;color:var(--muted);margin-top:8px;">Verify eligibility at <a href="https://clinicaltrials.gov/search?cond=long+covid+OR+post-acute+sequelae&filter.overallStatus=RECRUITING" target="_blank">ClinicalTrials.gov</a></p>
+</div>
+
+
 <div id="mechanism" class="card">
   <div class="sh"><div class="stw"><div class="sd" style="background:var(--cyan)"></div><div><div class="st2">Biological Mechanism</div><div class="ss">WHAT IS HAPPENING IN THE BODY</div></div></div><span class="stag ti">SCIENCE</span></div>
   <p>Long COVID and ME/CFS are complex, multi-system conditions. Current research points to several overlapping biological mechanisms, often occurring simultaneously.</p>
@@ -360,18 +369,8 @@ tr:last-child td{border-bottom:none;}
 </div>
 
 <!-- RESEARCH -->
-<div id="research" class="card">
-  <div class="sh"><div class="stw"><div class="sd" style="background:var(--cyan)"></div><div><div class="st2">Live Research Feed</div><div class="ss">PUBMED · UPDATED IN REAL TIME</div></div></div><span class="stag ti">LIVE</span></div>
-  <div id="pubfeed"><div class="load">Loading latest Long COVID research from PubMed...</div></div>
-  <p style="font-size:11px;color:var(--muted);margin-top:8px;">Live feed from PubMed. Updates automatically. <a href="https://pubmed.ncbi.nlm.nih.gov/?term=long+covid+OR+post-acute+sequelae+SARS-CoV-2+OR+ME-CFS" target="_blank">Browse PubMed directly</a></p>
-</div>
 
 <!-- TRIALS -->
-<div id="trials" class="card">
-  <div class="sh"><div class="stw"><div class="sd" style="background:var(--green)"></div><div><div class="st2">Active Clinical Trials</div><div class="ss">RECRUITING NOW · GLOBAL</div></div></div><span class="stag tg">LIVE</span></div>
-  <div id="tfeed"><div class="load">Loading recruiting trials from ClinicalTrials.gov...</div></div>
-  <p style="font-size:11px;color:var(--muted);margin-top:8px;">Verify eligibility at <a href="https://clinicaltrials.gov/search?cond=long+covid+OR+post-acute+sequelae&filter.overallStatus=RECRUITING" target="_blank">ClinicalTrials.gov</a></p>
-</div>
 
 <!-- LIVING WITH IT -->
 <div id="living" class="card">
@@ -543,7 +542,7 @@ tr:last-child td{border-bottom:none;}
 <footer style="background:var(--bg2);border-top:1px solid var(--border);padding:32px;text-align:center;">
   <p style="font-size:11px;color:var(--muted);margin-bottom:4px;">Long COVID Portal · The most comprehensive free resource for Long COVID and ME/CFS patients worldwide</p>
   <p style="font-size:11px;color:var(--muted);margin-bottom:8px;">Not medical advice · Educational purposes only · Always consult a qualified healthcare professional</p>
-  <p style="font-size:11px;color:var(--muted);">Powered by <a href="https://recalibratepain.com" style="color:var(--orange);">Recalibrate</a> · <a href="https://buymeacoffee.com/TristanSiokos" style="color:var(--orange);">Support this portal</a> · <a href="https://t.me/+WQAEro0iwB5kY2Fk" style="color:var(--orange);">Join the community</a></p>
+  <p style="font-size:11px;color:var(--muted);">Powered by <a href="https://recalibratepain.com" style="color:var(--orange);">Recalibrate</a> · <a href="https://ko-fi.com/recalibrate" style="color:var(--orange);">Support this portal</a> · <a href="https://t.me/+WQAEro0iwB5kY2Fk" style="color:var(--orange);">Join the community</a></p>
 </footer>
 
 <script>
