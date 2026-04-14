@@ -22,7 +22,7 @@
 <meta name="theme-color" content="#07070e">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#07070e;--bg2:#0e0e1a;--bg3:#151524;--border:rgba(255,255,255,0.06);--text:#dde3f0;--muted:rgba(255,255,255,0.38);--cyan:#06b6d4;--purple:#8b5cf6;--green:#10b981;--orange:#f59e0b;--red:#ef4444;--pink:#ec4899;}
+:root{--bg:#07070e;--bg2:#0e0e1a;--bg3:#151524;--border:rgba(255,255,255,0.06);--text:#dde3f0;--muted:rgba(255,255,255,0.38);--cyan:#06b6d4;--purple:#8b5cf6;--green:#10b981;--orange:#f59e0b;--red:#ef4444;--pink:#ec4899;--accent:#3b82f6;}
 *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;min-height:100vh;}
 a{color:var(--cyan);text-decoration:none;}
@@ -231,14 +231,15 @@ footer p{font-size:11px;color:var(--muted);margin-bottom:4px;}
       <div class="pc-features"><span class="feat">FODMAP Guide</span><span class="feat">Symptom Diary</span><span class="feat">Live Research</span></div>
       <div class="pc-link-dis">Coming soon. Join community for updates 🔔</div>
     </div>
-    <div class="portal-card">
-      <div class="pc-glow" style="background:var(--cyan)"></div>
-      <div class="pc-icon">🔴</div>
-      <span class="pc-badge soon">COMING SOON</span>
-      <div><div class="pc-title">Multiple Sclerosis (MS)</div><div class="pc-sub">AUTOIMMUNE · DEMYELINATION · NEUROLOGICAL</div></div>
-      <p class="pc-desc">Comprehensive MS intelligence. Disease-modifying therapy comparisons, EDSS tracking, MRI monitoring, relapse management, and global specialists.</p>
-      <div class="pc-features"><span class="feat">DMT Guide</span><span class="feat">EDSS Tracker</span><span class="feat">Live Research</span><span class="feat">Specialists</span></div>
-      <div class="pc-link-dis">Coming soon. Join community for updates 🔔</div>
+    <div class="portal-card active">
+      <div class="pc-glow" style="background:var(--accent)"></div>
+      <div class="pc-icon">🧠</div>
+      <span class="pc-badge live">● LIVE</span>
+      <div><div class="pc-title">Multiple Sclerosis (MS)</div><div class="pc-sub">DEMYELINATION · RELAPSES · NEUROLOGICAL</div></div>
+      <p class="pc-desc">Free MS intelligence. Symptoms, disease-modifying therapies, relapse guidance, MRI monitoring, live research, clinical trials, and specialist resources.</p>
+      <div class="pc-features"><span class="feat">DMT Guide</span><span class="feat">MRI Monitoring</span><span class="feat">Live Research</span><span class="feat">Clinical Trials</span></div>
+      <a href="ms/" class="pc-link">Open Portal <span>→</span></a>
+      <a href="https://recalibratepain.com" class="pc-link" target="_blank" style="margin-top:6px;background:rgba(6,182,212,0.1);border:1px solid var(--cyan);">🏥 Recalibrate</a>
     </div>
     <div class="portal-card">
       <div class="pc-glow" style="background:var(--red)"></div>
@@ -247,6 +248,15 @@ footer p{font-size:11px;color:var(--muted);margin-bottom:4px;}
       <div><div class="pc-title">Arachnoiditis</div><div class="pc-sub">NEUROINFLAMMATION · NERVE ROOTS · CHRONIC PAIN</div></div>
       <p class="pc-desc">Specialized arachnoiditis intelligence. Evidence-informed treatment pathways, symptom patterns, live research, and specialist guidance for a complex inflammatory pain condition affecting the arachnoid and nerve roots.</p>
       <div class="pc-features"><span class="feat">Symptom Tracking</span><span class="feat">Treatment Evidence</span><span class="feat">Live Research</span></div>
+      <div class="pc-link-dis">Coming soon. Join community for updates 🔔</div>
+    </div>
+    <div class="portal-card">
+      <div class="pc-glow" style="background:var(--purple)"></div>
+      <div class="pc-icon">♾️</div>
+      <span class="pc-badge soon">COMING SOON</span>
+      <div><div class="pc-title">ASD / AuDHD</div><div class="pc-sub">AUTISM · NEURODIVERGENCE · SENSORY PROCESSING</div></div>
+      <p class="pc-desc">Patient intelligence for Autism Spectrum Disorder and AuDHD. Sensory processing, masking, burnout, overlap with ADHD, practical supports, live research, and specialist resources.</p>
+      <div class="pc-features"><span class="feat">Masking & Burnout</span><span class="feat">Live Research</span><span class="feat">Support Pathways</span></div>
       <div class="pc-link-dis">Coming soon. Join community for updates 🔔</div>
     </div>
   </div>
@@ -315,6 +325,5 @@ footer p{font-size:11px;color:var(--muted);margin-bottom:4px;}
 </footer>
 <a href="https://ko-fi.com/recalibrate" class="bmc-float" target="_blank">☕</a>
 <div class="bmc-tip">Keep Health Portals Free</div>
-<a href="https://recalibratepain.com" class="pill" target="_blank" style="position:fixed;bottom:92px;right:16px;z-index:999;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:var(--text);">← Website</a>
 </body>
 </html>
