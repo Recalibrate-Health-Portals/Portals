@@ -82,7 +82,7 @@ footer p{font-size:11px;color:var(--muted);margin-bottom:4px;}
 .social-link.x:hover{border-color:rgba(255,255,255,0.3);color:#fff;}
 .social-link.li:hover{border-color:rgba(10,102,194,0.5);color:#0a66c2;}
 @media(max-width:600px){.hero{padding:48px 16px 32px;}.portals,.community,.ecosystem{padding-left:16px;padding-right:16px;}.stats{flex-wrap:wrap;}.stat{min-width:50%;border-bottom:1px solid var(--border);}.ecosystem>div{grid-template-columns:1fr !important;}.eco-grid{grid-template-columns:1fr !important;}}
-.filter-chip{padding:7px 10px;border-radius:20px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.75);font-size:11px;cursor:pointer}.filter-chip.active{background:rgba(59,130,246,0.14);border-color:rgba(59,130,246,0.35);color:#bfdbfe}.portal-hidden{display:none!important}
+.portal-hidden{display:none!important}
 </style>
 <meta name="keywords" content="chronic illness, chronic pain, health portals, arthritis, osteoarthritis, rheumatoid arthritis, fibromyalgia, central sensitisation syndrome, long covid, ME-CFS, ADHD, patient intelligence, evidence based health information, recalibrate">
 <meta name="author" content="Recalibrate Inc.">
@@ -126,8 +126,20 @@ footer p{font-size:11px;color:var(--muted);margin-bottom:4px;}
     <a href="https://recalibratepain.com" class="btn btn-p" target="_blank">🏥 Explore Recalibrate</a>
     <a href="https://t.me/Recalibrate_HealthPortals" class="btn btn-g" target="_blank">💬 Join Health Portals Community</a>
   </div>
-  <div style="max-width:1140px;margin:0 auto;padding:18px 24px 0;"><div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:12px;"><div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;"><input id="portalSearch" type="text" placeholder="Search conditions, symptoms, or topics..." style="flex:1;min-width:240px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:12px 14px;color:white;font-size:13px;"><select id="portalCategory" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:12px 14px;color:white;font-size:13px;"><option value="all">All categories</option><option value="pain">Pain</option><option value="neuro">Neurological</option><option value="autoimmune">Autoimmune / Inflammatory</option><option value="fatigue">Fatigue / Post-viral</option><option value="gut">Gut / GI</option><option value="pelvic">Pelvic / Hormonal</option><option value="neurodivergence">Neurodivergence</option></select><select id="portalStatus" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:12px 14px;color:white;font-size:13px;"><option value="all">All statuses</option><option value="live">Live only</option><option value="coming">In development</option></select></div><div style="display:flex;gap:8px;flex-wrap:wrap;"><button class="filter-chip active" data-filter="all">All</button><button class="filter-chip" data-filter="pain">Pain</button><button class="filter-chip" data-filter="neuro">Neurological</button><button class="filter-chip" data-filter="autoimmune">Autoimmune</button><button class="filter-chip" data-filter="fatigue">Fatigue / Post-viral</button><button class="filter-chip" data-filter="gut">Gut</button><button class="filter-chip" data-filter="pelvic">Pelvic</button><button class="filter-chip" data-filter="neurodivergence">Neurodivergence</button></div></div></div>
-<div class="stats">
+  <div style="max-width:1140px;margin:0 auto;padding:18px 24px 0;">
+    <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:12px;">
+      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+        <input id="portalSearch" type="text" placeholder="Search conditions, symptoms, or topics..." style="flex:1;min-width:240px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:12px 14px;color:white;font-size:13px;">
+        <select id="portalCategory" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:12px 14px;color:white;font-size:13px;">
+          <option value="all">All categories</option><option value="pain">Pain</option><option value="neuro">Neurological</option><option value="autoimmune">Autoimmune / Inflammatory</option><option value="fatigue">Fatigue / Post-viral</option><option value="gut">Gut / GI</option><option value="pelvic">Pelvic / Hormonal</option><option value="neurodivergence">Neurodivergence</option>
+        </select>
+        <select id="portalStatus" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:12px 14px;color:white;font-size:13px;">
+          <option value="all">All statuses</option><option value="live">Live only</option><option value="coming">In development</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="stats">
     <div class="stat"><div class="sv">2B+</div><div class="sl">CHRONIC ILLNESS PATIENTS</div></div>
     <div class="stat"><div class="sv">7</div><div class="sl">PORTALS LIVE NOW</div></div>
     <div class="stat"><div class="sv">14+</div><div class="sl">CONDITIONS COVERED</div></div>
@@ -139,11 +151,127 @@ footer p{font-size:11px;color:var(--muted);margin-bottom:4px;}
   <div class="sec-label">● LIVE NOW</div>
   <p style="font-size:13px;color:var(--muted);margin:-4px 0 20px;max-width:760px;line-height:1.8;">These portals are built to become the most discoverable, trusted windows into chronic condition care on the internet: condition-specific education, research monitoring, treatment evidence, community, and a route into Recalibrate for people who need practical support.</p>
   <div class="grid">
+    <div class="portal-card active">
+      <div class="pc-glow" style="background:var(--pink)"></div>
+      <div class="pc-icon">🧬</div>
+      <span class="pc-badge live">● LIVE</span>
+      <div class="pc-meta" data-category="pain fatigue" data-status="live" data-search="fibromyalgia widespread pain fatigue sleep chronic pain" style="display:none"></div><div><div class="pc-title">Fibromyalgia</div><div class="pc-sub">WIDESPREAD PAIN · FATIGUE · SLEEP</div></div>
+      <p class="pc-desc">Comprehensive fibromyalgia intelligence. FIQ-R impact assessment, evidence-rated treatments, live research, clinical trials and global specialists.</p>
+      <div class="pc-features"><span class="feat">FIQ-R Assessment</span><span class="feat">Live PubMed</span><span class="feat">Clinical Trials</span><span class="feat">Treatment Evidence</span></div>
+      <a href="fibromyalgia/" class="pc-link">Open Portal <span>→</span></a>
+      <a href="https://t.me/+u0q_HWeKwRYwYmRk" class="pc-link" target="_blank" style="margin-top:6px;background:rgba(6,182,212,0.1);border:1px solid var(--cyan);">💬 Community</a>
+    </div>
+    <div class="portal-card active">
+      <div class="pc-glow" style="background:var(--orange)"></div>
+      <div class="pc-icon">🦠</div>
+      <span class="pc-badge live">● LIVE</span>
+      <div class="pc-meta" data-category="fatigue neuro" data-status="live" data-search="long covid me cfs post viral fatigue pem brain fog" style="display:none"></div><div><div class="pc-title">Long COVID / ME-CFS</div><div class="pc-sub">POST-VIRAL · FATIGUE · BRAIN FOG</div></div>
+      <p class="pc-desc">Comprehensive Long COVID and ME/CFS intelligence. PEM screener, evidence-rated treatments, live research, clinical trials, pacing guide, and global specialists.</p>
+      <div class="pc-features">
+        <span class="feat">PEM Screener</span><span class="feat">Live PubMed</span><span class="feat">Clinical Trials</span><span class="feat">Treatment Evidence</span><span class="feat">Specialists</span>
+      </div>
+      <a href="long-covid/" class="pc-link">Open Portal <span>→</span></a>
+      <a href="https://t.me/+WQAEro0iwB5kY2Fk" class="pc-link" target="_blank" style="margin-top:6px;background:rgba(6,182,212,0.1);border:1px solid var(--cyan);">💬 Community</a>
+    </div>
+    <div class="portal-card active">
+      <div class="pc-glow" style="background:var(--purple)"></div>
+      <div class="pc-icon">⚡</div>
+      <span class="pc-badge live">● LIVE</span>
+      <div><div class="pc-title">ADHD &amp; Neurodivergence</div><div class="pc-sub">ATTENTION · EXECUTIVE FUNCTION · COMORBIDITIES</div></div>
+      <p class="pc-desc">Comprehensive ADHD intelligence. Self-screening, full medication guide, evidence-rated treatments, live research, clinical trials, and global specialists.</p>
+      <div class="pc-features"><span class="feat">ASRS Screener</span><span class="feat">Medication Guide</span><span class="feat">Live PubMed</span><span class="feat">Clinical Trials</span><span class="feat">Specialists</span></div>
+      <a href="adhd/" class="pc-link">Open Portal <span>→</span></a>
+      <a href="https://t.me/+pUapzux1eFA2NzBk" class="pc-link" target="_blank" style="margin-top:6px;background:rgba(6,182,212,0.1);border:1px solid var(--cyan);">💬 Community</a>
+    </div>
+    <div class="portal-card active">
+      <div class="pc-glow" style="background:var(--cyan)"></div>
+      <div class="pc-icon">🧠</div>
+      <span class="pc-badge live">● LIVE</span>
+      <div class="pc-meta" data-category="pain neuro" data-status="live" data-search="central sensitisation syndrome css chronic pain nervous system" style="display:none"></div><div><div class="pc-title">Central Sensitisation</div><div class="pc-sub">SYNDROME (CSS)</div></div>
+      <p class="pc-desc">The world's most comprehensive free CSS resource. Validated CSI self-assessment, evidence-rated treatments, live research, active clinical trials, global specialists.</p>
+      <div class="pc-features">
+        <span class="feat">CSI Self-Test</span><span class="feat">Live PubMed</span><span class="feat">Clinical Trials</span><span class="feat">Treatment Evidence</span><span class="feat">Specialists</span>
+      </div>
+      <a href="css/" class="pc-link">Open Portal <span>→</span></a>
+      <a href="https://t.me/HealthPortal_CSS" class="pc-link" target="_blank" style="margin-top:6px;background:rgba(6,182,212,0.1);border:1px solid var(--cyan);">💬 Community</a>
+    </div>
+    <div class="portal-card active">
+      <div class="pc-glow" style="background:var(--orange)"></div>
+      <div class="pc-icon">🦴</div>
+      <span class="pc-badge live">● LIVE</span>
+      <div class="pc-meta" data-category="pain autoimmune" data-status="live" data-search="arthritis oa ra psa gout joint pain" style="display:none"></div><div><div class="pc-title">Arthritis</div><div class="pc-sub">OA · RA · PSA · GOUT · JOINT PAIN</div></div>
+      <p class="pc-desc">A comprehensive arthritis portal covering osteoarthritis, rheumatoid arthritis, psoriatic arthritis and gout with live research, clinical trials, treatment evidence, red flags, and practical support.</p>
+      <div class="pc-features"><span class="feat">OA vs RA Guide</span><span class="feat">Live PubMed</span><span class="feat">Clinical Trials</span><span class="feat">Treatment Evidence</span></div>
+      <a href="arthritis/" class="pc-link">Open Portal <span>→</span></a>
+      <a href="https://t.me/Recalibrate_HealthPortals" class="pc-link" target="_blank" style="margin-top:6px;background:rgba(6,182,212,0.1);border:1px solid var(--cyan);">💬 Community</a>
+    </div>
+    <div class="portal-card active">
+      <div class="pc-glow" style="background:var(--accent)"></div>
+      <div class="pc-icon">🧠</div>
+      <span class="pc-badge live">● LIVE</span>
+      <div class="pc-meta" data-category="neuro autoimmune" data-status="live" data-search="multiple sclerosis ms demyelination relapse neurological fatigue" style="display:none"></div><div><div class="pc-title">Multiple Sclerosis (MS)</div><div class="pc-sub">DEMYELINATION · RELAPSES · NEUROLOGICAL</div></div>
+      <p class="pc-desc">Free MS intelligence. Symptoms, disease-modifying therapies, relapse guidance, MRI monitoring, live research, clinical trials, and specialist resources.</p>
+      <div class="pc-features"><span class="feat">DMT Guide</span><span class="feat">MRI Monitoring</span><span class="feat">Live Research</span><span class="feat">Clinical Trials</span></div>
+      <a href="ms/" class="pc-link">Open Portal <span>→</span></a>
+      <a href="https://recalibratepain.com" class="pc-link" target="_blank" style="margin-top:6px;background:rgba(6,182,212,0.1);border:1px solid var(--cyan);">🏥 Recalibrate</a>
+    </div>
+      <div class="portal-card active">
+      <div class="pc-glow" style="background:var(--red)"></div>
+      <div class="pc-icon">🧠</div>
+      <span class="pc-badge live">● LIVE</span>
+      <div class="pc-meta" data-category="pain neuro" data-status="live" data-search="arachnoiditis adhesive arachnoiditis nerve roots neuropathic pain" style="display:none"></div><div><div class="pc-title">Arachnoiditis</div><div class="pc-sub">NEUROINFLAMMATION · NERVE ROOTS · CHRONIC PAIN</div></div>
+      <p class="pc-desc">A medically serious arachnoiditis portal with symptom explanations, causes, imaging context, pain management, function support, live research, and specialist resources.</p>
+      <div class="pc-features"><span class="feat">Diagnosis Context</span><span class="feat">Pain & Function</span><span class="feat">Live Research</span><span class="feat">Clinical Trials</span></div>
+      <a href="arachnoiditis/" class="pc-link">Open Portal <span>→</span></a>
+      <a href="https://recalibratepain.com" class="pc-link" target="_blank" style="margin-top:6px;background:rgba(6,182,212,0.1);border:1px solid var(--cyan);">🏥 Recalibrate</a>
+    </div>
+  </div>
+
+  <div class="sec-label">🛰️ IN DEVELOPMENT</div>
+  <div class="grid">
+
+    <div class="portal-card">
+      <div class="pc-glow" style="background:var(--blue)"></div>
+      <div class="pc-icon">🩸</div>
+      <span class="pc-badge soon">COMING SOON</span>
+      <div class="pc-meta" data-category="autoimmune" data-status="coming" data-search="diabetes insulin blood sugar complications" style="display:none"></div><div><div class="pc-title">Type 1 and 2 Diabetes</div><div class="pc-sub">BLOOD SUGAR · INSULIN · COMPLICATIONS</div></div>
+      <p class="pc-desc">Comprehensive diabetes intelligence. Evidence-rated treatments, medication comparisons, complication monitoring, live research and global specialists.</p>
+      <div class="pc-features"><span class="feat">Medication Guide</span><span class="feat">Live Research</span><span class="feat">Complications</span></div>
+      <div class="pc-link-dis">Coming soon. Join community for updates 🔔</div>
+    </div>
+    <div class="portal-card">
+      <div class="pc-glow" style="background:var(--pink)"></div>
+      <div class="pc-icon">🦋</div>
+      <span class="pc-badge soon">COMING SOON</span>
+      <div class="pc-meta" data-category="autoimmune" data-status="coming" data-search="lupus sle autoimmune inflammation multisystem" style="display:none"></div><div><div class="pc-title">Lupus (SLE)</div><div class="pc-sub">AUTOIMMUNE · INFLAMMATION · MULTI-SYSTEM</div></div>
+      <p class="pc-desc">Patient intelligence for Systemic Lupus Erythematosus. Flare management, evidence-rated treatments, live clinical trials and specialist directory.</p>
+      <div class="pc-features"><span class="feat">Flare Tracker</span><span class="feat">Live Research</span><span class="feat">Specialists</span></div>
+      <div class="pc-link-dis">Coming soon. Join community for updates 🔔</div>
+    </div>
+    
+    <div class="portal-card">
+      <div class="pc-glow" style="background:var(--green)"></div>
+      <div class="pc-icon">🧬</div>
+      <span class="pc-badge soon">COMING SOON</span>
+      <div class="pc-meta" data-category="pelvic pain" data-status="coming" data-search="endometriosis pelvic pain hormonal fertility" style="display:none"></div><div><div class="pc-title">Endometriosis</div><div class="pc-sub">CHRONIC PELVIC PAIN · HORMONAL · FERTILITY</div></div>
+      <p class="pc-desc">Free endometriosis intelligence. Average diagnosis takes 7-10 years. Evidence-based treatments, surgical options, live research and specialist directory.</p>
+      <div class="pc-features"><span class="feat">Symptom Tracker</span><span class="feat">Treatment Evidence</span><span class="feat">Specialists</span></div>
+      <div class="pc-link-dis">Coming soon. Join community for updates 🔔</div>
+    </div>
+    <div class="portal-card">
+      <div class="pc-glow" style="background:var(--purple)"></div>
+      <div class="pc-icon">🫁</div>
+      <span class="pc-badge soon">COMING SOON</span>
+      <div class="pc-meta" data-category="gut pain" data-status="coming" data-search="ibs irritable bowel syndrome gut pain motility fodmap" style="display:none"></div><div><div class="pc-title">Irritable Bowel Syndrome</div><div class="pc-sub">GUT HEALTH · PAIN · MOTILITY</div></div>
+      <p class="pc-desc">Comprehensive IBS intelligence. Low-FODMAP guide, evidence-rated treatments, gut-brain axis research, live trials and specialist gastroenterologists.</p>
+      <div class="pc-features"><span class="feat">FODMAP Guide</span><span class="feat">Symptom Diary</span><span class="feat">Live Research</span></div>
+      <div class="pc-link-dis">Coming soon. Join community for updates 🔔</div>
+    </div>
     <div class="portal-card">
       <div class="pc-glow" style="background:var(--purple)"></div>
       <div class="pc-icon">♾️</div>
       <span class="pc-badge soon">COMING SOON</span>
-      <div class="portal-card-meta" data-category="neurodivergence neuro" data-status="coming" data-search="asd audhd autism neurodivergence sensory processing masking burnout" style="display:none"></div><div><div class="pc-title">ASD / AuDHD</div><div class="pc-sub">AUTISM · NEURODIVERGENCE · SENSORY PROCESSING</div></div>
+      <div class="pc-meta" data-category="neurodivergence neuro" data-status="coming" data-search="asd audhd autism neurodivergence sensory processing masking burnout" style="display:none"></div><div><div class="pc-title">ASD / AuDHD</div><div class="pc-sub">AUTISM · NEURODIVERGENCE · SENSORY PROCESSING</div></div>
       <p class="pc-desc">Patient intelligence for Autism Spectrum Disorder and AuDHD. Sensory processing, masking, burnout, overlap with ADHD, practical supports, live research, and specialist resources.</p>
       <div class="pc-features"><span class="feat">Masking & Burnout</span><span class="feat">Live Research</span><span class="feat">Support Pathways</span></div>
       <div class="pc-link-dis">Coming soon. Join community for updates 🔔</div>
@@ -214,16 +342,17 @@ footer p{font-size:11px;color:var(--muted);margin-bottom:4px;}
 </footer>
 <a href="https://ko-fi.com/recalibrate" class="bmc-float" target="_blank">☕</a>
 <div class="bmc-tip">Keep Health Portals Free</div>
+
 <script>
 function applyPortalFilters(){
  const q=(document.getElementById('portalSearch')?.value||'').toLowerCase().trim();
  const c=document.getElementById('portalCategory')?.value||'all';
  const s=document.getElementById('portalStatus')?.value||'all';
  document.querySelectorAll('.portal-card').forEach(card=>{
-   const m=card.querySelector('.portal-card-meta');
+   const m=card.querySelector('.pc-meta');
    const hay=((m?.dataset.search)||card.innerText||'').toLowerCase();
    const cats=(m?.dataset.category||'').toLowerCase();
-   const stat=m?.dataset.status||'';
+   const stat=(m?.dataset.status)||'';
    const okQ=!q||hay.includes(q);
    const okC=c==='all'||cats.includes(c);
    const okS=s==='all'||stat===s;
@@ -234,7 +363,7 @@ window.addEventListener('DOMContentLoaded',()=>{
  document.getElementById('portalSearch')?.addEventListener('input',applyPortalFilters);
  document.getElementById('portalCategory')?.addEventListener('change',applyPortalFilters);
  document.getElementById('portalStatus')?.addEventListener('change',applyPortalFilters);
- document.querySelectorAll('.filter-chip').forEach(ch=>ch.addEventListener('click',()=>{document.querySelectorAll('.filter-chip').forEach(x=>x.classList.remove('active'));ch.classList.add('active');document.getElementById('portalCategory').value=ch.dataset.filter;applyPortalFilters();}));
 });
-</script></body>
+</script>
+</body>
 </html>
